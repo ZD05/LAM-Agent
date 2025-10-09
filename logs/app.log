@@ -1,0 +1,1766 @@
+2025-10-03 15:07:38,252 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放主页第一个视频...
+2025-10-03 15:07:41,303 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-03 15:07:42,935 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate
+2025-10-03 15:07:42,935 - src.tools.executor - INFO - 执行操作: nl_automate
+2025-10-03 15:07:42,935 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate
+2025-10-03 15:07:43,012 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-03 15:07:54,124 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-03 15:51:36,249 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-03 15:51:38,023 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-03 15:51:40,147 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-03 15:51:40,147 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-03 15:51:40,209 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-03 15:51:47,343 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 13:54:20,385 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 13:54:23,370 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 13:54:26,708 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 13:54:26,708 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 13:54:26,766 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 13:54:33,682 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 13:54:46,696 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站...
+2025-10-04 13:54:46,891 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 13:54:48,515 - src.agent.lam_agent - INFO - 执行计划: execute:open_bilibili
+2025-10-04 13:54:48,515 - src.tools.executor - INFO - 执行操作: open_bilibili
+2025-10-04 13:54:50,641 - src.agent.lam_agent - INFO - 操作执行完成: open_bilibili
+2025-10-04 13:54:50,706 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 13:54:54,656 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 13:58:40,913 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 13:58:42,574 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 13:58:44,558 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate:query="打开B站，搜索影视飓风，播放第一个视频"
+2025-10-04 13:58:44,558 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate:query="打开B站，搜索影视飓风，播放第一个视频"
+2025-10-04 13:58:44,618 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 13:58:52,868 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:01:06,706 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:01:08,445 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:01:11,183 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:01:11,183 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:01:11,275 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:01:18,371 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:16:02,907 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站...
+2025-10-04 14:16:04,706 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:16:06,438 - src.agent.lam_agent - INFO - 执行计划: execute:open_bilibili
+2025-10-04 14:16:06,438 - src.tools.executor - INFO - 执行操作: open_bilibili
+2025-10-04 14:16:08,470 - src.agent.lam_agent - INFO - 操作执行完成: open_bilibili
+2025-10-04 14:16:08,537 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:16:12,841 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:30:13,970 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:30:15,578 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:30:18,070 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:30:18,070 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:30:18,131 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:30:27,975 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:30:59,377 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:31:03,929 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:31:05,798 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:31:05,799 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate:打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:31:05,867 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:31:16,833 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:32:03,199 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:32:04,901 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:32:07,367 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:32:07,367 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:32:07,367 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:32:07,367 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:32:07,367 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:32:07,368 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:32:07,368 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 14:32:07,486 - src.tools.search - INFO - 已打开搜索页面: https://www.google.com/search?q=B%E7%AB%99
+2025-10-04 14:32:07,502 - src.tools.search - INFO - 已打开搜索页面: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 14:32:07,523 - src.tools.search - INFO - 已打开搜索页面: https://duckduckgo.com/?q=B%E7%AB%99
+2025-10-04 14:32:07,556 - src.tools.search - INFO - 已打开搜索页面: https://www.baidu.com/s?wd=B%E7%AB%99
+2025-10-04 14:32:07,556 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:32:09,557 - src.tools.step_executor - INFO - 执行步骤 2/3: 搜索: 影视飓风
+2025-10-04 14:32:10,269 - src.tools.browser - INFO - 打开页面: https://browser
+2025-10-04 14:32:18,748 - src.tools.browser - ERROR - 自动化失败: Page.goto: net::ERR_CONNECTION_CLOSED at https://browser/
+Call log:
+  - navigating to "https://browser/", waiting until "load"
+
+2025-10-04 14:32:18,748 - src.tools.step_executor - ERROR - 步骤 2 执行失败: 未知错误
+2025-10-04 14:32:20,749 - src.tools.step_executor - INFO - 执行步骤 3/3: 播放: 播放第一个视频
+2025-10-04 14:32:20,749 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:32:20,749 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败1步
+2025-10-04 14:32:20,749 - src.tools.executor - INFO - 步骤化指令执行成功: 2/3 步骤完成
+2025-10-04 14:32:20,749 - src.agent.lam_agent - ERROR - 操作执行失败: Object of type OperationStep is not JSON serializable
+2025-10-04 14:32:20,919 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:32:28,627 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:33:11,451 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:33:13,140 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:33:14,613 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:33:14,614 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:33:14,614 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:33:14,614 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:33:14,614 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:33:14,614 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:33:14,614 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 14:33:14,736 - src.tools.search - INFO - 已打开搜索页面: https://www.google.com/search?q=B%E7%AB%99
+2025-10-04 14:33:14,752 - src.tools.search - INFO - 已打开搜索页面: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 14:33:14,772 - src.tools.search - INFO - 已打开搜索页面: https://duckduckgo.com/?q=B%E7%AB%99
+2025-10-04 14:33:14,793 - src.tools.search - INFO - 已打开搜索页面: https://www.baidu.com/s?wd=B%E7%AB%99
+2025-10-04 14:33:14,794 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:33:16,794 - src.tools.step_executor - INFO - 执行步骤 2/3: 搜索: 影视飓风
+2025-10-04 14:33:17,486 - src.tools.browser - INFO - 打开页面: https://browser
+2025-10-04 14:33:30,854 - src.tools.browser - ERROR - 自动化失败: Page.goto: net::ERR_CONNECTION_CLOSED at https://browser/
+Call log:
+  - navigating to "https://browser/", waiting until "load"
+
+2025-10-04 14:33:30,854 - src.tools.step_executor - ERROR - 步骤 2 执行失败: 未知错误
+2025-10-04 14:33:32,855 - src.tools.step_executor - INFO - 执行步骤 3/3: 播放: 播放第一个视频
+2025-10-04 14:33:32,855 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:33:32,855 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败1步
+2025-10-04 14:33:32,855 - src.tools.executor - INFO - 步骤化指令执行成功: 2/3 步骤完成
+2025-10-04 14:33:32,856 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:33:33,025 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:33:43,198 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:35:24,174 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:35:25,860 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:35:27,664 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:35:27,664 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:35:27,664 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:35:27,664 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:35:27,665 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:35:27,665 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:35:27,665 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 14:35:27,795 - src.tools.search - INFO - 已打开搜索页面: https://www.google.com/search?q=B%E7%AB%99
+2025-10-04 14:35:27,812 - src.tools.search - INFO - 已打开搜索页面: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 14:35:27,830 - src.tools.search - INFO - 已打开搜索页面: https://duckduckgo.com/?q=B%E7%AB%99
+2025-10-04 14:35:27,851 - src.tools.search - INFO - 已打开搜索页面: https://www.baidu.com/s?wd=B%E7%AB%99
+2025-10-04 14:35:27,851 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:35:29,852 - src.tools.step_executor - INFO - 执行步骤 2/3: 搜索: 影视飓风
+2025-10-04 14:35:29,867 - src.tools.search - INFO - 已打开搜索页面: https://www.google.com/search?q=%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E
+2025-10-04 14:35:29,884 - src.tools.search - INFO - 已打开搜索页面: https://www.bing.com/search?q=%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E
+2025-10-04 14:35:29,910 - src.tools.search - INFO - 已打开搜索页面: https://duckduckgo.com/?q=%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E
+2025-10-04 14:35:29,942 - src.tools.search - INFO - 已打开搜索页面: https://www.baidu.com/s?wd=%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E
+2025-10-04 14:35:29,943 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 14:35:31,943 - src.tools.step_executor - INFO - 执行步骤 3/3: 播放: 播放第一个视频
+2025-10-04 14:35:31,943 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:35:31,943 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 14:35:31,943 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 14:35:31,944 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:35:32,009 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:35:39,236 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:36:05,732 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:36:07,405 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:36:08,791 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:36:08,791 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:36:08,791 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:36:08,791 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:36:08,791 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:36:08,791 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:36:08,791 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 14:36:08,808 - src.tools.search - INFO - 已打开搜索页面: https://www.google.com/search?q=B%E7%AB%99
+2025-10-04 14:36:08,826 - src.tools.search - INFO - 已打开搜索页面: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 14:36:08,849 - src.tools.search - INFO - 已打开搜索页面: https://duckduckgo.com/?q=B%E7%AB%99
+2025-10-04 14:36:08,873 - src.tools.search - INFO - 已打开搜索页面: https://www.baidu.com/s?wd=B%E7%AB%99
+2025-10-04 14:36:08,873 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:36:10,874 - src.tools.step_executor - INFO - 执行步骤 2/3: 搜索: 影视飓风
+2025-10-04 14:36:10,889 - src.tools.search - INFO - 已打开搜索页面: https://www.google.com/search?q=%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E
+2025-10-04 14:36:10,907 - src.tools.search - INFO - 已打开搜索页面: https://www.bing.com/search?q=%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E
+2025-10-04 14:36:10,932 - src.tools.search - INFO - 已打开搜索页面: https://duckduckgo.com/?q=%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E
+2025-10-04 14:36:10,959 - src.tools.search - INFO - 已打开搜索页面: https://www.baidu.com/s?wd=%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E
+2025-10-04 14:36:10,960 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 14:36:12,960 - src.tools.step_executor - INFO - 执行步骤 3/3: 播放: 播放第一个视频
+2025-10-04 14:36:12,960 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:36:12,960 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 14:36:12,960 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 14:36:12,960 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:36:13,025 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:36:21,560 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:44:27,240 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:44:28,956 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:44:30,473 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:44:30,473 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:44:30,473 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:44:30,473 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:44:30,473 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:44:30,473 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:44:30,473 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 14:44:30,490 - src.tools.search - INFO - 已打开搜索页面: https://www.google.com/search?q=B%E7%AB%99
+2025-10-04 14:44:30,507 - src.tools.search - INFO - 已打开搜索页面: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 14:44:30,532 - src.tools.search - INFO - 已打开搜索页面: https://duckduckgo.com/?q=B%E7%AB%99
+2025-10-04 14:44:30,580 - src.tools.search - INFO - 已打开搜索页面: https://www.baidu.com/s?wd=B%E7%AB%99
+2025-10-04 14:44:30,580 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:44:32,581 - src.tools.step_executor - INFO - 执行步骤 2/3: 在bilibili.com中搜索: 影视飓风
+2025-10-04 14:44:33,239 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 14:44:34,124 - src.tools.browser - INFO - 暂停: 1000ms
+2025-10-04 14:44:35,124 - src.tools.browser - INFO - 点击: selector=input#nav-searchform input
+2025-10-04 14:44:55,307 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input#nav-searchform input")
+
+2025-10-04 14:44:55,308 - src.tools.step_executor - ERROR - 步骤 2 执行失败: 未知错误
+2025-10-04 14:44:57,308 - src.tools.step_executor - INFO - 执行步骤 3/3: 在bilibili.com中播放: 播放第一个视频
+2025-10-04 14:44:57,943 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 14:44:59,007 - src.tools.browser - INFO - 暂停: 1000ms
+2025-10-04 14:45:00,008 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']
+2025-10-04 14:45:00,122 - src.tools.browser - INFO - 等待: selector=video, state=visible
+2025-10-04 14:45:00,157 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 14:45:02,459 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:45:02,459 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败1步
+2025-10-04 14:45:02,459 - src.tools.executor - INFO - 步骤化指令执行成功: 2/3 步骤完成
+2025-10-04 14:45:02,459 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:45:02,637 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:45:12,174 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:48:28,728 - src.agent.lam_agent - INFO - 处理用户查询: 搜索人工智能最新发展...
+2025-10-04 14:48:30,348 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:48:32,022 - src.agent.lam_agent - INFO - 执行计划: search
+2025-10-04 14:48:32,029 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95
+2025-10-04 14:48:32,029 - src.agent.lam_agent - INFO - 浏览器搜索完成: 已在Edge浏览器中使用Google搜索: 搜索人工智能最新发展
+2025-10-04 14:48:32,030 - src.tools.search - INFO - 开始搜索: 搜索人工智能最新发展
+2025-10-04 14:48:32,247 - primp - INFO - response: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 302
+2025-10-04 14:48:32,247 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 14:48:32,247 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 14:48:32,247 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 14:48:32,247 - src.agent.lam_agent - INFO - 程序化搜索完成，获得 3 个结果
+2025-10-04 14:48:32,307 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:48:46,991 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:52:55,064 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:52:57,892 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:52:59,314 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:52:59,314 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:52:59,314 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:52:59,314 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:52:59,314 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:52:59,314 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:52:59,314 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 14:52:59,323 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=B%E7%AB%99
+2025-10-04 14:52:59,323 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:53:01,323 - src.tools.step_executor - INFO - 执行步骤 2/3: 在bilibili.com中搜索: 影视飓风
+2025-10-04 14:53:02,057 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 14:53:04,127 - src.tools.browser - INFO - 暂停: 1000ms
+2025-10-04 14:53:05,128 - src.tools.browser - INFO - 点击: selector=input#nav-searchform input
+2025-10-04 14:53:25,390 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input#nav-searchform input")
+
+2025-10-04 14:53:25,390 - src.tools.step_executor - ERROR - 步骤 2 执行失败: 未知错误
+2025-10-04 14:53:27,390 - src.tools.step_executor - INFO - 执行步骤 3/3: 在bilibili.com中播放: 播放第一个视频
+2025-10-04 14:53:28,137 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 14:53:29,313 - src.tools.browser - INFO - 暂停: 1000ms
+2025-10-04 14:53:30,313 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']
+2025-10-04 14:53:30,445 - src.tools.browser - INFO - 等待: selector=video, state=visible
+2025-10-04 14:53:30,475 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 14:53:32,761 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:53:32,761 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败1步
+2025-10-04 14:53:32,761 - src.tools.executor - INFO - 步骤化指令执行成功: 2/3 步骤完成
+2025-10-04 14:53:32,762 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:53:32,951 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:53:41,932 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:53:41,932 - src.agent.lam_agent - INFO - 处理用户查询: 打开淘宝，搜索iPhone 15，查看第一个商品，加入购物车...
+2025-10-04 14:53:42,056 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:53:43,432 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate
+2025-10-04 14:53:43,432 - src.tools.executor - INFO - 执行操作: nl_automate
+2025-10-04 14:53:43,441 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=%E6%89%93%E5%BC%80%E6%B7%98%E5%AE%9D%EF%BC%8C%E6%90%9C%E7%B4%A2iPhone+15%EF%BC%8C%E6%9F%A5%E7%9C%8B%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%95%86%E5%93%81%EF%BC%8C%E5%8A%A0%E5%85%A5%E8%B4%AD%E7%89%A9%E8%BD%A6
+2025-10-04 14:53:43,441 - src.tools.executor - INFO - 已同时打开搜索引擎: 已在Edge浏览器中使用Google搜索: 打开淘宝，搜索iPhone 15，查看第一个商品，加入购物车
+2025-10-04 14:53:44,230 - src.tools.browser - INFO - 打开页面: https://www.taobao.com
+2025-10-04 14:53:46,434 - src.tools.browser - INFO - 暂停: 600ms
+2025-10-04 14:53:47,035 - src.tools.browser - INFO - 点击: selector=input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input
+2025-10-04 14:54:07,299 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input")
+
+2025-10-04 14:54:07,299 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate
+2025-10-04 14:54:07,478 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:54:19,505 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:54:19,505 - src.agent.lam_agent - INFO - 处理用户查询: 进入YouTube，搜索Python教程，播放第一个视频，然后搜索机器学习...
+2025-10-04 14:54:19,570 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:54:21,193 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:54:21,193 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:54:21,193 - src.tools.executor - INFO - 开始执行步骤化指令: 进入YouTube，搜索Python教程，播放第一个视频，然后搜索机器学习
+2025-10-04 14:54:21,194 - src.tools.nl_parser - INFO - 开始解析指令: 进入YouTube，搜索Python教程，播放第一个视频，然后搜索机器学习
+2025-10-04 14:54:21,194 - src.tools.nl_parser - INFO - 解析完成，共4个操作步骤
+2025-10-04 14:54:21,194 - src.tools.step_executor - INFO - 开始执行4个操作步骤
+2025-10-04 14:54:21,194 - src.tools.step_executor - INFO - 执行步骤 1/4: 进入: YouTube
+2025-10-04 14:54:21,203 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=YouTube
+2025-10-04 14:54:21,204 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:54:23,204 - src.tools.step_executor - INFO - 执行步骤 2/4: 搜索: Python教程
+2025-10-04 14:54:23,212 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=Python%E6%95%99%E7%A8%8B
+2025-10-04 14:54:23,212 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 14:54:25,213 - src.tools.step_executor - INFO - 执行步骤 3/4: 播放: 播放第一个视频
+2025-10-04 14:54:25,213 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:54:27,213 - src.tools.step_executor - INFO - 执行步骤 4/4: 搜索: 机器学习
+2025-10-04 14:54:27,221 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0
+2025-10-04 14:54:27,222 - src.tools.step_executor - INFO - 步骤 4 执行成功
+2025-10-04 14:54:27,222 - src.tools.step_executor - INFO - 执行完成: 成功4步，失败0步
+2025-10-04 14:54:27,222 - src.tools.executor - INFO - 步骤化指令执行成功: 4/4 步骤完成
+2025-10-04 14:54:27,222 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:54:27,416 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:54:35,573 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:54:35,573 - src.agent.lam_agent - INFO - 处理用户查询: 打开百度，搜索今天天气，然后搜索新闻...
+2025-10-04 14:54:35,663 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:54:37,098 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:54:37,098 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:54:37,098 - src.tools.executor - INFO - 开始执行步骤化指令: 打开百度，搜索今天天气，然后搜索新闻
+2025-10-04 14:54:37,098 - src.tools.nl_parser - INFO - 开始解析指令: 打开百度，搜索今天天气，然后搜索新闻
+2025-10-04 14:54:37,098 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:54:37,098 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:54:37,098 - src.tools.step_executor - INFO - 执行步骤 1/3: 在baidu.com中打开: 打开百度
+2025-10-04 14:54:37,224 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:54:39,225 - src.tools.step_executor - INFO - 执行步骤 2/3: 搜索: 今天天气
+2025-10-04 14:54:39,239 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94
+2025-10-04 14:54:39,240 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 14:54:41,240 - src.tools.step_executor - INFO - 执行步骤 3/3: 搜索: 新闻
+2025-10-04 14:54:41,248 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=%E6%96%B0%E9%97%BB
+2025-10-04 14:54:41,248 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:54:41,248 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 14:54:41,248 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 14:54:41,248 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:54:41,343 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:54:51,241 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:54:51,241 - src.agent.lam_agent - INFO - 处理用户查询: 先打开B站搜索科技视频，然后去淘宝搜索电脑配件，最后在京东查看手机...
+2025-10-04 14:54:51,304 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:54:53,061 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:54:53,061 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:54:53,061 - src.tools.executor - INFO - 开始执行步骤化指令: 先打开B站搜索科技视频，然后去淘宝搜索电脑配件，最后在京东查看手机
+2025-10-04 14:54:53,061 - src.tools.nl_parser - INFO - 开始解析指令: 先打开B站搜索科技视频，然后去淘宝搜索电脑配件，最后在京东查看手机
+2025-10-04 14:54:53,061 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:54:53,061 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:54:53,061 - src.tools.step_executor - INFO - 执行步骤 1/3: 在bilibili.com中打开: 先B站科技
+2025-10-04 14:54:53,080 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:54:55,081 - src.tools.step_executor - INFO - 执行步骤 2/3: 在taobao.com中搜索: 去电脑配件
+2025-10-04 14:54:58,567 - src.tools.browser - INFO - 打开页面: https://www.taobao.com
+2025-10-04 14:55:00,444 - src.tools.browser - INFO - 暂停: 1000ms
+2025-10-04 14:55:01,445 - src.tools.browser - INFO - 点击: selector=input#q
+2025-10-04 14:55:01,574 - src.tools.browser - INFO - 输入: selector=input#q, text=去电脑配件
+2025-10-04 14:55:01,736 - src.tools.browser - INFO - 按键: selector=input#q, key=Enter
+2025-10-04 14:55:01,798 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], state=visible
+2025-10-04 14:55:02,104 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 14:55:04,106 - src.tools.step_executor - INFO - 执行步骤 3/3: 在jd.com中查看: 在手机
+2025-10-04 14:55:04,122 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 14:55:04,122 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 14:55:04,122 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 14:55:04,122 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:55:04,290 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:55:14,146 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 开始解析指令: 在淘宝搜索iPhone，然后加入购物车
+2025-10-04 14:55:14,147 - src.tools.nl_parser - WARNING - 无法识别操作类型: 加入购物车
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 解析完成，共1个操作步骤
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 开始解析指令: 进入YouTube，搜索Python教程，播放视频
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 开始解析指令: 打开百度，搜索天气，然后搜索新闻
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:55:14,147 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:58:45,818 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 14:58:48,684 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:58:52,203 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 14:58:52,203 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 14:58:52,203 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:58:52,204 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 14:58:52,204 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 14:58:52,204 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 14:58:52,204 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 14:58:52,212 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=B%E7%AB%99
+2025-10-04 14:58:52,212 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 14:58:54,213 - src.tools.step_executor - INFO - 执行步骤 2/3: 在bilibili.com中搜索: 影视飓风
+2025-10-04 14:58:54,969 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 14:58:56,018 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 14:58:58,019 - src.tools.browser - INFO - 点击: selector=input[placeholder*='搜索'], input#nav-searchform input, .nav-search-input, input[type='search']
+2025-10-04 14:58:58,094 - src.tools.browser - INFO - 输入: selector=input[placeholder*='搜索'], input#nav-searchform input, .nav-search-input, input[type='search'], text=影视飓风
+2025-10-04 14:58:58,222 - src.tools.browser - INFO - 按键: selector=input[placeholder*='搜索'], input#nav-searchform input, .nav-search-input, input[type='search'], key=Enter
+2025-10-04 14:58:58,264 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 14:59:18,479 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("a[href*='/video/'], .video-item, .bili-video-card") to be visible
+    44 × locator resolved to 43 elements. Proceeding with the first one: <div data-report="" data-v-5351676e="" class="bili-video-card">…</div>
+
+2025-10-04 14:59:18,480 - src.tools.step_executor - ERROR - 步骤 2 执行失败: 未知错误
+2025-10-04 14:59:20,480 - src.tools.step_executor - INFO - 执行步骤 3/3: 在bilibili.com中播放: 播放第一个视频
+2025-10-04 14:59:21,106 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 14:59:22,179 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 14:59:24,179 - src.tools.browser - INFO - 点击: selector=a[href*='/video/'], .video-item a, .bili-video-card a, .video-card a
+2025-10-04 14:59:44,480 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("a[href*='/video/'], .video-item a, .bili-video-card a, .video-card a")
+    - locator resolved to 32 elements. Proceeding with the first one: <a rel="noopener" target="_blank" data-loc-id="4694" data-v-051db7dd="" class="carousel-item" href="https://www.bilibili.com/video/BV1E8HWziEGx/" data-target-url="https://www.bilibili.com/video/BV1E8HWziEGx/">…</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <main class="bili-feed4-layout">…</main> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <main class="bili-feed4-layout">…</main> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <main class="bili-feed4-layout">…</main> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+    9 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not stable
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is not stable
+  3 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+  - retrying click action
+    - waiting 500ms
+
+2025-10-04 14:59:44,480 - src.tools.step_executor - ERROR - 步骤 3 执行失败: 未知错误
+2025-10-04 14:59:44,481 - src.tools.step_executor - INFO - 执行完成: 成功1步，失败2步
+2025-10-04 14:59:44,481 - src.tools.executor - INFO - 步骤化指令执行成功: 1/3 步骤完成
+2025-10-04 14:59:44,481 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 14:59:44,701 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 14:59:52,659 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 14:59:53,301 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 14:59:54,288 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 14:59:56,288 - src.tools.browser - INFO - 点击: selector=input[placeholder*='搜索'], input#nav-searchform input, .nav-search-input, input[type='search']
+2025-10-04 14:59:56,386 - src.tools.browser - INFO - 输入: selector=input[placeholder*='搜索'], input#nav-searchform input, .nav-search-input, input[type='search'], text=影视飓风
+2025-10-04 14:59:56,521 - src.tools.browser - INFO - 按键: selector=input[placeholder*='搜索'], input#nav-searchform input, .nav-search-input, input[type='search'], key=Enter
+2025-10-04 14:59:56,560 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:00:16,849 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("a[href*='/video/'], .video-item, .bili-video-card") to be visible
+    44 × locator resolved to 41 elements. Proceeding with the first one: <div data-report="" data-v-5351676e="" class="bili-video-card">…</div>
+
+2025-10-04 15:00:17,500 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 15:00:18,566 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:00:20,566 - src.tools.browser - INFO - 点击: selector=a[href*='/video/'], .video-item a, .bili-video-card a, .video-card a
+2025-10-04 15:00:20,648 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-video-wrap, .bpx-player-container, state=visible
+2025-10-04 15:00:40,902 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-video-wrap, .bpx-player-container") to be visible
+    44 × locator resolved to 2 elements. Proceeding with the first one: <video loop="" width="0" height="0" playsinline="" src="blob:https://www.bilibili.com/ff48007a-60f3-435a-afcd-6f246c8de168"></video>
+
+2025-10-04 15:01:38,152 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 15:01:39,859 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:01:41,508 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:01:41,508 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:01:41,508 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 15:01:41,508 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 15:01:41,509 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:01:41,509 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 15:01:41,509 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 15:01:41,519 - src.tools.search - INFO - 已使用Edge浏览器打开Google搜索: https://www.google.com/search?q=B%E7%AB%99
+2025-10-04 15:01:41,519 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:01:43,519 - src.tools.step_executor - INFO - 执行步骤 2/3: 在bilibili.com中搜索: 影视飓风
+2025-10-04 15:01:44,164 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=影视飓风
+2025-10-04 15:01:45,585 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:01:47,585 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:01:47,789 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:01:49,790 - src.tools.step_executor - INFO - 执行步骤 3/3: 在bilibili.com中播放: 播放第一个视频
+2025-10-04 15:01:50,423 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 15:01:51,097 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:01:53,098 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type
+2025-10-04 15:01:53,187 - src.tools.browser - INFO - 等待: selector=video, state=visible
+2025-10-04 15:02:13,422 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video") to be visible
+    44 × locator resolved to 2 elements. Proceeding with the first one: <video loop="" width="0" height="0" playsinline="" src="blob:https://www.bilibili.com/7b95abbc-a993-4eeb-902b-63f9c0d806c1"></video>
+
+2025-10-04 15:02:13,422 - src.tools.step_executor - ERROR - 步骤 3 执行失败: 未知错误
+2025-10-04 15:02:13,422 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败1步
+2025-10-04 15:02:13,422 - src.tools.executor - INFO - 步骤化指令执行成功: 2/3 步骤完成
+2025-10-04 15:02:13,422 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:02:13,603 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:02:23,052 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:05:00,490 - src.agent.lam_agent - INFO - 处理用户查询: 搜索人工智能最新发展...
+2025-10-04 15:05:02,201 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:05:03,468 - src.agent.lam_agent - INFO - 执行计划: search
+2025-10-04 15:05:03,477 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95
+2025-10-04 15:05:03,477 - src.agent.lam_agent - INFO - 浏览器搜索完成: 已在Edge浏览器中搜索: 搜索人工智能最新发展
+2025-10-04 15:05:03,477 - src.tools.search - INFO - 开始搜索: 搜索人工智能最新发展
+2025-10-04 15:05:03,726 - primp - INFO - response: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 302
+2025-10-04 15:05:03,726 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 15:05:03,726 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 15:05:03,726 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 15:05:03,726 - src.agent.lam_agent - INFO - 程序化搜索完成，获得 3 个结果
+2025-10-04 15:05:03,793 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:05:19,154 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:11:24,131 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 15:11:24,132 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:11:24,132 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索影视飓风，播放第一个视频...
+2025-10-04 15:11:25,811 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:11:27,308 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:11:27,308 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:11:27,308 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 15:11:27,308 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 15:11:27,308 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:11:27,308 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 15:11:27,308 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 15:11:27,317 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 15:11:27,317 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:11:29,318 - src.tools.step_executor - INFO - 执行步骤 2/3: 在bilibili.com中搜索: 影视飓风
+2025-10-04 15:11:29,984 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=影视飓风
+2025-10-04 15:11:31,712 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:11:33,713 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:11:33,922 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:11:35,922 - src.tools.step_executor - INFO - 执行步骤 3/3: 在bilibili.com中播放: 播放第一个视频
+2025-10-04 15:11:36,538 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 15:11:37,328 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:11:39,329 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type
+2025-10-04 15:11:39,417 - src.tools.browser - INFO - 等待: selector=video, state=visible
+2025-10-04 15:11:39,433 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 15:11:42,698 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 15:11:42,699 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 15:11:42,699 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 15:11:42,699 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:11:42,884 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:11:50,297 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:11:50,297 - src.tools.nl_parser - INFO - 开始解析指令: 先打开淘宝，搜索iPhone 15，查看第一个商品，然后加入购物车
+2025-10-04 15:11:50,297 - src.tools.nl_parser - WARNING - 无法识别操作类型: 加入购物车
+2025-10-04 15:11:50,297 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:11:50,297 - src.agent.lam_agent - INFO - 处理用户查询: 先打开淘宝，搜索iPhone 15，查看第一个商品，然后加入购物车...
+2025-10-04 15:11:50,363 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:11:51,989 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:11:51,990 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:11:51,990 - src.tools.executor - INFO - 开始执行步骤化指令: 先打开淘宝，搜索iPhone 15，查看第一个商品，然后加入购物车
+2025-10-04 15:11:51,990 - src.tools.nl_parser - INFO - 开始解析指令: 先打开淘宝，搜索iPhone 15，查看第一个商品，然后加入购物车
+2025-10-04 15:11:51,990 - src.tools.nl_parser - WARNING - 无法识别操作类型: 加入购物车
+2025-10-04 15:11:51,990 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:11:51,990 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 15:11:51,990 - src.tools.step_executor - INFO - 执行步骤 1/3: 在taobao.com中打开: 先
+2025-10-04 15:11:52,108 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:11:54,108 - src.tools.step_executor - INFO - 执行步骤 2/3: 搜索: iPhone 15
+2025-10-04 15:11:54,120 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=iPhone+15
+2025-10-04 15:11:54,120 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:11:56,120 - src.tools.step_executor - INFO - 执行步骤 3/3: 查看: 商品
+2025-10-04 15:11:56,128 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E5%95%86%E5%93%81
+2025-10-04 15:11:56,128 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 15:11:56,128 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 15:11:56,128 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 15:11:56,128 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:11:56,193 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:12:06,973 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:12:06,973 - src.tools.nl_parser - INFO - 开始解析指令: 进入YouTube搜索Python教程，然后去B站搜索机器学习视频，最后在京东查看电脑配件
+2025-10-04 15:12:06,974 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:12:06,974 - src.agent.lam_agent - INFO - 处理用户查询: 进入YouTube搜索Python教程，然后去B站搜索机器学习视频，最后在京东查看电脑配件...
+2025-10-04 15:12:07,043 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:12:08,506 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:12:08,506 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:12:08,506 - src.tools.executor - INFO - 开始执行步骤化指令: 进入YouTube搜索Python教程，然后去B站搜索机器学习视频，最后在京东查看电脑配件
+2025-10-04 15:12:08,506 - src.tools.nl_parser - INFO - 开始解析指令: 进入YouTube搜索Python教程，然后去B站搜索机器学习视频，最后在京东查看电脑配件
+2025-10-04 15:12:08,506 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:12:08,506 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 15:12:08,506 - src.tools.step_executor - INFO - 执行步骤 1/3: 在bilibili.com中搜索: YouTubePython教程
+2025-10-04 15:12:09,158 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=YouTubePython教程
+2025-10-04 15:12:10,660 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:12:12,661 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:12:12,876 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:12:14,876 - src.tools.step_executor - INFO - 执行步骤 2/3: 在bilibili.com中搜索: 去B站机器学习
+2025-10-04 15:12:15,496 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=去B站机器学习
+2025-10-04 15:12:17,126 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:12:19,127 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:12:19,332 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:12:21,333 - src.tools.step_executor - INFO - 执行步骤 3/3: 在jd.com中查看: 在电脑配件
+2025-10-04 15:12:21,348 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 15:12:21,348 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 15:12:21,348 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 15:12:21,348 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:12:21,536 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:12:30,061 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:12:30,061 - src.tools.nl_parser - INFO - 开始解析指令: 打开百度搜索今天天气，然后搜索最新新闻
+2025-10-04 15:12:30,061 - src.tools.nl_parser - INFO - 解析完成，共2个操作步骤
+2025-10-04 15:12:30,061 - src.agent.lam_agent - INFO - 处理用户查询: 打开百度搜索今天天气，然后搜索最新新闻...
+2025-10-04 15:12:30,133 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:12:31,887 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:12:31,887 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:12:31,887 - src.tools.executor - INFO - 开始执行步骤化指令: 打开百度搜索今天天气，然后搜索最新新闻
+2025-10-04 15:12:31,887 - src.tools.nl_parser - INFO - 开始解析指令: 打开百度搜索今天天气，然后搜索最新新闻
+2025-10-04 15:12:31,887 - src.tools.nl_parser - INFO - 解析完成，共2个操作步骤
+2025-10-04 15:12:31,887 - src.tools.step_executor - INFO - 开始执行2个操作步骤
+2025-10-04 15:12:31,887 - src.tools.step_executor - INFO - 执行步骤 1/2: 在baidu.com中打开: 今天天气
+2025-10-04 15:12:31,903 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:12:33,903 - src.tools.step_executor - INFO - 执行步骤 2/2: 搜索: 最新新闻
+2025-10-04 15:12:33,911 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%9C%80%E6%96%B0%E6%96%B0%E9%97%BB
+2025-10-04 15:12:33,912 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:12:33,912 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败0步
+2025-10-04 15:12:33,912 - src.tools.executor - INFO - 步骤化指令执行成功: 2/2 步骤完成
+2025-10-04 15:12:33,912 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:12:33,975 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:12:42,934 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:12:42,935 - src.tools.nl_parser - INFO - 开始解析指令: 首先在B站搜索科技视频并播放，接着去淘宝搜索电脑配件，最后在京东查看手机并加入购物车
+2025-10-04 15:12:42,935 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:12:42,935 - src.agent.lam_agent - INFO - 处理用户查询: 首先在B站搜索科技视频并播放，接着去淘宝搜索电脑配件，最后在京东查看手机并加入购物车...
+2025-10-04 15:12:43,112 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:12:44,675 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:12:44,676 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:12:44,676 - src.tools.executor - INFO - 开始执行步骤化指令: 首先在B站搜索科技视频并播放，接着去淘宝搜索电脑配件，最后在京东查看手机并加入购物车
+2025-10-04 15:12:44,676 - src.tools.nl_parser - INFO - 开始解析指令: 首先在B站搜索科技视频并播放，接着去淘宝搜索电脑配件，最后在京东查看手机并加入购物车
+2025-10-04 15:12:44,676 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:12:44,676 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 15:12:44,676 - src.tools.step_executor - INFO - 执行步骤 1/3: 在bilibili.com中搜索: 首先在B站科技并
+2025-10-04 15:12:45,326 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=首先在B站科技并
+2025-10-04 15:12:46,754 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:12:48,755 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:12:48,955 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:12:50,955 - src.tools.step_executor - INFO - 执行步骤 2/3: 在taobao.com中搜索: 去电脑配件
+2025-10-04 15:12:51,573 - src.tools.browser - INFO - 打开页面: https://www.taobao.com
+2025-10-04 15:12:53,184 - src.tools.browser - INFO - 暂停: 1000ms
+2025-10-04 15:12:54,184 - src.tools.browser - INFO - 点击: selector=input#q
+2025-10-04 15:12:54,307 - src.tools.browser - INFO - 输入: selector=input#q, text=去电脑配件
+2025-10-04 15:12:54,470 - src.tools.browser - INFO - 按键: selector=input#q, key=Enter
+2025-10-04 15:12:54,522 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], state=visible
+2025-10-04 15:12:54,821 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:12:56,822 - src.tools.step_executor - INFO - 执行步骤 3/3: 在jd.com中查看: 在手机并加入购物车
+2025-10-04 15:12:56,838 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 15:12:56,838 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 15:12:56,838 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 15:12:56,838 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:12:57,018 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:13:09,617 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:13:09,617 - src.tools.nl_parser - INFO - 开始解析指令: 早上先搜索天气预报，中午搜索美食推荐，晚上搜索电影推荐
+2025-10-04 15:13:09,617 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:13:09,617 - src.agent.lam_agent - INFO - 处理用户查询: 早上先搜索天气预报，中午搜索美食推荐，晚上搜索电影推荐...
+2025-10-04 15:13:09,679 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:13:11,075 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:13:11,075 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:13:11,075 - src.tools.executor - INFO - 开始执行步骤化指令: 早上先搜索天气预报，中午搜索美食推荐，晚上搜索电影推荐
+2025-10-04 15:13:11,075 - src.tools.nl_parser - INFO - 开始解析指令: 早上先搜索天气预报，中午搜索美食推荐，晚上搜索电影推荐
+2025-10-04 15:13:11,075 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:13:11,075 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 15:13:11,075 - src.tools.step_executor - INFO - 执行步骤 1/3: 搜索: 早上先天气预报
+2025-10-04 15:13:11,083 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%97%A9%E4%B8%8A%E5%85%88%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5
+2025-10-04 15:13:11,083 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:13:13,084 - src.tools.step_executor - INFO - 执行步骤 2/3: 搜索: 中午美食推荐
+2025-10-04 15:13:13,092 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E4%B8%AD%E5%8D%88%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90
+2025-10-04 15:13:13,092 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:13:15,093 - src.tools.step_executor - INFO - 执行步骤 3/3: 搜索: 晚上电影推荐
+2025-10-04 15:13:15,100 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%99%9A%E4%B8%8A%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90
+2025-10-04 15:13:15,100 - src.tools.step_executor - INFO - 步骤 3 执行成功
+2025-10-04 15:13:15,100 - src.tools.step_executor - INFO - 执行完成: 成功3步，失败0步
+2025-10-04 15:13:15,100 - src.tools.executor - INFO - 步骤化指令执行成功: 3/3 步骤完成
+2025-10-04 15:13:15,101 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:13:15,166 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:13:30,446 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:13:30,446 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索Python教程，播放第一个视频
+2025-10-04 15:13:30,446 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:13:30,446 - src.tools.nl_parser - INFO - 开始解析指令: 进入淘宝，搜索手机，查看详情，加入购物车
+2025-10-04 15:13:30,446 - src.tools.nl_parser - WARNING - 无法识别操作类型: 加入购物车
+2025-10-04 15:13:30,446 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:13:30,446 - src.tools.nl_parser - INFO - 开始解析指令: 打开YouTube，搜索音乐，播放视频
+2025-10-04 15:13:30,446 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:13:30,446 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索影视飓风，播放第一个视频
+2025-10-04 15:13:30,447 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:13:30,447 - src.tools.nl_parser - INFO - 开始解析指令: 先进入淘宝，然后搜索iPhone，接着查看商品，最后加入购物车
+2025-10-04 15:13:30,447 - src.tools.nl_parser - WARNING - 无法识别操作类型: 加入购物车
+2025-10-04 15:13:30,447 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:13:30,447 - src.tools.nl_parser - INFO - 开始解析指令: 搜索Python教程
+2025-10-04 15:13:30,447 - src.tools.nl_parser - INFO - 解析完成，共1个操作步骤
+2025-10-04 15:13:30,447 - src.tools.nl_parser - INFO - 开始解析指令: 打开YouTube，搜索音乐，播放视频，然后搜索电影
+2025-10-04 15:13:30,447 - src.tools.nl_parser - INFO - 解析完成，共4个操作步骤
+2025-10-04 15:13:30,447 - src.agent.lam_agent - INFO - 处理用户查询: 搜索人工智能最新发展...
+2025-10-04 15:13:30,512 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:13:31,875 - src.agent.lam_agent - INFO - 执行计划: search
+2025-10-04 15:13:31,883 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95
+2025-10-04 15:13:31,883 - src.agent.lam_agent - INFO - 浏览器搜索完成: 已在Edge浏览器中搜索: 搜索人工智能最新发展
+2025-10-04 15:13:31,883 - src.tools.search - INFO - 开始搜索: 搜索人工智能最新发展
+2025-10-04 15:13:32,211 - primp - INFO - response: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 302
+2025-10-04 15:13:32,211 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 15:13:32,211 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 15:13:32,211 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 15:13:32,211 - src.agent.lam_agent - INFO - 程序化搜索完成，获得 3 个结果
+2025-10-04 15:13:32,274 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:13:46,755 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:13:46,755 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索科技视频...
+2025-10-04 15:13:46,822 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:13:48,229 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:13:48,230 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:13:48,230 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索科技视频
+2025-10-04 15:13:48,230 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索科技视频
+2025-10-04 15:13:48,230 - src.tools.nl_parser - INFO - 解析完成，共2个操作步骤
+2025-10-04 15:13:48,230 - src.tools.step_executor - INFO - 开始执行2个操作步骤
+2025-10-04 15:13:48,230 - src.tools.step_executor - INFO - 执行步骤 1/2: 打开: B站
+2025-10-04 15:13:48,247 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 15:13:48,247 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:13:50,248 - src.tools.step_executor - INFO - 执行步骤 2/2: 在bilibili.com中搜索: 科技
+2025-10-04 15:13:50,902 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=科技
+2025-10-04 15:13:52,450 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:13:54,450 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:13:54,661 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:13:54,661 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败0步
+2025-10-04 15:13:54,661 - src.tools.executor - INFO - 步骤化指令执行成功: 2/2 步骤完成
+2025-10-04 15:13:54,661 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:13:54,836 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:14:05,285 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:14:05,285 - src.agent.lam_agent - INFO - 处理用户查询: 进入淘宝，搜索手机...
+2025-10-04 15:14:05,353 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:14:06,742 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate
+2025-10-04 15:14:06,742 - src.tools.executor - INFO - 执行操作: nl_automate
+2025-10-04 15:14:06,751 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E8%BF%9B%E5%85%A5%E6%B7%98%E5%AE%9D%EF%BC%8C%E6%90%9C%E7%B4%A2%E6%89%8B%E6%9C%BA
+2025-10-04 15:14:06,751 - src.tools.executor - INFO - 已同时打开搜索引擎: 已在Edge浏览器中搜索: 进入淘宝，搜索手机
+2025-10-04 15:14:07,494 - src.tools.browser - INFO - 打开页面: https://www.taobao.com
+2025-10-04 15:14:09,199 - src.tools.browser - INFO - 暂停: 600ms
+2025-10-04 15:14:09,800 - src.tools.browser - INFO - 点击: selector=input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input
+2025-10-04 15:14:30,096 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input")
+
+2025-10-04 15:14:30,096 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate
+2025-10-04 15:14:30,341 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:14:45,571 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:14:45,571 - src.agent.lam_agent - INFO - 处理用户查询: 打开百度，搜索天气...
+2025-10-04 15:14:45,631 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:14:47,013 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate
+2025-10-04 15:14:47,013 - src.tools.executor - INFO - 执行操作: nl_automate
+2025-10-04 15:14:47,021 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%89%93%E5%BC%80%E7%99%BE%E5%BA%A6%EF%BC%8C%E6%90%9C%E7%B4%A2%E5%A4%A9%E6%B0%94
+2025-10-04 15:14:47,022 - src.tools.executor - INFO - 已同时打开搜索引擎: 已在Edge浏览器中搜索: 打开百度，搜索天气
+2025-10-04 15:14:47,810 - src.tools.browser - INFO - 打开页面: https://www.google.com
+2025-10-04 15:14:57,505 - src.tools.browser - INFO - 暂停: 600ms
+2025-10-04 15:14:58,106 - src.tools.browser - INFO - 点击: selector=input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input
+2025-10-04 15:15:18,269 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input")
+
+2025-10-04 15:15:18,269 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate
+2025-10-04 15:15:18,472 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:15:32,196 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:21:52,535 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索Python教程，播放第一个视频
+2025-10-04 15:21:52,536 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:21:52,536 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索Python教程，播放第一个视频...
+2025-10-04 15:21:55,199 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:21:56,845 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:21:56,846 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:21:56,846 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索Python教程，播放第一个视频
+2025-10-04 15:21:56,846 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索Python教程，播放第一个视频
+2025-10-04 15:21:56,846 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:21:56,846 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 15:21:56,846 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 15:21:56,856 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 15:21:56,856 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:21:58,857 - src.tools.step_executor - INFO - 执行步骤 2/3: 在bilibili.com中搜索: Python教程
+2025-10-04 15:22:02,355 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=Python教程
+2025-10-04 15:22:03,933 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:22:05,934 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:22:06,124 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:22:08,125 - src.tools.step_executor - INFO - 执行步骤 3/3: 在bilibili.com中播放: 播放第一个视频
+2025-10-04 15:22:08,741 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 15:22:09,518 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:22:11,523 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type
+2025-10-04 15:22:11,609 - src.tools.browser - INFO - 等待: selector=video, state=visible
+2025-10-04 15:22:31,840 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video") to be visible
+    44 × locator resolved to 2 elements. Proceeding with the first one: <video loop="" width="0" height="0" playsinline="" src="blob:https://www.bilibili.com/9d15367d-dd2c-4b10-952a-e7589437e1bf"></video>
+
+2025-10-04 15:22:31,840 - src.tools.step_executor - ERROR - 步骤 3 执行失败: 未知错误
+2025-10-04 15:22:31,840 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败1步
+2025-10-04 15:22:31,840 - src.tools.executor - INFO - 步骤化指令执行成功: 2/3 步骤完成
+2025-10-04 15:22:31,840 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:22:32,009 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:22:42,381 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:22:42,381 - src.tools.nl_parser - INFO - 开始解析指令: 进入淘宝，搜索iPhone 15
+2025-10-04 15:22:42,381 - src.tools.nl_parser - INFO - 解析完成，共2个操作步骤
+2025-10-04 15:22:42,381 - src.agent.lam_agent - INFO - 处理用户查询: 进入淘宝，搜索iPhone 15...
+2025-10-04 15:22:42,443 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:22:44,355 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate
+2025-10-04 15:22:44,355 - src.tools.executor - INFO - 执行操作: nl_automate
+2025-10-04 15:22:44,364 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E8%BF%9B%E5%85%A5%E6%B7%98%E5%AE%9D%EF%BC%8C%E6%90%9C%E7%B4%A2iPhone+15
+2025-10-04 15:22:44,364 - src.tools.executor - INFO - 已同时打开搜索引擎: 已在Edge浏览器中搜索: 进入淘宝，搜索iPhone 15
+2025-10-04 15:22:45,085 - src.tools.browser - INFO - 打开页面: https://www.taobao.com
+2025-10-04 15:22:46,996 - src.tools.browser - INFO - 暂停: 600ms
+2025-10-04 15:22:47,596 - src.tools.browser - INFO - 点击: selector=input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input
+2025-10-04 15:23:07,924 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input")
+
+2025-10-04 15:23:07,925 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate
+2025-10-04 15:23:08,092 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:23:18,041 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:23:18,042 - src.tools.nl_parser - INFO - 开始解析指令: 打开京东，搜索电脑配件
+2025-10-04 15:23:18,042 - src.tools.nl_parser - INFO - 解析完成，共2个操作步骤
+2025-10-04 15:23:18,042 - src.agent.lam_agent - INFO - 处理用户查询: 打开京东，搜索电脑配件...
+2025-10-04 15:23:18,111 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:23:20,459 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate
+2025-10-04 15:23:20,459 - src.tools.executor - INFO - 执行操作: nl_automate
+2025-10-04 15:23:20,467 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%89%93%E5%BC%80%E4%BA%AC%E4%B8%9C%EF%BC%8C%E6%90%9C%E7%B4%A2%E7%94%B5%E8%84%91%E9%85%8D%E4%BB%B6
+2025-10-04 15:23:20,467 - src.tools.executor - INFO - 已同时打开搜索引擎: 已在Edge浏览器中搜索: 打开京东，搜索电脑配件
+2025-10-04 15:23:21,217 - src.tools.browser - INFO - 打开页面: https://www.jd.com
+2025-10-04 15:23:24,765 - src.tools.browser - INFO - 暂停: 600ms
+2025-10-04 15:23:25,365 - src.tools.browser - INFO - 点击: selector=input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input
+2025-10-04 15:23:45,610 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input")
+
+2025-10-04 15:23:45,610 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate
+2025-10-04 15:23:45,779 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:23:58,291 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:23:58,291 - src.tools.nl_parser - INFO - 开始解析指令: 打开百度，搜索今天天气
+2025-10-04 15:23:58,291 - src.tools.nl_parser - INFO - 解析完成，共2个操作步骤
+2025-10-04 15:23:58,291 - src.agent.lam_agent - INFO - 处理用户查询: 打开百度，搜索今天天气...
+2025-10-04 15:23:58,369 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:24:00,063 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:24:00,064 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:24:00,064 - src.tools.executor - INFO - 开始执行步骤化指令: 打开百度，搜索今天天气
+2025-10-04 15:24:00,064 - src.tools.nl_parser - INFO - 开始解析指令: 打开百度，搜索今天天气
+2025-10-04 15:24:00,064 - src.tools.nl_parser - INFO - 解析完成，共2个操作步骤
+2025-10-04 15:24:00,064 - src.tools.step_executor - INFO - 开始执行2个操作步骤
+2025-10-04 15:24:00,064 - src.tools.step_executor - INFO - 执行步骤 1/2: 在baidu.com中打开: 打开百度
+2025-10-04 15:24:00,183 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:24:02,183 - src.tools.step_executor - INFO - 执行步骤 2/2: 搜索: 今天天气
+2025-10-04 15:24:02,193 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94
+2025-10-04 15:24:02,193 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:24:02,193 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败0步
+2025-10-04 15:24:02,193 - src.tools.executor - INFO - 步骤化指令执行成功: 2/2 步骤完成
+2025-10-04 15:24:02,193 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:24:02,259 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:24:08,460 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:24:09,109 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 15:24:09,969 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:24:11,969 - src.tools.browser - INFO - 点击: selector=input[type=search], input#search, input[name=q], input[placeholder*='搜索'], input[placeholder*='search']
+2025-10-04 15:24:32,172 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[type=search], input#search, input[name=q], input[placeholder*='搜索'], input[placeholder*='search']")
+
+2025-10-04 15:24:32,827 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 15:24:33,604 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:24:35,604 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type
+2025-10-04 15:24:35,680 - src.tools.browser - INFO - 等待: selector=video, state=visible
+2025-10-04 15:24:55,894 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video") to be visible
+    44 × locator resolved to 2 elements. Proceeding with the first one: <video loop="" width="0" height="0" playsinline="" src="blob:https://www.bilibili.com/bf65905d-c9e2-4f92-8d9d-e95d43ac3773"></video>
+
+2025-10-04 15:28:53,727 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索Python教程，播放第一个视频...
+2025-10-04 15:28:55,408 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:28:57,034 - src.agent.lam_agent - INFO - 执行计划: execute:nl_step_execute
+2025-10-04 15:28:57,035 - src.tools.executor - INFO - 执行操作: nl_step_execute
+2025-10-04 15:28:57,035 - src.tools.executor - INFO - 开始执行步骤化指令: 打开B站，搜索Python教程，播放第一个视频
+2025-10-04 15:28:57,035 - src.tools.nl_parser - INFO - 开始解析指令: 打开B站，搜索Python教程，播放第一个视频
+2025-10-04 15:28:57,035 - src.tools.nl_parser - INFO - 解析完成，共3个操作步骤
+2025-10-04 15:28:57,035 - src.tools.step_executor - INFO - 开始执行3个操作步骤
+2025-10-04 15:28:57,035 - src.tools.step_executor - INFO - 执行步骤 1/3: 打开: B站
+2025-10-04 15:28:57,043 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=B%E7%AB%99
+2025-10-04 15:28:57,043 - src.tools.step_executor - INFO - 步骤 1 执行成功
+2025-10-04 15:28:59,044 - src.tools.step_executor - INFO - 执行步骤 2/3: 在bilibili.com中搜索: Python教程
+2025-10-04 15:28:59,675 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=Python教程
+2025-10-04 15:29:01,247 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:29:03,248 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, .bili-video-card, state=visible
+2025-10-04 15:29:03,443 - src.tools.step_executor - INFO - 步骤 2 执行成功
+2025-10-04 15:29:05,443 - src.tools.step_executor - INFO - 执行步骤 3/3: 在bilibili.com中播放: 播放第一个视频
+2025-10-04 15:29:06,096 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com
+2025-10-04 15:29:07,082 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 15:29:09,083 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type
+2025-10-04 15:29:09,170 - src.tools.browser - INFO - 等待: selector=.bpx-player-container, .bpx-player-video-wrap, .video-container, state=visible
+2025-10-04 15:29:29,407 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator(".bpx-player-container, .bpx-player-video-wrap, .video-container") to be visible
+
+2025-10-04 15:29:29,407 - src.tools.step_executor - ERROR - 步骤 3 执行失败: 未知错误
+2025-10-04 15:29:29,407 - src.tools.step_executor - INFO - 执行完成: 成功2步，失败1步
+2025-10-04 15:29:29,407 - src.tools.executor - INFO - 步骤化指令执行成功: 2/3 步骤完成
+2025-10-04 15:29:29,407 - src.agent.lam_agent - INFO - 操作执行完成: nl_step_execute
+2025-10-04 15:29:29,579 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:29:41,182 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 15:29:41,182 - src.agent.lam_agent - INFO - 处理用户查询: 进入淘宝，搜索iPhone 15...
+2025-10-04 15:29:41,241 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:29:43,208 - src.agent.lam_agent - INFO - 执行计划: execute:nl_automate
+2025-10-04 15:29:43,208 - src.tools.executor - INFO - 执行操作: nl_automate
+2025-10-04 15:29:43,217 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E8%BF%9B%E5%85%A5%E6%B7%98%E5%AE%9D%EF%BC%8C%E6%90%9C%E7%B4%A2iPhone+15
+2025-10-04 15:29:43,217 - src.tools.executor - INFO - 已同时打开搜索引擎: 已在Edge浏览器中搜索: 进入淘宝，搜索iPhone 15
+2025-10-04 15:29:43,985 - src.tools.browser - INFO - 打开页面: https://www.taobao.com
+2025-10-04 15:29:45,106 - src.tools.browser - INFO - 暂停: 600ms
+2025-10-04 15:29:45,707 - src.tools.browser - INFO - 点击: selector=input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input
+2025-10-04 15:30:06,001 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[type=search], input#nav-searchform input, input[name=search_query], input#search, input[aria-label='Search'], input.s-input")
+
+2025-10-04 15:30:06,001 - src.agent.lam_agent - INFO - 操作执行完成: nl_automate
+2025-10-04 15:30:06,169 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 15:30:16,202 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:28:53,967 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索Python教程，播放第一个视频...
+2025-10-04 16:28:55,692 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:29:07,826 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '打开B站，搜索Python教程，播放第一个视频'}
+2025-10-04 16:29:07,835 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%89%93%E5%BC%80B%E7%AB%99%EF%BC%8C%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91
+2025-10-04 16:29:07,835 - src.tools.search - INFO - 开始搜索: 打开B站，搜索Python教程，播放第一个视频
+2025-10-04 16:29:08,058 - primp - INFO - response: https://www.bing.com/search?q=%E6%89%93%E5%BC%80B%E7%AB%99%EF%BC%8C%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 302
+2025-10-04 16:29:08,058 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%89%93%E5%BC%80B%E7%AB%99%EF%BC%8C%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 return None. params={'q': '打开B站，搜索Python教程，播放第一个视频'} content=None data=None
+2025-10-04 16:29:08,058 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%89%93%E5%BC%80B%E7%AB%99%EF%BC%8C%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 return None. params={'q': '打开B站，搜索Python教程，播放第一个视频'} content=None data=None
+2025-10-04 16:29:08,059 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 16:29:08,059 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:29:08,123 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:29:10,283 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:29:10,284 - src.agent.lam_agent - INFO - 处理用户查询: 在淘宝搜索iPhone 15...
+2025-10-04 16:29:10,356 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:29:19,382 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '在淘宝搜索iPhone 15'}
+2025-10-04 16:29:19,401 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E5%9C%A8%E6%B7%98%E5%AE%9D%E6%90%9C%E7%B4%A2iPhone+15
+2025-10-04 16:29:19,401 - src.tools.search - INFO - 开始搜索: 在淘宝搜索iPhone 15
+2025-10-04 16:29:19,642 - primp - INFO - response: https://www.bing.com/search?q=%E5%9C%A8%E6%B7%98%E5%AE%9D%E6%90%9C%E7%B4%A2iPhone+15 302
+2025-10-04 16:29:19,642 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E5%9C%A8%E6%B7%98%E5%AE%9D%E6%90%9C%E7%B4%A2iPhone+15 return None. params={'q': '在淘宝搜索iPhone 15'} content=None data=None
+2025-10-04 16:29:19,642 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E5%9C%A8%E6%B7%98%E5%AE%9D%E6%90%9C%E7%B4%A2iPhone+15 return None. params={'q': '在淘宝搜索iPhone 15'} content=None data=None
+2025-10-04 16:29:19,642 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 16:29:19,642 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:29:19,719 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:29:26,446 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:29:26,447 - src.agent.lam_agent - INFO - 处理用户查询: 搜索人工智能最新发展...
+2025-10-04 16:29:26,562 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:29:35,406 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '搜索人工智能最新发展'}
+2025-10-04 16:29:35,414 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95
+2025-10-04 16:29:35,414 - src.tools.search - INFO - 开始搜索: 搜索人工智能最新发展
+2025-10-04 16:29:35,688 - primp - INFO - response: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 302
+2025-10-04 16:29:35,689 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 16:29:35,689 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 16:29:35,689 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 16:29:35,689 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:29:35,773 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:29:42,907 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:29:42,908 - src.agent.lam_agent - INFO - 处理用户查询: 打开京东，搜索电脑配件...
+2025-10-04 16:29:42,995 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:29:51,235 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'jd.com', 'steps': [{'action': 'navigate', 'url': 'https://www.jd.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': '#key'}, {'action': 'type', 'selector': '#key', 'text': '电脑配件'}, {'action': 'press', 'selector': '#key', 'key': 'Enter'}, {'action': 'wait', 'selector': '.gl-item', 'state': 'visible'}, {'action': 'screenshot'}], 'context': '用户需要在京东商城搜索电脑配件商品，包括但不限于CPU、内存、硬盘、显卡等组件。操作将打开京东首页，在搜索框输入关键词并展示搜索结果页面。'}
+2025-10-04 16:29:51,933 - src.tools.browser - INFO - 打开页面: https://jd.com
+2025-10-04 16:29:56,909 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 16:29:56,909 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 16:29:59,909 - src.tools.browser - INFO - 点击: selector=#key
+2025-10-04 16:30:00,052 - src.tools.browser - INFO - 输入: selector=#key, text=电脑配件
+2025-10-04 16:30:00,186 - src.tools.browser - INFO - 按键: selector=#key, key=Enter
+2025-10-04 16:30:00,195 - src.tools.browser - INFO - 等待: selector=.gl-item, state=visible
+2025-10-04 16:30:20,409 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator(".gl-item") to be visible
+    - waiting for" https://search.jd.com/Search?keyword=%E7%94%B5%E8%84%91%E9%85%8D%E4%BB%B6&enc=utf-8&pvid=eab7d257e77340ae9aa5c554d1696915" navigation to finish...
+    - navigated to "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3D%25E7%2594%25B5%25E8%2584%2591%25E9%2585%258D%25E4%25BB%25B6%26enc%3Dutf-8%26pvid%…"
+
+2025-10-04 16:30:20,409 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:30:20,600 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:30:23,105 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:30:23,106 - src.agent.lam_agent - INFO - 处理用户查询: 在百度搜索今天天气...
+2025-10-04 16:30:23,188 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:30:31,084 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '在百度搜索今天天气'}
+2025-10-04 16:30:31,091 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E5%9C%A8%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94
+2025-10-04 16:30:31,092 - src.tools.search - INFO - 开始搜索: 在百度搜索今天天气
+2025-10-04 16:30:31,394 - primp - INFO - response: https://www.bing.com/search?q=%E5%9C%A8%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94 302
+2025-10-04 16:30:31,394 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E5%9C%A8%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94 return None. params={'q': '在百度搜索今天天气'} content=None data=None
+2025-10-04 16:30:31,394 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E5%9C%A8%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94 return None. params={'q': '在百度搜索今天天气'} content=None data=None
+2025-10-04 16:30:31,395 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 16:30:31,395 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:30:31,470 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:30:33,694 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:30:33,856 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:30:44,633 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:30:54,458 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:37:51,086 - src.agent.lam_agent - INFO - 处理用户查询: 打开B站，搜索Python教程，播放第一个视频...
+2025-10-04 16:37:52,904 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:38:07,371 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '打开B站，搜索Python教程，播放第一个视频'}
+2025-10-04 16:38:07,371 - src.agent.lam_agent - INFO - 执行计划: search - browser - 0步骤
+2025-10-04 16:38:07,380 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%89%93%E5%BC%80B%E7%AB%99%EF%BC%8C%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91
+2025-10-04 16:38:07,380 - src.tools.search - INFO - 开始搜索: 打开B站，搜索Python教程，播放第一个视频
+2025-10-04 16:38:07,650 - primp - INFO - response: https://www.bing.com/search?q=%E6%89%93%E5%BC%80B%E7%AB%99%EF%BC%8C%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 302
+2025-10-04 16:38:07,651 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%89%93%E5%BC%80B%E7%AB%99%EF%BC%8C%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 return None. params={'q': '打开B站，搜索Python教程，播放第一个视频'} content=None data=None
+2025-10-04 16:38:07,651 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%89%93%E5%BC%80B%E7%AB%99%EF%BC%8C%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 return None. params={'q': '打开B站，搜索Python教程，播放第一个视频'} content=None data=None
+2025-10-04 16:38:07,651 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 16:38:07,652 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:38:07,716 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:38:10,355 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:38:10,356 - src.agent.lam_agent - INFO - 处理用户查询: 在淘宝搜索iPhone 15...
+2025-10-04 16:38:10,431 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:38:20,898 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'taobao.com', 'steps': [{'action': 'navigate', 'url': 'https://www.taobao.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input#q, input[placeholder*='搜索'], input[placeholder*='搜宝贝']"}, {'action': 'type', 'selector': "input#q, input[placeholder*='搜索'], input[placeholder*='搜宝贝']", 'text': 'iPhone 15'}, {'action': 'press', 'selector': "input#q, input[placeholder*='搜索'], input[placeholder*='搜宝贝']", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/item'], .item, .J_ClickStat", 'state': 'visible', 'timeout': 5000}], 'context': '在淘宝搜索iPhone 15商品'}
+2025-10-04 16:38:20,898 - src.agent.lam_agent - INFO - 执行计划: automate - taobao.com - 6步骤
+2025-10-04 16:38:20,898 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 16:38:21,589 - src.tools.browser - INFO - 打开页面: https://taobao.com
+2025-10-04 16:38:23,597 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 16:38:23,597 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 16:38:26,598 - src.tools.browser - INFO - 点击: selector=input#q, input[placeholder*='搜索'], input[placeholder*='搜宝贝']
+2025-10-04 16:38:26,983 - src.tools.browser - INFO - 输入: selector=input#q, input[placeholder*='搜索'], input[placeholder*='搜宝贝'], text=iPhone 15
+2025-10-04 16:38:27,249 - src.tools.browser - INFO - 按键: selector=input#q, input[placeholder*='搜索'], input[placeholder*='搜宝贝'], key=Enter
+2025-10-04 16:38:27,320 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], .item, .J_ClickStat, state=visible
+2025-10-04 16:38:27,639 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:38:27,791 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:38:29,811 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:38:29,811 - src.agent.lam_agent - INFO - 处理用户查询: 打开京东，搜索电脑配件...
+2025-10-04 16:38:29,877 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:38:39,465 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'jd.com', 'steps': [{'action': 'navigate', 'url': 'https://www.jd.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input#key, input[placeholder*='搜索']"}, {'action': 'type', 'selector': "input#key, input[placeholder*='搜索']", 'text': '电脑配件'}, {'action': 'press', 'selector': "input#key, input[placeholder*='搜索']", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/item'], .gl-item", 'state': 'visible'}], 'context': '在京东网站搜索电脑配件商品'}
+2025-10-04 16:38:39,465 - src.agent.lam_agent - INFO - 执行计划: automate - jd.com - 6步骤
+2025-10-04 16:38:39,465 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 16:38:40,106 - src.tools.browser - INFO - 打开页面: https://jd.com
+2025-10-04 16:38:49,144 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 16:38:49,144 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 16:38:52,145 - src.tools.browser - INFO - 点击: selector=input#key, input[placeholder*='搜索']
+2025-10-04 16:38:52,287 - src.tools.browser - INFO - 输入: selector=input#key, input[placeholder*='搜索'], text=电脑配件
+2025-10-04 16:38:52,410 - src.tools.browser - INFO - 按键: selector=input#key, input[placeholder*='搜索'], key=Enter
+2025-10-04 16:38:52,419 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], .gl-item, state=visible
+2025-10-04 16:39:12,633 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("a[href*='/item'], .gl-item") to be visible
+    - waiting for" https://search.jd.com/Search?keyword=%E7%94%B5%E8%84%91%E9%85%8D%E4%BB%B6&enc=utf-8&pvid=e60ba4d80ee64ac881842e2622933baa" navigation to finish...
+    - navigated to "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3D%25E7%2594%25B5%25E8%2584%2591%25E9%2585%258D%25E4%25BB%25B6%26enc%3Dutf-8%26pvid%…"
+    - waiting for" https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3D%25E7%2594%25B5%25E8%2584%2591%25E9%2585%258D%25E4%25BB%25B6%26enc%3Dutf-8%26pvid%3De60ba4d80ee64ac88…" navigation to finish...
+    - navigated to "https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3D%25E7%2594%25B5%25E8%2584%2591%25E9%2585%258D%25E4%25BB%25B6%26enc%3Dutf-8%26pvid%3De60ba4d80ee64ac88…"
+    - waiting for" https://qq.jd.com/new/wx/login.aspx?ReturnUrl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3D%25E7%2594%25B5%25E8%2584%2591%25E9%2585%258D%25E4%25BB%25B6%26enc%3Dutf-8%26pvid%3De60ba4d80ee64ac88184…" navigation to finish...
+    - navigated to "https://open.weixin.qq.com/connect/qrconnect?appid=wx827225356b689e24&state=985D2FF3CEDB88CE8948142090881BAC9E2C0E1D0CBE049B5EF02110A2F97BD7FD4EA35FCF69B408C7639804204A2EB5&redirect_uri=https%3A%2F%2…"
+
+2025-10-04 16:39:12,633 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:39:12,780 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:39:15,198 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:39:15,199 - src.agent.lam_agent - INFO - 处理用户查询: 在百度搜索今天天气...
+2025-10-04 16:39:15,268 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:39:23,827 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'baidu.com', 'steps': [{'action': 'navigate', 'url': 'https://www.baidu.com'}, {'action': 'sleep', 'ms': 2000}, {'action': 'click', 'selector': "input#kw, input[name='wd'], input[placeholder*='搜索']"}, {'action': 'type', 'selector': "input#kw, input[name='wd'], input[placeholder*='搜索']", 'text': '今天天气'}, {'action': 'press', 'selector': "input#kw, input[name='wd'], input[placeholder*='搜索']", 'key': 'Enter'}, {'action': 'wait', 'selector': '#content_left, .result, .weather-info', 'state': 'visible'}], 'context': '在百度搜索今天天气信息'}
+2025-10-04 16:39:23,827 - src.agent.lam_agent - INFO - 执行计划: automate - baidu.com - 6步骤
+2025-10-04 16:39:23,827 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 16:39:24,450 - src.tools.browser - INFO - 打开页面: https://baidu.com
+2025-10-04 16:39:32,682 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 16:39:32,682 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 16:39:34,683 - src.tools.browser - INFO - 点击: selector=input#kw, input[name='wd'], input[placeholder*='搜索']
+2025-10-04 16:39:54,894 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input#kw, input[name='wd'], input[placeholder*='搜索']")
+    - locator resolved to <input id="kw" value="" name="wd" class="s_ipt" maxlength="255" autocomplete="off" placeholder="向鹏险胜雨果晋级大满贯4强"/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    38 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+2025-10-04 16:39:54,894 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:39:55,062 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:39:57,692 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:39:57,692 - src.agent.lam_agent - INFO - 处理用户查询: 搜索人工智能最新发展...
+2025-10-04 16:39:57,765 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:40:00,733 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '搜索人工智能最新发展'}
+2025-10-04 16:40:00,733 - src.agent.lam_agent - INFO - 执行计划: search - browser - 0步骤
+2025-10-04 16:40:00,744 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95
+2025-10-04 16:40:00,744 - src.tools.search - INFO - 开始搜索: 搜索人工智能最新发展
+2025-10-04 16:40:01,016 - primp - INFO - response: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 302
+2025-10-04 16:40:01,016 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 16:40:01,016 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 16:40:01,016 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 16:40:01,017 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 16:40:01,080 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:40:03,428 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 16:40:03,545 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:40:16,394 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:40:25,075 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:40:34,792 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:40:43,718 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:44:21,826 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:44:35,701 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:44:46,869 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:59:29,764 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:59:40,396 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 16:59:54,554 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:16:46,324 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:16:52,464 - src.tools.browser - INFO - 打开页面: https://www.baidu.com
+2025-10-04 17:16:53,640 - src.tools.browser - INFO - 暂停: 1000ms
+2025-10-04 17:16:54,640 - src.tools.browser - INFO - 执行脚本 evaluate
+2025-10-04 17:16:54,710 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%B5%8B%E8%AF%95%E6%90%9C%E7%B4%A2
+2025-10-04 17:16:54,710 - src.tools.search - INFO - 开始搜索: 测试搜索
+2025-10-04 17:16:54,977 - primp - INFO - response: https://www.bing.com/search?q=%E6%B5%8B%E8%AF%95%E6%90%9C%E7%B4%A2 302
+2025-10-04 17:16:54,977 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%B5%8B%E8%AF%95%E6%90%9C%E7%B4%A2 return None. params={'q': '测试搜索'} content=None data=None
+2025-10-04 17:16:54,977 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%B5%8B%E8%AF%95%E6%90%9C%E7%B4%A2 return None. params={'q': '测试搜索'} content=None data=None
+2025-10-04 17:16:54,977 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 17:16:55,145 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:17:03,997 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:17:17,116 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:19:02,339 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:50:48,413 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:50:59,712 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:51:08,497 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:51:17,455 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:51:27,717 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:55:41,266 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索影视飓风，播放第一个视频...
+2025-10-04 17:55:42,956 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:55:57,123 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://www.bilibili.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword"}, {'action': 'type', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword", 'text': '影视飓风'}, {'action': 'press', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item, .bili-video-card", 'state': 'visible'}, {'action': 'sleep', 'ms': 2000}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .video-item:first-of-type a, .bili-video-card:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container, .bilibili-player-video', 'state': 'visible'}], 'context': "在B站搜索'影视飓风'并播放第一个视频"}
+2025-10-04 17:55:57,123 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 9步骤
+2025-10-04 17:55:57,123 - src.agent.lam_agent - INFO - 执行自动化步骤: 9个步骤
+2025-10-04 17:55:57,806 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 17:55:58,659 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 17:55:58,659 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 17:56:01,659 - src.tools.browser - INFO - 点击: selector=input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword
+2025-10-04 17:56:21,859 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword")
+
+2025-10-04 17:56:21,860 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 17:56:22,011 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 17:56:23,966 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:06:21,622 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:06:34,897 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:06:44,330 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:06:54,161 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:07:03,836 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:07:06,542 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索影视飓风，播放第一个视频...
+2025-10-04 18:07:06,778 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:07:20,219 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://www.bilibili.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword"}, {'action': 'type', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword", 'text': '影视飓风'}, {'action': 'press', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item, .bili-video-card", 'state': 'visible'}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .video-item:first-of-type a, .bili-video-card:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container, .bilibili-player-video', 'state': 'visible'}, {'action': 'sleep', 'ms': 5000}], 'context': "在B站搜索'影视飓风'并播放第一个视频"}
+2025-10-04 18:07:20,219 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 9步骤
+2025-10-04 18:07:20,219 - src.agent.lam_agent - INFO - 执行自动化步骤: 9个步骤
+2025-10-04 18:07:20,852 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 18:07:21,693 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:07:21,693 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 18:07:24,694 - src.tools.browser - INFO - 点击: selector=input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword
+2025-10-04 18:07:44,898 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder*='搜索'], input#nav-searchform input, .nav-search-keyword")
+
+2025-10-04 18:07:44,898 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:07:45,082 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:07:47,604 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:10:00,347 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:10:11,319 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:10:20,346 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:10:28,558 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:10:39,113 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:10:42,085 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-04 18:10:42,144 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:10:55,714 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://www.bilibili.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']"}, {'action': 'type', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']", 'text': 'Python教程'}, {'action': 'press', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item, .bili-video-card", 'state': 'visible'}, {'action': 'sleep', 'ms': 2000}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .bili-video-card:first-of-type a, .video-item:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container, .bilibili-player-video', 'state': 'visible'}], 'context': '在B站搜索Python教程并播放第一个视频'}
+2025-10-04 18:10:55,714 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 9步骤
+2025-10-04 18:10:55,715 - src.agent.lam_agent - INFO - 执行自动化步骤: 9个步骤
+2025-10-04 18:10:56,335 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 18:10:57,401 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:10:57,401 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 18:11:00,402 - src.tools.browser - INFO - 点击: selector=input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']
+2025-10-04 18:11:20,628 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']")
+
+2025-10-04 18:11:20,628 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:11:20,777 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:11:22,547 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:11:22,547 - src.agent.lam_agent - INFO - 处理用户查询: 在百度搜索今天天气...
+2025-10-04 18:11:22,616 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:11:31,344 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'baidu.com', 'steps': [{'action': 'navigate', 'url': 'https://www.baidu.com'}, {'action': 'sleep', 'ms': 2000}, {'action': 'click', 'selector': "input#kw, input[name='wd'], input[placeholder*='搜索']"}, {'action': 'type', 'selector': "input#kw, input[name='wd'], input[placeholder*='搜索']", 'text': '今天天气'}, {'action': 'press', 'selector': "input#kw, input[name='wd'], input[placeholder*='搜索']", 'key': 'Enter'}, {'action': 'wait', 'selector': '#content_left, .result, .weather-info', 'state': 'visible'}], 'context': '在百度搜索今天天气信息'}
+2025-10-04 18:11:31,344 - src.agent.lam_agent - INFO - 执行计划: automate - baidu.com - 6步骤
+2025-10-04 18:11:31,344 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 18:11:31,971 - src.tools.browser - INFO - 打开页面: https://baidu.com
+2025-10-04 18:11:34,396 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:11:34,396 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 18:11:36,396 - src.tools.browser - INFO - 点击: selector=input#kw, input[name='wd'], input[placeholder*='搜索']
+2025-10-04 18:11:56,595 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input#kw, input[name='wd'], input[placeholder*='搜索']")
+    - locator resolved to <input id="kw" value="" name="wd" class="s_ipt" maxlength="255" autocomplete="off" placeholder="WTT中国大满贯冠军奖杯多重"/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    38 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+2025-10-04 18:11:56,595 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:11:56,756 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:11:58,700 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:11:58,700 - src.agent.lam_agent - INFO - 处理用户查询: 在京东搜索iPhone 15...
+2025-10-04 18:11:58,778 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:12:07,132 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'jd.com', 'steps': [{'action': 'navigate', 'url': 'https://www.jd.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input#key, input[placeholder*='搜索']"}, {'action': 'type', 'selector': "input#key, input[placeholder*='搜索']", 'text': 'iPhone 15'}, {'action': 'press', 'selector': "input#key, input[placeholder*='搜索']", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/item'], .gl-item", 'state': 'visible'}], 'context': '在京东搜索iPhone 15产品'}
+2025-10-04 18:12:07,132 - src.agent.lam_agent - INFO - 执行计划: automate - jd.com - 6步骤
+2025-10-04 18:12:07,132 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 18:12:07,749 - src.tools.browser - INFO - 打开页面: https://jd.com
+2025-10-04 18:12:13,507 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:12:13,507 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 18:12:16,508 - src.tools.browser - INFO - 点击: selector=input#key, input[placeholder*='搜索']
+2025-10-04 18:12:16,653 - src.tools.browser - INFO - 输入: selector=input#key, input[placeholder*='搜索'], text=iPhone 15
+2025-10-04 18:12:16,947 - src.tools.browser - INFO - 按键: selector=input#key, input[placeholder*='搜索'], key=Enter
+2025-10-04 18:12:16,956 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], .gl-item, state=visible
+2025-10-04 18:12:37,166 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("a[href*='/item'], .gl-item") to be visible
+    - waiting for" https://search.jd.com/Search?keyword=iPhone%2015&enc=utf-8&pvid=862ffdbe089b4b3596386533a78d5f0b" navigation to finish...
+    - navigated to "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3DiPhone%252015%26enc%3Dutf-8%26pvid%3D862ffdbe089b4b3596386533a78d5f0b&evtype=3&rpi…"
+    - waiting for" https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3DiPhone%252015%26enc%3Dutf-8%26pvid%3D862ffdbe089b4b3596386533a78d5f0b&czLogin=1" navigation to finish...
+    - navigated to "https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3DiPhone%252015%26enc%3Dutf-8%26pvid%3D862ffdbe089b4b3596386533a78d5f0b&czLogin=1"
+
+2025-10-04 18:12:37,167 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:12:37,324 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:12:39,727 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:12:39,727 - src.agent.lam_agent - INFO - 处理用户查询: 在淘宝搜索笔记本电脑...
+2025-10-04 18:12:39,789 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:12:49,425 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'taobao.com', 'steps': [{'action': 'navigate', 'url': 'https://www.taobao.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input#q, input[placeholder*='搜索'], .search-combobox-input"}, {'action': 'type', 'selector': "input#q, input[placeholder*='搜索'], .search-combobox-input", 'text': '笔记本电脑'}, {'action': 'press', 'selector': "input#q, input[placeholder*='搜索'], .search-combobox-input", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/item'], .item, .J_ClickStat", 'state': 'visible', 'timeout': 5000}], 'context': '在淘宝搜索笔记本电脑商品'}
+2025-10-04 18:12:49,425 - src.agent.lam_agent - INFO - 执行计划: automate - taobao.com - 6步骤
+2025-10-04 18:12:49,425 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 18:12:50,053 - src.tools.browser - INFO - 打开页面: https://taobao.com
+2025-10-04 18:12:51,854 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:12:51,855 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 18:12:54,855 - src.tools.browser - INFO - 点击: selector=input#q, input[placeholder*='搜索'], .search-combobox-input
+2025-10-04 18:12:55,193 - src.tools.browser - INFO - 输入: selector=input#q, input[placeholder*='搜索'], .search-combobox-input, text=笔记本电脑
+2025-10-04 18:12:55,350 - src.tools.browser - INFO - 按键: selector=input#q, input[placeholder*='搜索'], .search-combobox-input, key=Enter
+2025-10-04 18:12:55,411 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], .item, .J_ClickStat, state=visible
+2025-10-04 18:12:55,703 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:12:55,928 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:12:57,924 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:14:38,682 - src.agent.lam_agent - INFO - 处理用户查询: 搜索人工智能最新发展...
+2025-10-04 18:14:40,425 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:14:42,911 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '搜索人工智能最新发展'}
+2025-10-04 18:14:42,912 - src.agent.lam_agent - INFO - 执行计划: search - browser - 0步骤
+2025-10-04 18:14:42,925 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95
+2025-10-04 18:14:42,925 - src.tools.search - INFO - 开始搜索: 搜索人工智能最新发展
+2025-10-04 18:14:43,155 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 18:14:43,155 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E5%8F%91%E5%B1%95 return None. params={'q': '搜索人工智能最新发展'} content=None data=None
+2025-10-04 18:14:43,155 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-04 18:14:43,155 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:14:43,221 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:14:45,928 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:14:45,928 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程...
+2025-10-04 18:14:45,994 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:14:55,405 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://www.bilibili.com'}, {'action': 'sleep', 'ms': 2000}, {'action': 'click', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']"}, {'action': 'type', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']", 'text': 'Python教程'}, {'action': 'press', 'selector': "input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item", 'state': 'visible'}], 'context': '在B站搜索Python教程'}
+2025-10-04 18:14:55,406 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 6步骤
+2025-10-04 18:14:55,406 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 18:14:56,086 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 18:14:57,145 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:14:57,145 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 18:14:59,145 - src.tools.browser - INFO - 点击: selector=input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']
+2025-10-04 18:15:19,360 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder*='搜索'], input#nav-searchform input, .search-input input, input[type='search']")
+
+2025-10-04 18:15:19,360 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:15:19,521 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:15:21,475 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:15:21,475 - src.agent.lam_agent - INFO - 处理用户查询: 在百度搜索今天天气...
+2025-10-04 18:15:21,539 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:15:31,089 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'baidu.com', 'steps': [{'action': 'navigate', 'url': 'https://www.baidu.com'}, {'action': 'sleep', 'ms': 2000}, {'action': 'click', 'selector': "input#kw, input[placeholder*='搜索'], input[name='wd']"}, {'action': 'type', 'selector': "input#kw, input[placeholder*='搜索'], input[name='wd']", 'text': '今天天气'}, {'action': 'press', 'selector': "input#kw, input[placeholder*='搜索'], input[name='wd']", 'key': 'Enter'}, {'action': 'wait', 'selector': ".weather_info, .op_weather4_twoicon, [class*='weather'], .result", 'state': 'visible'}], 'context': '在百度搜索今天天气信息'}
+2025-10-04 18:15:31,089 - src.agent.lam_agent - INFO - 执行计划: automate - baidu.com - 6步骤
+2025-10-04 18:15:31,090 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 18:15:31,716 - src.tools.browser - INFO - 打开页面: https://baidu.com
+2025-10-04 18:15:32,976 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:15:32,976 - src.tools.browser - INFO - 暂停: 2000ms
+2025-10-04 18:15:34,976 - src.tools.browser - INFO - 点击: selector=input#kw, input[placeholder*='搜索'], input[name='wd']
+2025-10-04 18:15:55,188 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("input#kw, input[placeholder*='搜索'], input[name='wd']")
+    - locator resolved to <input id="kw" value="" name="wd" class="s_ipt" maxlength="255" autocomplete="off" placeholder="铜仁一景区竹筏发生侧翻事故"/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    38 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+2025-10-04 18:15:55,188 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:15:55,362 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:15:57,390 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:15:57,390 - src.agent.lam_agent - INFO - 处理用户查询: 在京东搜索iPhone 15...
+2025-10-04 18:15:57,463 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:16:05,669 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'jd.com', 'steps': [{'action': 'navigate', 'url': 'https://www.jd.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input#key, input[placeholder*='搜索']"}, {'action': 'type', 'selector': "input#key, input[placeholder*='搜索']", 'text': 'iPhone 15'}, {'action': 'press', 'selector': "input#key, input[placeholder*='搜索']", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/item'], .gl-item", 'state': 'visible'}], 'context': '在京东搜索iPhone 15产品'}
+2025-10-04 18:16:05,669 - src.agent.lam_agent - INFO - 执行计划: automate - jd.com - 6步骤
+2025-10-04 18:16:05,669 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 18:16:06,309 - src.tools.browser - INFO - 打开页面: https://jd.com
+2025-10-04 18:16:17,261 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:16:17,261 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 18:16:20,262 - src.tools.browser - INFO - 点击: selector=input#key, input[placeholder*='搜索']
+2025-10-04 18:16:20,537 - src.tools.browser - INFO - 输入: selector=input#key, input[placeholder*='搜索'], text=iPhone 15
+2025-10-04 18:16:20,844 - src.tools.browser - INFO - 按键: selector=input#key, input[placeholder*='搜索'], key=Enter
+2025-10-04 18:16:20,853 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], .gl-item, state=visible
+2025-10-04 18:16:41,083 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("a[href*='/item'], .gl-item") to be visible
+    - waiting for" https://search.jd.com/Search?keyword=iPhone%2015&enc=utf-8&pvid=520b39036bf8444daa48db730b0cfbd4" navigation to finish...
+    - navigated to "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3DiPhone%252015%26enc%3Dutf-8%26pvid%3D520b39036bf8444daa48db730b0cfbd4&evtype=3&rpi…"
+    - waiting for" https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3DiPhone%252015%26enc%3Dutf-8%26pvid%3D520b39036bf8444daa48db730b0cfbd4&czLogin=1" navigation to finish...
+    - navigated to "https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3DiPhone%252015%26enc%3Dutf-8%26pvid%3D520b39036bf8444daa48db730b0cfbd4&czLogin=1"
+    - waiting for" https://sso.jd.hk/sso/sync/redirect?t=1759572998024&pin=jd_omZZRoVwXvlj&c=3573710c42668d1fc9eb0d2cb9e5ae20bc6c877203aae8d4b8cfc37662584fbc12bcb2ea186192de01200872599c3ba209ac7d257d0b32749e79498362af5…" navigation to finish...
+
+2025-10-04 18:16:41,083 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:16:41,261 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:16:44,105 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:16:44,105 - src.agent.lam_agent - INFO - 处理用户查询: 在淘宝搜索笔记本电脑...
+2025-10-04 18:16:44,180 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:16:53,632 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'taobao.com', 'steps': [{'action': 'navigate', 'url': 'https://www.taobao.com'}, {'action': 'sleep', 'ms': 3000}, {'action': 'click', 'selector': "input#q, input[placeholder*='搜索'], .search-combobox-input"}, {'action': 'type', 'selector': "input#q, input[placeholder*='搜索'], .search-combobox-input", 'text': '笔记本电脑'}, {'action': 'press', 'selector': "input#q, input[placeholder*='搜索'], .search-combobox-input", 'key': 'Enter'}, {'action': 'wait', 'selector': "a[href*='/item'], .item, .J_ClickStat", 'state': 'visible', 'timeout': 5000}], 'context': '在淘宝搜索笔记本电脑商品'}
+2025-10-04 18:16:53,632 - src.agent.lam_agent - INFO - 执行计划: automate - taobao.com - 6步骤
+2025-10-04 18:16:53,632 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 18:16:54,291 - src.tools.browser - INFO - 打开页面: https://taobao.com
+2025-10-04 18:16:56,324 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:16:56,324 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 18:16:59,325 - src.tools.browser - INFO - 点击: selector=input#q, input[placeholder*='搜索'], .search-combobox-input
+2025-10-04 18:16:59,658 - src.tools.browser - INFO - 输入: selector=input#q, input[placeholder*='搜索'], .search-combobox-input, text=笔记本电脑
+2025-10-04 18:16:59,824 - src.tools.browser - INFO - 按键: selector=input#q, input[placeholder*='搜索'], .search-combobox-input, key=Enter
+2025-10-04 18:16:59,875 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], .item, .J_ClickStat, state=visible
+2025-10-04 18:17:00,204 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:17:00,382 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:17:02,460 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:21:04,666 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-04 18:21:06,362 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:21:14,382 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=Python教程'}, {'action': 'wait', 'selector': ".video-item a, a[href*='/video/']", 'state': 'visible', 'timeout': 10000}, {'action': 'click', 'selector': ".video-item a:first-of-type, a[href*='/video/']:first-of-type"}, {'action': 'wait', 'selector': '.bpx-player-video-wrap, video, .bpx-player-container', 'state': 'visible', 'timeout': 10000}], 'context': '在B站搜索Python教程并播放第一个视频'}
+2025-10-04 18:21:14,382 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 4步骤
+2025-10-04 18:21:14,382 - src.agent.lam_agent - INFO - 执行自动化步骤: 4个步骤
+2025-10-04 18:21:15,050 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 18:21:16,221 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:21:16,221 - src.tools.browser - INFO - 等待: selector=.video-item a, a[href*='/video/'], state=visible
+2025-10-04 18:21:16,618 - src.tools.browser - INFO - 点击: selector=.video-item a:first-of-type, a[href*='/video/']:first-of-type
+2025-10-04 18:21:16,947 - src.tools.browser - INFO - 等待: selector=.bpx-player-video-wrap, video, .bpx-player-container, state=visible
+2025-10-04 18:21:17,257 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:21:17,355 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:21:20,203 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:21:20,203 - src.agent.lam_agent - INFO - 处理用户查询: 在百度搜索今天天气...
+2025-10-04 18:21:20,266 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:21:25,537 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'baidu.com', 'steps': [{'action': 'navigate', 'url': 'https://www.baidu.com/s?wd=今天天气'}, {'action': 'wait', 'selector': '#content_left, .result', 'state': 'visible'}], 'context': '在百度搜索今天天气'}
+2025-10-04 18:21:25,538 - src.agent.lam_agent - INFO - 执行计划: automate - baidu.com - 2步骤
+2025-10-04 18:21:25,538 - src.agent.lam_agent - INFO - 执行自动化步骤: 2个步骤
+2025-10-04 18:21:26,192 - src.tools.browser - INFO - 打开页面: https://baidu.com
+2025-10-04 18:21:27,729 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:21:27,729 - src.tools.browser - INFO - 等待: selector=#content_left, .result, state=visible
+2025-10-04 18:21:47,915 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("#content_left, .result") to be visible
+
+2025-10-04 18:21:47,915 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:21:48,085 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:21:50,060 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:21:50,061 - src.agent.lam_agent - INFO - 处理用户查询: 在京东搜索iPhone 15...
+2025-10-04 18:21:50,298 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:21:55,096 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'jd.com', 'steps': [{'action': 'navigate', 'url': 'https://search.jd.com/Search?keyword=iPhone 15'}, {'action': 'wait', 'selector': "a[href*='/item'], .gl-item", 'state': 'visible'}], 'context': '在京东搜索iPhone 15'}
+2025-10-04 18:21:55,096 - src.agent.lam_agent - INFO - 执行计划: automate - jd.com - 2步骤
+2025-10-04 18:21:55,096 - src.agent.lam_agent - INFO - 执行自动化步骤: 2个步骤
+2025-10-04 18:21:55,705 - src.tools.browser - INFO - 打开页面: https://jd.com
+2025-10-04 18:21:58,578 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:21:58,578 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], .gl-item, state=visible
+2025-10-04 18:22:18,786 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("a[href*='/item'], .gl-item") to be visible
+
+2025-10-04 18:22:18,787 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:22:18,942 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:22:21,473 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:22:21,473 - src.agent.lam_agent - INFO - 处理用户查询: 在淘宝搜索笔记本电脑...
+2025-10-04 18:22:21,537 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:22:26,118 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'taobao.com', 'steps': [{'action': 'navigate', 'url': 'https://s.taobao.com/search?q=笔记本电脑'}, {'action': 'wait', 'selector': "a[href*='/item'], .item", 'state': 'visible'}], 'context': '在淘宝搜索笔记本电脑'}
+2025-10-04 18:22:26,118 - src.agent.lam_agent - INFO - 执行计划: automate - taobao.com - 2步骤
+2025-10-04 18:22:26,118 - src.agent.lam_agent - INFO - 执行自动化步骤: 2个步骤
+2025-10-04 18:22:26,735 - src.tools.browser - INFO - 打开页面: https://taobao.com
+2025-10-04 18:22:28,554 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:22:28,554 - src.tools.browser - INFO - 等待: selector=a[href*='/item'], .item, state=visible
+2025-10-04 18:22:28,833 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:22:28,897 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:22:31,752 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:22:31,752 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索影视飓风，播放第一个视频...
+2025-10-04 18:22:31,833 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:22:40,787 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=影视飓风'}, {'action': 'wait', 'selector': ".video-item a, a[href*='/video/']", 'state': 'visible', 'timeout': 10000}, {'action': 'click', 'selector': ".video-item a:first-of-type, a[href*='/video/']:first-of-type"}, {'action': 'wait', 'selector': '.bpx-player-video-wrap, video, .bpx-player-container', 'state': 'visible', 'timeout': 10000}], 'context': "在B站搜索'影视飓风'并播放第一个视频"}
+2025-10-04 18:22:40,787 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 4步骤
+2025-10-04 18:22:40,787 - src.agent.lam_agent - INFO - 执行自动化步骤: 4个步骤
+2025-10-04 18:22:41,408 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 18:22:42,393 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:22:42,393 - src.tools.browser - INFO - 等待: selector=.video-item a, a[href*='/video/'], state=visible
+2025-10-04 18:22:42,672 - src.tools.browser - INFO - 点击: selector=.video-item a:first-of-type, a[href*='/video/']:first-of-type
+2025-10-04 18:22:43,070 - src.tools.browser - INFO - 等待: selector=.bpx-player-video-wrap, video, .bpx-player-container, state=visible
+2025-10-04 18:23:03,278 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator(".bpx-player-video-wrap, video, .bpx-player-container") to be visible
+    44 × locator resolved to 2 elements. Proceeding with the first one: <video loop="" width="0" height="0" playsinline="" src="blob:https://www.bilibili.com/360d444e-e2c0-4568-833f-5970d22a2261"></video>
+
+2025-10-04 18:23:03,278 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:23:03,440 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:23:05,656 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:27:02,335 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-04 18:27:04,007 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:27:12,943 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=Python教程'}, {'action': 'wait', 'selector': ".video-item a, a[href*='/video/']", 'state': 'visible', 'timeout': 10000}, {'action': 'click', 'selector': ".video-item a:first-of-type, a[href*='/video/']:first-of-type"}, {'action': 'wait', 'selector': 'video, .bpx-player-container, .bilibili-player', 'state': 'visible', 'timeout': 10000}, {'action': 'video_play'}, {'action': 'sleep', 'ms': 5000}], 'context': '在B站搜索Python教程并播放第一个视频'}
+2025-10-04 18:27:12,943 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 6步骤
+2025-10-04 18:27:12,943 - src.agent.lam_agent - INFO - 执行自动化步骤: 6个步骤
+2025-10-04 18:27:13,626 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 18:27:14,640 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-04 18:27:14,640 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:27:14,640 - src.tools.browser - INFO - 等待: selector=.video-item a, a[href*='/video/'], state=visible
+2025-10-04 18:27:14,923 - src.tools.browser - INFO - 点击: selector=.video-item a:first-of-type, a[href*='/video/']:first-of-type
+2025-10-04 18:27:15,369 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, .bilibili-player, state=visible
+2025-10-04 18:27:35,635 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container, .bilibili-player") to be visible
+    44 × locator resolved to 2 elements. Proceeding with the first one: <video loop="" width="0" height="0" playsinline="" src="blob:https://www.bilibili.com/229165c5-88a3-4870-a4ce-eebf9b6030f8"></video>
+
+2025-10-04 18:27:35,636 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:27:35,811 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:27:37,773 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:32:42,241 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索影视飓风，播放第一个视频...
+2025-10-04 18:32:44,591 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:32:56,280 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=影视飓风'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item", 'state': 'visible', 'timeout': 10000}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .video-item:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container, .bilibili-player-video', 'state': 'visible', 'timeout': 10000}, {'action': 'video_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_force_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_click_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_keyboard_play'}, {'action': 'sleep', 'ms': 5000}], 'context': "在B站搜索'影视飓风'并播放第一个视频"}
+2025-10-04 18:32:56,281 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 12步骤
+2025-10-04 18:32:56,282 - src.agent.lam_agent - INFO - 执行自动化步骤: 12个步骤
+2025-10-04 18:32:57,191 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-04 18:32:58,395 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-04 18:32:58,395 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-04 18:32:58,395 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, state=visible
+2025-10-04 18:32:59,155 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type, .video-item:first-of-type a
+2025-10-04 18:32:59,409 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, .bilibili-player-video, state=visible
+2025-10-04 18:33:19,854 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container, .bilibili-player-video") to be visible
+    43 × locator resolved to 2 elements. Proceeding with the first one: <video loop="" width="0" height="0" playsinline="" src="blob:https://www.bilibili.com/81b6b995-d1ca-478e-85bb-d91d4f6d1f27"></video>
+
+2025-10-04 18:33:19,854 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-04 18:33:20,045 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-04 18:33:22,402 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-04 18:33:23,389 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-04 18:33:24,750 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-04 18:33:24,750 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-04 18:33:45,026 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-04 18:33:45,812 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-04 18:33:47,015 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-04 18:33:47,016 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-04 18:34:07,335 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-04 18:34:08,182 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-04 18:34:09,421 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-04 18:34:09,421 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-04 18:34:25,361 - src.tools.browser - INFO - 点击播放按钮
+2025-10-04 18:34:25,367 - src.tools.browser - INFO - 点击播放按钮完成
+2025-10-04 18:34:25,367 - src.tools.browser - INFO - 暂停: 3000ms
+2025-10-04 18:34:29,615 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-04 18:34:30,819 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-04 18:34:30,819 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-04 18:34:51,175 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:02:47,637 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-05 14:02:50,966 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:03:02,834 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '在B站搜索Python教程，播放第一个视频'}
+2025-10-05 14:03:02,835 - src.agent.lam_agent - INFO - 执行计划: search - browser - 0步骤
+2025-10-05 14:03:02,843 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E5%9C%A8B%E7%AB%99%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91
+2025-10-05 14:03:02,843 - src.tools.search - INFO - 开始搜索: 在B站搜索Python教程，播放第一个视频
+2025-10-05 14:03:03,081 - primp - INFO - response: https://www.bing.com/search?q=%E5%9C%A8B%E7%AB%99%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 302
+2025-10-05 14:03:03,081 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E5%9C%A8B%E7%AB%99%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 return None. params={'q': '在B站搜索Python教程，播放第一个视频'} content=None data=None
+2025-10-05 14:03:03,081 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E5%9C%A8B%E7%AB%99%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 return None. params={'q': '在B站搜索Python教程，播放第一个视频'} content=None data=None
+2025-10-05 14:03:03,081 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-05 14:03:03,081 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-05 14:03:03,139 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:03:06,453 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-05 14:03:07,104 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-05 14:03:08,150 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:03:08,150 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:03:28,360 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:03:28,998 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-05 14:03:30,022 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:03:30,022 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:03:50,234 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:03:50,870 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-05 14:03:51,831 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:03:51,831 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:04:12,020 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:04:12,597 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-05 14:04:13,552 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:04:13,552 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:04:33,749 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:04:42,203 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:04:53,996 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:04:58,970 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:05:05,465 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:05:10,921 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:05:58,739 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-05 14:06:00,378 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:06:12,073 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=Python教程'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item", 'state': 'visible', 'timeout': 5000}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .video-item:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container', 'state': 'visible', 'timeout': 5000}, {'action': 'video_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_force_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_click_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_keyboard_play'}, {'action': 'sleep', 'ms': 3000}], 'context': '在B站搜索Python教程并播放第一个视频'}
+2025-10-05 14:06:12,073 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 12步骤
+2025-10-05 14:06:12,073 - src.agent.lam_agent - INFO - 执行自动化步骤: 12个步骤
+2025-10-05 14:06:12,706 - src.tools.browser - INFO - 打开页面: https://bilibili.com
+2025-10-05 14:06:13,810 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:06:13,810 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-05 14:06:13,811 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, state=visible
+2025-10-05 14:06:13,880 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type, .video-item:first-of-type a
+2025-10-05 14:06:34,117 - src.tools.browser - ERROR - 自动化失败: Page.click: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("a[href*='/video/']:first-of-type, .video-item:first-of-type a")
+    - locator resolved to 24 elements. Proceeding with the first one: <a rel="noopener" target="_blank" data-loc-id="4694" data-v-051db7dd="" class="carousel-item" href="https://www.bilibili.com/video/BV1HmHPzpEgX" data-target-url="https://www.bilibili.com/video/BV1HmHPzpEgX">…</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <main class="bili-feed4-layout">…</main> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <main class="bili-feed4-layout">…</main> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    8 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <main class="bili-feed4-layout">…</main> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not stable
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 500ms
+    10 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - element is outside of the viewport
+     - retrying click action
+       - waiting 500ms
+
+2025-10-05 14:06:34,117 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-05 14:06:34,312 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:06:36,474 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-05 14:07:25,518 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-05 14:07:27,127 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:07:38,103 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=Python教程'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item", 'state': 'visible', 'timeout': 10000}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .video-item:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container', 'state': 'visible', 'timeout': 10000}, {'action': 'video_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_force_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_click_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_keyboard_play'}, {'action': 'sleep', 'ms': 3000}], 'context': '在B站搜索Python教程并播放第一个视频'}
+2025-10-05 14:07:38,103 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 12步骤
+2025-10-05 14:07:38,103 - src.agent.lam_agent - INFO - 执行自动化步骤: 12个步骤
+2025-10-05 14:07:38,676 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=Python教程
+2025-10-05 14:07:40,221 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:07:40,221 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-05 14:07:40,221 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, state=visible
+2025-10-05 14:07:40,574 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type, .video-item:first-of-type a
+2025-10-05 14:07:40,696 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:08:00,911 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:08:00,911 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-05 14:08:01,101 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:08:03,085 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-05 14:15:17,206 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-05 14:15:18,933 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:15:30,046 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=Python教程'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item", 'state': 'visible', 'timeout': 10000}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .video-item:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container', 'state': 'visible', 'timeout': 10000}, {'action': 'video_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_force_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_click_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_keyboard_play'}, {'action': 'sleep', 'ms': 3000}], 'context': '在B站搜索Python教程并播放第一个视频'}
+2025-10-05 14:15:30,046 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 12步骤
+2025-10-05 14:15:30,047 - src.agent.lam_agent - INFO - 执行自动化步骤: 12个步骤
+2025-10-05 14:15:30,658 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=Python教程
+2025-10-05 14:15:32,173 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:15:32,173 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-05 14:15:32,173 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, state=visible
+2025-10-05 14:15:32,402 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type, .video-item:first-of-type a
+2025-10-05 14:15:32,853 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:15:53,073 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:15:53,073 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-05 14:15:53,251 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:15:55,351 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-05 14:33:56,106 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:34:07,639 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:34:12,180 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:34:18,219 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:34:23,594 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:34:34,569 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-05 14:34:36,420 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:34:47,632 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '在B站搜索Python教程，播放第一个视频'}
+2025-10-05 14:34:47,632 - src.agent.lam_agent - INFO - 执行计划: search - browser - 0步骤
+2025-10-05 14:34:47,643 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E5%9C%A8B%E7%AB%99%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91
+2025-10-05 14:34:47,643 - src.tools.search - INFO - 开始搜索: 在B站搜索Python教程，播放第一个视频
+2025-10-05 14:34:48,005 - primp - INFO - response: https://www.bing.com/search?q=%E5%9C%A8B%E7%AB%99%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 302
+2025-10-05 14:34:48,006 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E5%9C%A8B%E7%AB%99%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 return None. params={'q': '在B站搜索Python教程，播放第一个视频'} content=None data=None
+2025-10-05 14:34:48,006 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E5%9C%A8B%E7%AB%99%E6%90%9C%E7%B4%A2Python%E6%95%99%E7%A8%8B%EF%BC%8C%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91 return None. params={'q': '在B站搜索Python教程，播放第一个视频'} content=None data=None
+2025-10-05 14:34:48,006 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-05 14:34:48,006 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-05 14:34:48,071 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:34:51,947 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-05 14:35:21,547 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-05 14:35:24,432 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:35:35,708 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=Python教程'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item", 'state': 'visible', 'timeout': 10000}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .video-item:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container', 'state': 'visible', 'timeout': 10000}, {'action': 'video_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_force_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_click_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_keyboard_play'}, {'action': 'sleep', 'ms': 3000}], 'context': '在B站搜索Python教程并播放第一个视频'}
+2025-10-05 14:35:35,710 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 12步骤
+2025-10-05 14:35:35,710 - src.agent.lam_agent - INFO - 执行自动化步骤: 12个步骤
+2025-10-05 14:35:36,370 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=Python教程
+2025-10-05 14:35:38,071 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:35:38,071 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-05 14:35:38,071 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, state=visible
+2025-10-05 14:35:38,473 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type, .video-item:first-of-type a
+2025-10-05 14:35:38,664 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:35:58,928 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:35:58,928 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-05 14:35:59,118 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:36:01,247 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-05 14:37:38,199 - src.agent.lam_agent - INFO - 处理用户查询: 在B站搜索Python教程，播放第一个视频...
+2025-10-05 14:37:39,962 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:37:51,768 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'automate', 'target_platform': 'bilibili.com', 'steps': [{'action': 'navigate', 'url': 'https://search.bilibili.com/all?keyword=Python教程'}, {'action': 'wait', 'selector': "a[href*='/video/'], .video-item", 'state': 'visible', 'timeout': 10000}, {'action': 'click', 'selector': "a[href*='/video/']:first-of-type, .video-item:first-of-type a"}, {'action': 'wait', 'selector': 'video, .bpx-player-container', 'state': 'visible', 'timeout': 10000}, {'action': 'video_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_force_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_click_play'}, {'action': 'sleep', 'ms': 2000}, {'action': 'video_keyboard_play'}, {'action': 'sleep', 'ms': 3000}], 'context': '在B站搜索Python教程并播放第一个视频'}
+2025-10-05 14:37:51,768 - src.agent.lam_agent - INFO - 执行计划: automate - bilibili.com - 12步骤
+2025-10-05 14:37:51,768 - src.agent.lam_agent - INFO - 执行自动化步骤: 12个步骤
+2025-10-05 14:37:52,381 - src.tools.browser - INFO - 打开页面: https://search.bilibili.com/all?keyword=Python教程
+2025-10-05 14:37:53,984 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:37:53,984 - src.tools.browser - INFO - 未知动作: navigate
+2025-10-05 14:37:53,984 - src.tools.browser - INFO - 等待: selector=a[href*='/video/'], .video-item, state=visible
+2025-10-05 14:37:54,409 - src.tools.browser - INFO - 点击: selector=a[href*='/video/']:first-of-type, .video-item:first-of-type a
+2025-10-05 14:37:54,499 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:38:14,713 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:38:14,713 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-05 14:38:14,877 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 14:38:16,967 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-05 14:38:17,594 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-05 14:38:18,660 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:38:18,661 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:38:38,831 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:38:39,491 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-05 14:38:40,735 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:38:40,735 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:39:00,947 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:39:01,603 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-05 14:39:02,734 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:39:02,734 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:39:22,934 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
+2025-10-05 14:39:23,604 - src.tools.browser - INFO - 打开页面: https://www.bilibili.com/video/BV1GJ411x7h7
+2025-10-05 14:39:24,643 - src.tools.browser - INFO - 已注入HTML5播放器支持脚本
+2025-10-05 14:39:24,644 - src.tools.browser - INFO - 等待: selector=video, .bpx-player-container, state=visible
+2025-10-05 14:39:44,839 - src.tools.browser - ERROR - 自动化失败: Page.wait_for_selector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator("video, .bpx-player-container") to be visible
+
