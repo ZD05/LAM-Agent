@@ -220,6 +220,110 @@ def open_up_homepage(up_name: str = "影视飓风", *, timeout_ms: int = 45000, 
     return search_up_and_open(up_name, timeout_ms=timeout_ms, keep_open_ms=keep_open_ms)
 
 
+def open_up_homepage_by_direct_url(up_name: str = "影视飓风", *, timeout_ms: int = 45000, keep_open_ms: int | None = 60000) -> Dict[str, Any]:
+    """通过直接URL访问UP主页（需要先获取UP的MID或空间链接）"""
+    up_name = _normalize_text(up_name)
+    
+    # 先搜索获取UP的空间链接，然后直接访问
+    search_result = search_up_and_open(up_name, timeout_ms=timeout_ms, keep_open_ms=None)
+    
+    if not search_result.get('success'):
+        return search_result
+    
+    current_url = search_result.get('current_url', '')
+    
+    # 如果已经在正确的UP主页，直接返回
+    if 'space.bilibili.com' in current_url and up_name in search_result.get('logs', []):
+        return search_result
+    
+    # 否则尝试从当前页面提取UP的空间链接并直接访问
+    steps = [
+        {"action": "sleep", "ms": 2000},
+        # 尝试在当前页面找到UP的空间链接
+        {"action": "wait_any", "selectors": [
+            f"a[href*='space.bilibili.com']:has-text('{up_name}')",
+            f".bili-video-card__info--owner:has-text('{up_name}') a[href*='space.bilibili.com']",
+            f"a.user-name[href*='space.bilibili.com']:has-text('{up_name}')",
+        ], "timeout": 10000, "optional": True},
+        {"action": "sleep", "ms": 500},
+        {"action": "click_any", "selectors": [
+            f"a[href*='space.bilibili.com']:has-text('{up_name}')",
+            f".bili-video-card__info--owner:has-text('{up_name}') a[href*='space.bilibili.com']",
+            f"a.user-name[href*='space.bilibili.com']:has-text('{up_name}')",
+        ], "new_page": True, "optional": True},
+        {"action": "sleep", "ms": 2000},
+        # 验证到达正确的UP主页
+        {"action": "wait_url", "includes": "space.bilibili.com", "timeout": 15000},
+        {"action": "wait_any", "selectors": [
+            f"text={up_name}",
+            f".h-name:has-text('{up_name}')",
+            f".info:has-text('{up_name}')",
+        ], "timeout": 10000, "optional": True},
+        {"action": "sleep", "ms": 2000},
+    ]
+    
+    return automate_page(current_url, steps, headless=False, timeout_ms=timeout_ms, keep_open_ms=keep_open_ms)
+
+
+def open_up_homepage_by_known_mid(mid: str, up_name: str = "影视飓风", *, timeout_ms: int = 45000, keep_open_ms: int | None = 60000) -> Dict[str, Any]:
+    """通过已知的MID直接访问UP主页（最直接的方法）"""
+    up_name = _normalize_text(up_name)
+    direct_url = f"https://space.bilibili.com/{mid}"
+    
+    steps = [
+        {"action": "sleep", "ms": 2000},
+        # 验证到达正确的UP主页
+        {"action": "wait_url", "includes": f"/{mid}", "timeout": 15000},
+        {"action": "wait_any", "selectors": [
+            f"text={up_name}",
+            f".h-name:has-text('{up_name}')",
+            f".info:has-text('{up_name}')",
+            f"a:has-text('{up_name}')",
+        ], "timeout": 10000, "optional": True},
+        {"action": "sleep", "ms": 2000},
+    ]
+    
+    return automate_page(direct_url, steps, headless=False, timeout_ms=timeout_ms, keep_open_ms=keep_open_ms)
+
+
+def open_up_homepage_and_play_first_video_by_mid(mid: str, up_name: str = "影视飓风", *, timeout_ms: int = 45000, keep_open_ms: int | None = 60000) -> Dict[str, Any]:
+    """通过已知MID直接访问UP主页并播放第一个视频（通用方法）"""
+    up_name = _normalize_text(up_name)
+    direct_url = f"https://space.bilibili.com/{mid}"
+    
+    steps = [
+        {"action": "sleep", "ms": 2000},
+        # 验证到达正确的UP主页
+        {"action": "wait_url", "includes": f"/{mid}", "timeout": 15000},
+        {"action": "wait_any", "selectors": [
+            f"text={up_name}",
+            f".h-name:has-text('{up_name}')",
+            f".info:has-text('{up_name}')",
+            f"a:has-text('{up_name}')",
+        ], "timeout": 10000, "optional": True},
+        {"action": "sleep", "ms": 2000},
+        # 点击"视频"标签（如果存在）
+        {"action": "click_any", "selectors": UP_VIDEO_TAB_SELECTORS, "optional": True},
+        {"action": "sleep", "ms": 1200},
+        # 等待并点击第一个视频
+        {"action": "wait_any", "selectors": UP_FIRST_VIDEO_SELECTORS, "timeout": 20000},
+        {"action": "sleep", "ms": 800},
+        {"action": "click_any", "selectors": UP_FIRST_VIDEO_SELECTORS, "new_page": True},
+        {"action": "wait_url", "includes": "/video/", "timeout": 20000},
+        {"action": "sleep", "ms": 3000},
+        # 等待视频播放器准备就绪
+        {"action": "wait_video_ready", "timeout": 20000},
+        {"action": "sleep", "ms": 1500},
+        # 点击播放按钮
+        {"action": "video_click_play"},
+        {"action": "sleep", "ms": 2000},
+        {"action": "video_play"},
+        {"action": "sleep", "ms": 1200},
+    ]
+    
+    return automate_page(direct_url, steps, headless=False, timeout_ms=timeout_ms, keep_open_ms=keep_open_ms)
+
+
 def search_click_account_play_first(
     up_name: str = "影视飓风",
     *,

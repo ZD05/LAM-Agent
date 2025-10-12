@@ -10,6 +10,7 @@ from langchain_openai import ChatOpenAI
 from ..config import settings
 from ..tools.browser import automate_page
 from ..tools.search import open_search_in_browser, web_search
+from ..tools.desktop_integration import DesktopIntegration
 from ..utils.validators import sanitize_text, validate_query, validate_url
 
 def _setup_logging():
@@ -60,7 +61,8 @@ SYSTEM_PROMPT = (
     "7) 计算数学表达式\n"
     "8) 翻译文本\n"
     "9) 发送邮件\n"
-    "10) 安排任务\n\n"
+    "10) 安排任务\n"
+    "11) 桌面文件管理（扫描、搜索、启动桌面文件和快捷方式）\n\n"
     "重要：当用户提出需求时，你应该：\n"
     "1. 分析用户意图和上下文\n"
     "2. 制定详细的执行计划\n"
@@ -90,6 +92,9 @@ class LamAgent:
         self._run_lock = threading.Lock()
         self._last_sig = ""
         self._last_sig_ts = 0.0
+        
+        # 初始化桌面集成功能
+        self._desktop_integration = DesktopIntegration()
         
         # 验证API密钥
         if settings.use_deepseek:
@@ -467,6 +472,25 @@ class LamAgent:
             
         try:
             logger.info(f"处理用户查询: {user_query[:100]}...")
+            
+            # 检查是否为桌面相关命令
+            if self._is_desktop_command(user_query):
+                logger.info("检测到桌面命令，使用桌面集成处理")
+                execution_result = self._handle_desktop_command(user_query)
+                answer = self._format_desktop_result(execution_result)
+                
+                self._last_sig = sig
+                self._last_sig_ts = now
+                
+                return {
+                    "plan": "desktop_command",
+                    "execution_result": execution_result,
+                    "answer": answer,
+                    "evidence_count": 1,
+                    "sources": [],
+                    "evidence": [execution_result] if execution_result.get("success") else []
+                }
+            
             llm = self._ensure_llm()
             
             # 使用DeepSeek分析用户意图并生成执行计划
@@ -504,3 +528,62 @@ class LamAgent:
         finally:
             self._is_running = False
             self._run_lock.release()
+    
+    def _is_desktop_command(self, user_query: str) -> bool:
+        """检查是否为桌面相关命令"""
+        desktop_keywords = [
+            '扫描桌面', 'search desktop', 'scan desktop',
+            '搜索桌面', 'search desktop files',
+            '启动桌面', 'launch desktop', '启动文件',
+            '桌面文件', 'desktop files', '快捷方式',
+            'shortcut', '桌面应用', 'desktop app'
+        ]
+        
+        user_query_lower = user_query.lower()
+        return any(keyword in user_query_lower for keyword in desktop_keywords)
+    
+    def _handle_desktop_command(self, user_query: str) -> Dict[str, Any]:
+        """处理桌面相关命令"""
+        try:
+            return self._desktop_integration.handle_desktop_command(user_query)
+        except Exception as e:
+            logger.error(f"处理桌面命令时出错: {e}")
+            return {
+                'success': False,
+                'error': str(e),
+                'message': f'处理桌面命令时出错: {str(e)}'
+            }
+    
+    def _format_desktop_result(self, result: Dict[str, Any]) -> str:
+        """格式化桌面操作结果"""
+        if not result.get('success'):
+            return f"[ERROR] 操作失败: {result.get('error', '未知错误')}"
+        
+        message = result.get('message', '操作完成')
+        
+        # 如果是扫描结果，添加详细信息
+        if 'files' in result and result['files']:
+            files = result['files']
+            message += f"\n\n找到 {len(files)} 个文件/快捷方式:"
+            
+            for i, file_info in enumerate(files[:10], 1):  # 只显示前10个
+                file_type = "[SHORTCUT]" if file_info.get('type') == 'shortcut' else "[FILE]"
+                executable = "[EXE]" if file_info.get('executable') else ""
+                message += f"\n{i:2d}. {file_type} {file_info['name']} {executable}"
+                if file_info.get('description'):
+                    message += f" - {file_info['description']}"
+            
+            if len(files) > 10:
+                message += f"\n... 还有 {len(files) - 10} 个文件"
+        
+        # 如果是启动结果，添加启动信息
+        if 'launch_result' in result:
+            launch_result = result['launch_result']
+            if launch_result.get('success'):
+                message += f"\n\n[SUCCESS] 启动成功!"
+                if launch_result.get('process_id'):
+                    message += f" (进程ID: {launch_result['process_id']})"
+            else:
+                message += f"\n\n[ERROR] 启动失败: {launch_result.get('error', '未知错误')}"
+        
+        return message

@@ -7,7 +7,7 @@ from tkinter import ttk, scrolledtext, messagebox, filedialog
 import threading
 import os
 import sys
-from typing import Optional
+from typing import Optional, Dict, Any
 import json
 import webbrowser
 from datetime import datetime
@@ -18,6 +18,7 @@ sys.path.insert(0, project_root)
 
 from src.agent.lam_agent import LamAgent
 from ..tools.executor import executor
+from ..tools.command_recognizer import CommandRecognizer, CommandType
 
 
 class LAMAgentUI:
@@ -25,6 +26,7 @@ class LAMAgentUI:
         self.root = root
         self.agent: Optional[LamAgent] = None
         self.conversation_history = []
+        self.command_recognizer = CommandRecognizer()
         self.setup_ui()
         self.setup_agent()
         
@@ -90,6 +92,7 @@ class LAMAgentUI:
         tools_menu.add_command(label="查看日志", command=self.view_logs)
         tools_menu.add_separator()
         tools_menu.add_command(label="网页自动化...", command=self.open_automation_dialog)
+        tools_menu.add_command(label="桌面管理...", command=self.open_desktop_dialog)
         
         # 帮助菜单
         help_menu = tk.Menu(menubar, tearoff=0)
@@ -103,7 +106,20 @@ class LAMAgentUI:
         sidebar = ttk.LabelFrame(parent, text="功能面板", padding="10")
         sidebar.grid(row=0, column=0, rowspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(0, 10))
         
-        # 已移除快速操作按钮，根据需求保留更简洁的侧边栏
+        # 桌面操作按钮
+        ttk.Label(sidebar, text="桌面操作", font=("Arial", 10, "bold")).pack(anchor=tk.W, pady=(0, 5))
+        
+        desktop_btn_frame = ttk.Frame(sidebar)
+        desktop_btn_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Button(desktop_btn_frame, text="扫描桌面", 
+                  command=lambda: self._quick_scan_desktop()).pack(fill=tk.X, pady=(0, 2))
+        ttk.Button(desktop_btn_frame, text="搜索文件", 
+                  command=lambda: self._quick_search_files()).pack(fill=tk.X, pady=(0, 2))
+        ttk.Button(desktop_btn_frame, text="启动文件", 
+                  command=lambda: self._quick_launch_file()).pack(fill=tk.X, pady=(0, 2))
+        ttk.Button(desktop_btn_frame, text="桌面管理", 
+                  command=self.open_desktop_dialog).pack(fill=tk.X, pady=(0, 2))
         
         # 分隔线
         ttk.Separator(sidebar, orient='horizontal').pack(fill=tk.X, pady=10)
@@ -174,6 +190,19 @@ class LAMAgentUI:
                                  font=("Arial", 11))
         self.input_text.grid(row=0, column=0, sticky=(tk.W, tk.E), padx=(0, 10))
         
+        # 命令建议框架
+        self.suggestion_frame = ttk.Frame(input_frame)
+        self.suggestion_frame.grid(row=1, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(5, 0))
+        
+        # 命令建议标签
+        self.suggestion_label = ttk.Label(self.suggestion_frame, text="命令建议:", 
+                                         font=("Arial", 9, "italic"), foreground="gray")
+        self.suggestion_label.pack(anchor=tk.W)
+        
+        # 命令建议按钮框架
+        self.suggestion_buttons_frame = ttk.Frame(self.suggestion_frame)
+        self.suggestion_buttons_frame.pack(fill=tk.X, pady=(2, 0))
+        
         # 输入滚动条
         input_scrollbar = ttk.Scrollbar(input_frame, orient=tk.VERTICAL, 
                                       command=self.input_text.yview)
@@ -203,6 +232,10 @@ class LAMAgentUI:
         self.input_text.bind('<Control-Return>', lambda e: self.send_message())
         self.input_text.bind('<Control-a>', lambda e: self.select_all())
         self.input_text.bind('<Control-c>', lambda e: self.copy_selected())
+        
+        # 绑定文本变化事件，用于命令识别和建议
+        self.input_text.bind('<KeyRelease>', self._on_input_change)
+        self.input_text.bind('<FocusIn>', self._on_input_focus)
         
         # 设置焦点
         self.input_text.focus()
@@ -406,6 +439,390 @@ class LAMAgentUI:
             threading.Thread(target=self._run_bilibili_play_task, args=(kw,), daemon=True).start()
         ttk.Button(btns, text="B站搜索并播放(用上方关键词)", command=run_bili).pack(side=tk.LEFT, padx=8)
 
+    # ---------- 桌面管理对话框 ----------
+    def open_desktop_dialog(self):
+        """打开桌面管理对话框"""
+        win = tk.Toplevel(self.root)
+        win.title("桌面文件管理")
+        win.geometry("800x600")
+        win.resizable(True, True)
+        
+        # 创建主框架
+        main_frame = ttk.Frame(win, padding="10")
+        main_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # 创建标签页
+        notebook = ttk.Notebook(main_frame)
+        notebook.pack(fill=tk.BOTH, expand=True)
+        
+        # 扫描桌面标签页
+        scan_frame = ttk.Frame(notebook, padding="10")
+        notebook.add(scan_frame, text="扫描桌面")
+        
+        # 扫描按钮
+        scan_btn_frame = ttk.Frame(scan_frame)
+        scan_btn_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Button(scan_btn_frame, text="扫描桌面文件", 
+                  command=lambda: self._scan_desktop_files(scan_result_text)).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(scan_btn_frame, text="获取摘要", 
+                  command=lambda: self._get_desktop_summary(scan_result_text)).pack(side=tk.LEFT)
+        
+        # 扫描结果显示
+        ttk.Label(scan_frame, text="扫描结果:", font=("Arial", 10, "bold")).pack(anchor=tk.W, pady=(0, 5))
+        scan_result_text = scrolledtext.ScrolledText(scan_frame, height=20, state=tk.DISABLED)
+        scan_result_text.pack(fill=tk.BOTH, expand=True)
+        
+        # 搜索桌面标签页
+        search_frame = ttk.Frame(notebook, padding="10")
+        notebook.add(search_frame, text="搜索桌面")
+        
+        # 搜索输入
+        search_input_frame = ttk.Frame(search_frame)
+        search_input_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Label(search_input_frame, text="搜索关键词:").pack(side=tk.LEFT, padx=(0, 10))
+        search_var = tk.StringVar()
+        search_entry = ttk.Entry(search_input_frame, textvariable=search_var, width=30)
+        search_entry.pack(side=tk.LEFT, padx=(0, 10))
+        
+        ttk.Button(search_input_frame, text="搜索", 
+                  command=lambda: self._search_desktop_files(search_var.get(), search_result_text)).pack(side=tk.LEFT)
+        
+        # 搜索结果
+        ttk.Label(search_frame, text="搜索结果:", font=("Arial", 10, "bold")).pack(anchor=tk.W, pady=(0, 5))
+        search_result_text = scrolledtext.ScrolledText(search_frame, height=20, state=tk.DISABLED)
+        search_result_text.pack(fill=tk.BOTH, expand=True)
+        
+        # 启动文件标签页
+        launch_frame = ttk.Frame(notebook, padding="10")
+        notebook.add(launch_frame, text="启动文件")
+        
+        # 启动输入
+        launch_input_frame = ttk.Frame(launch_frame)
+        launch_input_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Label(launch_input_frame, text="文件名:").pack(side=tk.LEFT, padx=(0, 10))
+        launch_var = tk.StringVar()
+        launch_entry = ttk.Entry(launch_input_frame, textvariable=launch_var, width=30)
+        launch_entry.pack(side=tk.LEFT, padx=(0, 10))
+        
+        ttk.Button(launch_input_frame, text="启动", 
+                  command=lambda: self._launch_desktop_file(launch_var.get(), launch_result_text)).pack(side=tk.LEFT)
+        
+        # 启动结果显示
+        ttk.Label(launch_frame, text="启动结果:", font=("Arial", 10, "bold")).pack(anchor=tk.W, pady=(0, 5))
+        launch_result_text = scrolledtext.ScrolledText(launch_frame, height=20, state=tk.DISABLED)
+        launch_result_text.pack(fill=tk.BOTH, expand=True)
+        
+        # 快速操作标签页
+        quick_frame = ttk.Frame(notebook, padding="10")
+        notebook.add(quick_frame, text="快速操作")
+        
+        # 快速操作按钮
+        quick_btn_frame = ttk.Frame(quick_frame)
+        quick_btn_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Button(quick_btn_frame, text="扫描桌面", 
+                  command=lambda: self._quick_scan_desktop()).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(quick_btn_frame, text="搜索Python文件", 
+                  command=lambda: self._quick_search_python()).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(quick_btn_frame, text="搜索可执行文件", 
+                  command=lambda: self._quick_search_executable()).pack(side=tk.LEFT)
+        
+        # 快速操作结果显示
+        ttk.Label(quick_frame, text="操作结果:", font=("Arial", 10, "bold")).pack(anchor=tk.W, pady=(0, 5))
+        quick_result_text = scrolledtext.ScrolledText(quick_frame, height=20, state=tk.DISABLED)
+        quick_result_text.pack(fill=tk.BOTH, expand=True)
+        
+        # 绑定回车键到搜索
+        search_entry.bind('<Return>', lambda e: self._search_desktop_files(search_var.get(), search_result_text))
+        launch_entry.bind('<Return>', lambda e: self._launch_desktop_file(launch_var.get(), launch_result_text))
+        
+        # 初始化时扫描桌面
+        self._scan_desktop_files(scan_result_text)
+    
+    def _append_to_text(self, text_widget, message, tag="normal"):
+        """添加文本到文本控件"""
+        text_widget.configure(state=tk.NORMAL)
+        text_widget.insert(tk.END, message + "\n", tag)
+        text_widget.configure(state=tk.DISABLED)
+        text_widget.see(tk.END)
+    
+    def _scan_desktop_files(self, result_text):
+        """扫描桌面文件"""
+        def _task():
+            try:
+                from src.tools.desktop_integration import DesktopIntegration
+                integration = DesktopIntegration()
+                result = integration.scan_desktop()
+                
+                result_text.configure(state=tk.NORMAL)
+                result_text.delete(1.0, tk.END)
+                result_text.configure(state=tk.DISABLED)
+                
+                if result['success']:
+                    self._append_to_text(result_text, f"[SUCCESS] {result['message']}", "success")
+                    if result.get('files'):
+                        self._append_to_text(result_text, f"\n找到 {len(result['files'])} 个文件/快捷方式:")
+                        for i, file_info in enumerate(result['files'], 1):
+                            file_type = "[SHORTCUT]" if file_info.get('type') == 'shortcut' else "[FILE]"
+                            executable = "[EXE]" if file_info.get('executable') else ""
+                            self._append_to_text(result_text, f"{i:2d}. {file_type} {file_info['name']} {executable}")
+                            if file_info.get('description'):
+                                self._append_to_text(result_text, f"     {file_info['description']}")
+                else:
+                    self._append_to_text(result_text, f"[ERROR] {result['error']}", "error")
+                    
+            except Exception as e:
+                self._append_to_text(result_text, f"[ERROR] 扫描失败: {str(e)}", "error")
+        
+        threading.Thread(target=_task, daemon=True).start()
+    
+    def _get_desktop_summary(self, result_text):
+        """获取桌面文件摘要"""
+        def _task():
+            try:
+                from src.tools.desktop_integration import DesktopIntegration
+                integration = DesktopIntegration()
+                result = integration.get_desktop_files_summary()
+                
+                if result['success']:
+                    self._append_to_text(result_text, "\n" + "="*50, "separator")
+                    self._append_to_text(result_text, "[INFO] 桌面文件摘要:", "info")
+                    self._append_to_text(result_text, f"总文件数: {result['total_files']}")
+                    self._append_to_text(result_text, f"可执行文件数: {result['executable_files']}")
+                    self._append_to_text(result_text, f"桌面路径: {result['desktop_path']}")
+                    self._append_to_text(result_text, "文件类型统计:")
+                    for file_type, count in result['type_statistics'].items():
+                        self._append_to_text(result_text, f"  {file_type}: {count} 个")
+                else:
+                    self._append_to_text(result_text, f"[ERROR] {result['error']}", "error")
+                    
+            except Exception as e:
+                self._append_to_text(result_text, f"[ERROR] 获取摘要失败: {str(e)}", "error")
+        
+        threading.Thread(target=_task, daemon=True).start()
+    
+    def _search_desktop_files(self, keyword, result_text):
+        """搜索桌面文件"""
+        if not keyword.strip():
+            self._append_to_text(result_text, "[WARNING] 请输入搜索关键词", "warning")
+            return
+            
+        def _task():
+            try:
+                from src.tools.desktop_integration import DesktopIntegration
+                integration = DesktopIntegration()
+                result = integration.search_desktop(f"搜索桌面 {keyword}")
+                
+                result_text.configure(state=tk.NORMAL)
+                result_text.delete(1.0, tk.END)
+                result_text.configure(state=tk.DISABLED)
+                
+                if result['success']:
+                    self._append_to_text(result_text, f"[SUCCESS] {result['message']}", "success")
+                    if result.get('files'):
+                        self._append_to_text(result_text, f"\n匹配的文件:")
+                        for i, file_info in enumerate(result['files'], 1):
+                            file_type = "[SHORTCUT]" if file_info.get('type') == 'shortcut' else "[FILE]"
+                            executable = "[EXE]" if file_info.get('executable') else ""
+                            self._append_to_text(result_text, f"{i:2d}. {file_type} {file_info['name']} {executable}")
+                            if file_info.get('description'):
+                                self._append_to_text(result_text, f"     {file_info['description']}")
+                else:
+                    self._append_to_text(result_text, f"[ERROR] {result['error']}", "error")
+                    
+            except Exception as e:
+                self._append_to_text(result_text, f"[ERROR] 搜索失败: {str(e)}", "error")
+        
+        threading.Thread(target=_task, daemon=True).start()
+    
+    def _launch_desktop_file(self, filename, result_text):
+        """启动桌面文件"""
+        if not filename.strip():
+            self._append_to_text(result_text, "[WARNING] 请输入文件名", "warning")
+            return
+            
+        def _task():
+            try:
+                from src.tools.desktop_integration import DesktopIntegration
+                integration = DesktopIntegration()
+                result = integration.launch_from_command(f"启动 {filename}")
+                
+                result_text.configure(state=tk.NORMAL)
+                result_text.delete(1.0, tk.END)
+                result_text.configure(state=tk.DISABLED)
+                
+                if result['success']:
+                    self._append_to_text(result_text, f"[SUCCESS] {result['message']}", "success")
+                    if result.get('launch_result'):
+                        launch_result = result['launch_result']
+                        if launch_result.get('process_id'):
+                            self._append_to_text(result_text, f"进程ID: {launch_result['process_id']}")
+                        if launch_result.get('command'):
+                            self._append_to_text(result_text, f"执行命令: {launch_result['command']}")
+                else:
+                    self._append_to_text(result_text, f"[ERROR] {result['error']}", "error")
+                    
+            except Exception as e:
+                self._append_to_text(result_text, f"[ERROR] 启动失败: {str(e)}", "error")
+        
+        threading.Thread(target=_task, daemon=True).start()
+    
+    def _quick_scan_desktop(self):
+        """快速扫描桌面"""
+        self.add_to_chat("系统", "正在扫描桌面文件...", "info")
+        if self.agent:
+            threading.Thread(target=self._run_desktop_command, args=("扫描桌面文件",), daemon=True).start()
+    
+    def _quick_search_python(self):
+        """快速搜索Python文件"""
+        self.add_to_chat("系统", "正在搜索Python文件...", "info")
+        if self.agent:
+            threading.Thread(target=self._run_desktop_command, args=("搜索桌面文件 python",), daemon=True).start()
+    
+    def _quick_search_executable(self):
+        """快速搜索可执行文件"""
+        self.add_to_chat("系统", "正在搜索可执行文件...", "info")
+        if self.agent:
+            threading.Thread(target=self._run_desktop_command, args=("搜索桌面文件 exe",), daemon=True).start()
+    
+    def _run_desktop_command(self, command):
+        """运行桌面命令"""
+        try:
+            result = self.agent.run(command)
+            self.add_to_chat("AI", result['answer'], "ai")
+        except Exception as e:
+            self.add_to_chat("系统", f"执行失败: {str(e)}", "error")
+    
+    def _on_input_change(self, event):
+        """输入文本变化时的处理"""
+        # 延迟处理，避免频繁触发
+        self.root.after(300, self._update_command_suggestions)
+    
+    def _on_input_focus(self, event):
+        """输入框获得焦点时的处理"""
+        self._update_command_suggestions()
+    
+    def _update_command_suggestions(self):
+        """更新命令建议"""
+        try:
+            current_text = self.input_text.get("1.0", tk.END).strip()
+            
+            # 清除现有建议按钮
+            for widget in self.suggestion_buttons_frame.winfo_children():
+                widget.destroy()
+            
+            if not current_text:
+                self.suggestion_label.config(text="命令建议: 输入命令获取建议")
+                return
+            
+            # 获取命令建议
+            suggestions = self.command_recognizer.get_command_suggestions(current_text)
+            
+            if suggestions:
+                self.suggestion_label.config(text=f"命令建议: 找到 {len(suggestions)} 个建议")
+                
+                # 创建建议按钮
+                for i, suggestion in enumerate(suggestions):
+                    btn = ttk.Button(self.suggestion_buttons_frame, text=suggestion,
+                                   command=lambda s=suggestion: self._use_suggestion(s))
+                    btn.pack(side=tk.LEFT, padx=(0, 5), pady=2)
+            else:
+                # 识别当前命令类型
+                cmd_type, params = self.command_recognizer.recognize_command(current_text)
+                self.suggestion_label.config(text=f"识别命令类型: {cmd_type.value}")
+                
+                # 根据命令类型显示相关信息
+                if cmd_type == CommandType.DESKTOP_SCAN:
+                    self._show_desktop_scan_info()
+                elif cmd_type == CommandType.DESKTOP_SEARCH:
+                    self._show_desktop_search_info(params)
+                elif cmd_type == CommandType.DESKTOP_LAUNCH:
+                    self._show_desktop_launch_info(params)
+                elif cmd_type == CommandType.WEB_SEARCH:
+                    self._show_web_search_info(params)
+                elif cmd_type == CommandType.BILIBILI_OPERATION:
+                    self._show_bilibili_info(params)
+                
+        except Exception as e:
+            print(f"[ERROR] 更新命令建议时出错: {e}")
+    
+    def _use_suggestion(self, suggestion):
+        """使用建议命令"""
+        self.input_text.delete("1.0", tk.END)
+        self.input_text.insert("1.0", suggestion)
+        self.input_text.focus()
+    
+    def _show_desktop_scan_info(self):
+        """显示桌面扫描信息"""
+        info_btn = ttk.Button(self.suggestion_buttons_frame, text="📁 扫描桌面文件",
+                            command=lambda: self._quick_scan_desktop())
+        info_btn.pack(side=tk.LEFT, padx=(0, 5), pady=2)
+    
+    def _show_desktop_search_info(self, params):
+        """显示桌面搜索信息"""
+        keyword = params.get('keyword', '')
+        if keyword:
+            search_btn = ttk.Button(self.suggestion_buttons_frame, text=f"🔍 搜索 '{keyword}'",
+                                  command=lambda: self._quick_search_files())
+            search_btn.pack(side=tk.LEFT, padx=(0, 5), pady=2)
+    
+    def _show_desktop_launch_info(self, params):
+        """显示桌面启动信息"""
+        filename = params.get('filename', '')
+        if filename:
+            launch_btn = ttk.Button(self.suggestion_buttons_frame, text=f"🚀 启动 '{filename}'",
+                                  command=lambda: self._quick_launch_file())
+            launch_btn.pack(side=tk.LEFT, padx=(0, 5), pady=2)
+    
+    def _show_web_search_info(self, params):
+        """显示网络搜索信息"""
+        keyword = params.get('keyword', '')
+        if keyword:
+            web_btn = ttk.Button(self.suggestion_buttons_frame, text=f"🌐 搜索 '{keyword}'",
+                               command=lambda: self._quick_web_search(keyword))
+            web_btn.pack(side=tk.LEFT, padx=(0, 5), pady=2)
+    
+    def _show_bilibili_info(self, params):
+        """显示B站操作信息"""
+        action = params.get('action', '')
+        if action == 'search_play':
+            keyword = params.get('keyword', '')
+            if keyword:
+                bili_btn = ttk.Button(self.suggestion_buttons_frame, text=f"📺 播放 '{keyword}'",
+                                    command=lambda: self._quick_bilibili_play(keyword))
+                bili_btn.pack(side=tk.LEFT, padx=(0, 5), pady=2)
+    
+    def _quick_web_search(self, keyword):
+        """快速网络搜索"""
+        self.add_to_chat("系统", f"正在搜索网络信息: {keyword}", "info")
+        if self.agent:
+            threading.Thread(target=self._run_desktop_command, args=(f"搜索网络信息 {keyword}",), daemon=True).start()
+    
+    def _quick_bilibili_play(self, keyword):
+        """快速B站播放"""
+        self.add_to_chat("系统", f"正在B站搜索播放: {keyword}", "info")
+        if self.agent:
+            threading.Thread(target=self._run_desktop_command, args=(f"B站搜索播放 {keyword}",), daemon=True).start()
+    
+    def _quick_search_files(self):
+        """快速搜索文件"""
+        keyword = tk.simpledialog.askstring("搜索桌面文件", "请输入搜索关键词：", parent=self.root)
+        if keyword:
+            self.add_to_chat("系统", f"正在搜索包含 '{keyword}' 的文件...", "info")
+            if self.agent:
+                threading.Thread(target=self._run_desktop_command, args=(f"搜索桌面文件 {keyword}",), daemon=True).start()
+    
+    def _quick_launch_file(self):
+        """快速启动文件"""
+        filename = tk.simpledialog.askstring("启动桌面文件", "请输入文件名：", parent=self.root)
+        if filename:
+            self.add_to_chat("系统", f"正在启动 '{filename}'...", "info")
+            if self.agent:
+                threading.Thread(target=self._run_desktop_command, args=(f"启动桌面文件 {filename}",), daemon=True).start()
+
     
     def send_message(self):
         """发送消息"""
@@ -416,7 +833,10 @@ class LAMAgentUI:
         question = self.input_text.get("1.0", tk.END).strip()
         if not question:
             return
-            
+        
+        # 识别命令类型
+        cmd_type, params = self.command_recognizer.recognize_command(question)
+        
         # 添加到对话历史
         self.conversation_history.append({"type": "user", "content": question})
         self.update_history_list()
@@ -424,14 +844,92 @@ class LAMAgentUI:
         # 显示用户消息
         self.add_to_chat("用户", question, "user")
         
+        # 显示识别的命令类型
+        self.add_to_chat("系统", f"识别命令类型: {cmd_type.value}", "info")
+        if params:
+            self.add_to_chat("系统", f"命令参数: {params}", "info")
+        
         # 禁用发送按钮
         self.send_button.configure(state=tk.DISABLED)
         self.status_var.set("处理中...")
         
-        # 在新线程中处理请求
-        thread = threading.Thread(target=self.process_message, args=(question,))
+        # 根据命令类型选择处理方式
+        if cmd_type in [CommandType.DESKTOP_SCAN, CommandType.DESKTOP_SEARCH, CommandType.DESKTOP_LAUNCH]:
+            # 桌面操作直接处理
+            thread = threading.Thread(target=self.process_desktop_command, args=(question, cmd_type, params))
+        else:
+            # 其他操作使用LAM Agent处理
+            thread = threading.Thread(target=self.process_message, args=(question,))
+        
         thread.daemon = True
         thread.start()
+    
+    def process_desktop_command(self, question: str, cmd_type: CommandType, params: Dict[str, Any]):
+        """处理桌面命令"""
+        try:
+            from src.tools.desktop_integration import DesktopIntegration
+            integration = DesktopIntegration()
+            
+            if cmd_type == CommandType.DESKTOP_SCAN:
+                result = integration.scan_desktop()
+                self._handle_desktop_result(result, "扫描桌面文件")
+                
+            elif cmd_type == CommandType.DESKTOP_SEARCH:
+                keyword = params.get('keyword', '')
+                if keyword:
+                    result = integration.search_desktop(f"搜索桌面 {keyword}")
+                    self._handle_desktop_result(result, f"搜索桌面文件: {keyword}")
+                else:
+                    self.add_to_chat("系统", "未找到搜索关键词", "warning")
+                    
+            elif cmd_type == CommandType.DESKTOP_LAUNCH:
+                filename = params.get('filename', '')
+                if filename:
+                    result = integration.launch_from_command(f"启动 {filename}")
+                    self._handle_desktop_result(result, f"启动桌面文件: {filename}")
+                else:
+                    self.add_to_chat("系统", "未找到文件名", "warning")
+            
+            # 清空输入框
+            self.root.after(0, self.clear_input)
+            
+        except Exception as e:
+            self.add_to_chat("系统", f"桌面操作失败: {str(e)}", "error")
+        finally:
+            # 恢复UI状态
+            self.root.after(0, self.reset_ui_state)
+    
+    def _handle_desktop_result(self, result: Dict[str, Any], operation: str):
+        """处理桌面操作结果"""
+        if result.get('success'):
+            self.add_to_chat("系统", f"[SUCCESS] {operation} 成功", "success")
+            
+            # 显示详细信息
+            if 'files' in result and result['files']:
+                files = result['files']
+                self.add_to_chat("系统", f"找到 {len(files)} 个文件/快捷方式:", "info")
+                
+                for i, file_info in enumerate(files[:10], 1):  # 只显示前10个
+                    file_type = "[SHORTCUT]" if file_info.get('type') == 'shortcut' else "[FILE]"
+                    executable = "[EXE]" if file_info.get('executable') else ""
+                    self.add_to_chat("系统", f"{i:2d}. {file_type} {file_info['name']} {executable}", "info")
+                    if file_info.get('description'):
+                        self.add_to_chat("系统", f"     {file_info['description']}", "info")
+                
+                if len(files) > 10:
+                    self.add_to_chat("系统", f"... 还有 {len(files) - 10} 个文件", "info")
+            
+            # 显示启动信息
+            if 'launch_result' in result:
+                launch_result = result['launch_result']
+                if launch_result.get('success'):
+                    self.add_to_chat("系统", "[SUCCESS] 启动成功!", "success")
+                    if launch_result.get('process_id'):
+                        self.add_to_chat("系统", f"进程ID: {launch_result['process_id']}", "info")
+                else:
+                    self.add_to_chat("系统", f"[ERROR] 启动失败: {launch_result.get('error', '未知错误')}", "error")
+        else:
+            self.add_to_chat("系统", f"[ERROR] {operation} 失败: {result.get('error', '未知错误')}", "error")
     
     def process_message(self, question: str):
         """处理消息"""
@@ -691,24 +1189,36 @@ class LAMAgentUI:
    - 点击发送按钮或按Ctrl+Enter
    - AI会给出详细回答
 
-2. 快速操作：
+2. 桌面操作：
+   - 扫描桌面文件：查看桌面上的所有文件
+   - 搜索文件：根据关键词搜索桌面文件
+   - 启动文件：启动桌面上的应用程序
+   - 桌面管理：打开完整的桌面管理界面
+
+3. 快速操作：
    - 使用侧边栏的快速按钮
    - 选择预设的问题类型
+   - 桌面操作按钮
 
-3. 对话管理：
+4. 对话管理：
    - 保存和加载对话历史
    - 导出对话日志
    - 清空对话内容
 
-4. 快捷键：
+5. 快捷键：
    - Ctrl+Enter: 发送消息
    - Ctrl+A: 全选
    - Ctrl+C: 复制
 
-5. 配置选项：
+6. 配置选项：
    - 修改API设置
    - 选择不同模型
-   - 调整浏览器模式"""
+   - 调整浏览器模式
+
+7. 桌面命令示例：
+   - "扫描桌面文件"
+   - "搜索桌面文件 python"
+   - "启动桌面文件 文件名" """
         
         messagebox.showinfo("使用说明", help_text)
     

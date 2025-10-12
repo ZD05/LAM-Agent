@@ -1764,3 +1764,44 @@ Call log:
 Call log:
   - waiting for locator("video, .bpx-player-container") to be visible
 
+2025-10-11 13:49:51,080 - src.agent.lam_agent - INFO - 处理用户查询: 扫描桌面文件...
+2025-10-11 13:49:51,081 - src.agent.lam_agent - INFO - 检测到桌面命令，使用桌面集成处理
+2025-10-11 13:50:21,491 - src.agent.lam_agent - INFO - 处理用户查询: 扫描桌面文件...
+2025-10-11 13:50:21,491 - src.agent.lam_agent - INFO - 检测到桌面命令，使用桌面集成处理
+2025-10-11 13:50:21,492 - src.agent.lam_agent - INFO - 处理用户查询: 搜索桌面文件 test...
+2025-10-11 13:50:21,492 - src.agent.lam_agent - INFO - 检测到桌面命令，使用桌面集成处理
+2025-10-11 13:50:21,493 - src.agent.lam_agent - INFO - 处理用户查询: 启动桌面文件 test_python_app.py...
+2025-10-11 13:50:21,493 - src.agent.lam_agent - INFO - 检测到桌面命令，使用桌面集成处理
+2025-10-11 14:30:15,988 - src.agent.lam_agent - INFO - 处理用户查询: 扫描桌面文件...
+2025-10-11 14:30:15,988 - src.agent.lam_agent - INFO - 检测到桌面命令，使用桌面集成处理
+2025-10-11 14:30:15,989 - src.agent.lam_agent - INFO - 处理用户查询: 搜索桌面文件 python...
+2025-10-11 14:30:15,989 - src.agent.lam_agent - INFO - 检测到桌面命令，使用桌面集成处理
+2025-10-11 14:34:51,899 - src.agent.lam_agent - INFO - 处理用户查询: 在桌面创建一个名为滕王阁序.txt的文本文件...
+2025-10-11 14:34:56,128 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-11 14:35:00,961 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'answer', 'target_platform': 'desktop', 'steps': [{'action': 'create_file', 'file_path': '~/Desktop/滕王阁序.txt', 'content': ''}], 'context': '在桌面创建名为滕王阁序.txt的文本文件'}
+2025-10-11 14:35:00,961 - src.agent.lam_agent - INFO - 执行计划: answer - desktop - 1步骤
+2025-10-11 14:35:00,961 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-11 14:35:01,022 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-11 14:35:03,074 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-11 14:35:42,049 - src.agent.lam_agent - INFO - 处理用户查询: 在桌面创建一个名为滕王阁序.txt的文本文件...
+2025-10-11 14:35:44,185 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-11 14:35:48,708 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'answer', 'target_platform': 'desktop', 'steps': [{'action': 'create_file', 'file_path': '~/Desktop/滕王阁序.txt', 'content': ''}], 'context': '在桌面创建名为滕王阁序.txt的文本文件'}
+2025-10-11 14:35:48,708 - src.agent.lam_agent - INFO - 执行计划: answer - desktop - 1步骤
+2025-10-11 14:35:48,709 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-11 14:35:48,771 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-11 14:35:50,945 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-11 14:35:50,945 - src.agent.lam_agent - INFO - 处理用户查询: 搜索滕王阁序的完整内容...
+2025-10-11 14:35:51,012 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-11 14:35:54,459 - src.agent.lam_agent - INFO - DeepSeek执行计划: {'operation_type': 'search', 'target_platform': 'browser', 'steps': [], 'context': '搜索滕王阁序的完整内容'}
+2025-10-11 14:35:54,459 - src.agent.lam_agent - INFO - 执行计划: search - browser - 0步骤
+2025-10-11 14:35:54,471 - src.tools.search - INFO - 已使用Edge浏览器打开搜索: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F%E7%9A%84%E5%AE%8C%E6%95%B4%E5%86%85%E5%AE%B9
+2025-10-11 14:35:54,471 - src.tools.search - INFO - 开始搜索: 搜索滕王阁序的完整内容
+2025-10-11 14:35:54,741 - primp - INFO - response: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F%E7%9A%84%E5%AE%8C%E6%95%B4%E5%86%85%E5%AE%B9 302
+2025-10-11 14:35:54,742 - duckduckgo_search.DDGS - INFO - Error to search using bing backend: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F%E7%9A%84%E5%AE%8C%E6%95%B4%E5%86%85%E5%AE%B9 return None. params={'q': '搜索滕王阁序的完整内容'} content=None data=None
+2025-10-11 14:35:54,742 - src.tools.search - WARNING - DuckDuckGo搜索失败，尝试备用方案: https://www.bing.com/search?q=%E6%90%9C%E7%B4%A2%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F%E7%9A%84%E5%AE%8C%E6%95%B4%E5%86%85%E5%AE%B9 return None. params={'q': '搜索滕王阁序的完整内容'} content=None data=None
+2025-10-11 14:35:54,742 - src.tools.search - INFO - 搜索完成，获得 3 个结果
+2025-10-11 14:35:54,742 - src.agent.lam_agent - INFO - DeepSeek计划执行完成
+2025-10-11 14:35:54,808 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-10-11 14:35:57,491 - src.agent.lam_agent - INFO - 查询处理完成
+2025-10-11 14:35:57,491 - src.agent.lam_agent - INFO - 处理用户查询: 将以下内容写入桌面文件滕王阁序.txt: 已成功在浏览器中搜索“滕王阁序的完整内容”，并为您提供了多个相关结果。您可以在打开的浏览器页面中查看详细内容。......
+2025-10-11 14:35:57,491 - src.agent.lam_agent - INFO - 检测到桌面命令，使用桌面集成处理
