@@ -14,8 +14,10 @@ from .browser import (
     generic_play_video,
     generic_site_search,
 )
-from .bilibili import search_and_play_first_video_strict, open_up_homepage
+from .browser_context import browser_context
+from .bilibili_integration import BilibiliIntegration
 from .step_executor import execute_natural_language_instruction
+from src.database.credential_db import credential_db
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +31,8 @@ class ActionExecutor:
             "open_bilibili": self.open_bilibili,
             "play_video": self.play_video,
             "automate_page": self.action_automate_page,
-            "bilibili_search_play": self.action_bilibili_search_play,
+            "bilibili_open_up": self.action_bilibili_open_up,
+            "bilibili_play_video": self.action_bilibili_play_video,
             "nl_automate": self.action_nl_automate,
             "search_web": self.search_web,
             "create_file": self.create_file,
@@ -45,6 +48,9 @@ class ActionExecutor:
             "play_video_generic": self.play_video_generic,
             "add_to_cart": self.add_to_cart_action,
             "nl_step_execute": self.nl_step_execute,
+            # 淘宝拆分动作
+            "taobao_search_product": self.action_taobao_search_product,
+            "taobao_buy": self.action_taobao_buy,
         }
     
     def execute_action(self, action: str, params: Dict[str, Any]) -> Dict[str, Any]:
@@ -74,7 +80,7 @@ class ActionExecutor:
             }
     
     def open_website(self, params: Dict[str, Any]) -> Dict[str, Any]:
-        """打开网站"""
+        """打开网站并检查自动登录"""
         url = params.get("url", "")
         if not url:
             return {"error": "缺少URL参数"}
@@ -83,10 +89,66 @@ class ActionExecutor:
             url = 'https://' + url
         
         try:
-            webbrowser.open(url)
-            return {"message": f"已打开网站: {url}", "url": url, "action": "open_website"}
+            # 首先使用浏览器自动化打开网站并检查登录
+            from src.tools.auto_login import auto_login_manager
+            from playwright.sync_api import sync_playwright
+            from src.tools.browser_config_safe import get_safe_browser_args, get_safe_browser_context_config
+            
+            with sync_playwright() as p:
+                from src.tools.browser_config_safe import get_launch_kwargs
+                browser = p.chromium.launch(**get_launch_kwargs(headless=False))
+                context = browser.new_context(**get_safe_browser_context_config())
+                page = context.new_page()
+                
+                try:
+                    # 打开页面
+                    page.goto(url, timeout=30000)
+                    
+                    # 检查是否需要自动登录
+                    login_result = auto_login_manager.auto_login_website(page, url)
+                    
+                    if login_result.get('success'):
+                        if login_result.get('action') == 'no_login_required':
+                            message = f"已打开网站: {url} (无需登录)"
+                        elif login_result.get('action') == 'login_attempted':
+                            message = f"已打开网站: {url} (自动登录成功)"
+                        elif login_result.get('action') == 'no_credentials':
+                            message = f"已打开网站: {url} (需要登录，但未找到凭据)"
+                        else:
+                            message = f"已打开网站: {url}"
+                    else:
+                        message = f"已打开网站: {url} (登录检查失败: {login_result.get('error', '')})"
+                    
+                    # 保持浏览器打开
+                    return {
+                        "message": message,
+                        "url": url,
+                        "action": "open_website",
+                        "login_result": login_result
+                    }
+                    
+                except Exception as e:
+                    # 如果自动化失败，回退到简单打开
+                    webbrowser.open(url)
+                    return {
+                        "message": f"已打开网站: {url} (自动化失败，使用默认浏览器)",
+                        "url": url,
+                        "action": "open_website",
+                        "error": str(e)
+                    }
+                    
         except Exception as e:
-            return {"error": f"打开网站失败: {str(e)}"}
+            # 如果所有方法都失败，使用默认浏览器
+            try:
+                webbrowser.open(url)
+                return {
+                    "message": f"已打开网站: {url} (使用默认浏览器)",
+                    "url": url,
+                    "action": "open_website",
+                    "error": str(e)
+                }
+            except Exception as e2:
+                return {"error": f"打开网站失败: {str(e2)}"}
     
     def open_bilibili(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """打开B站并搜索视频"""
@@ -198,24 +260,122 @@ class ActionExecutor:
         result = generic_add_to_cart(url=url, keyword=keyword, match_text=match_text or None, headless=False)
         return {"message": f"已尝试加入购物车: {keyword}", **result}
 
-    def action_bilibili_search_play(self, params: Dict[str, Any]) -> Dict[str, Any]:
-        """在B站搜索UP主并播放其第一个视频（默认严格走UP主页）。"""
-        up_name = params.get("keyword") or params.get("up_name") or "影视飓风"
-        keep_open_seconds = params.get("keep_open_seconds")
-        keep_open_ms = int(keep_open_seconds * 1000) if keep_open_seconds else 0
-        # 默认保持页面打开60秒；调用方可传 keep_open_seconds 自定义
-        if not keep_open_ms:
-            keep_open_ms = 60000
-        result = search_and_play_first_video_strict(up_name, keep_open_ms=keep_open_ms)
-        return {"message": f"已在B站定位UP主并尝试播放首个视频: {up_name}", **result}
 
     def action_bilibili_open_up(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """只打开B站UP主主页，不播放视频。支持 keep_open_seconds。"""
         up_name = params.get("keyword") or params.get("up_name") or "影视飓风"
         keep_open_seconds = params.get("keep_open_seconds")
         keep_open_ms = int(keep_open_seconds * 1000) if keep_open_seconds else 60000
-        result = open_up_homepage(up_name, keep_open_ms=keep_open_ms)
-        return {"message": f"已打开UP主页: {up_name}", **result}
+        
+        try:
+            # 使用浏览器上下文管理器
+            if not browser_context.is_active:
+                browser_context.start_browser(headless=False)
+            
+            # 导航到B站搜索页面
+            search_url = f"https://search.bilibili.com/all?keyword={up_name}"
+            nav_result = browser_context.navigate_to(search_url)
+            
+            if not nav_result.get('success'):
+                return {"success": False, "error": nav_result.get('error')}
+            
+            # 执行主页导航步骤
+            steps = [
+                {"action": "sleep", "ms": 2000},
+                {"action": "wait", "selector": "a.bili-video-card__info--owner, .bili-video-card", "state": "visible", "timeout": 8000},
+                {"action": "sleep", "ms": 500},
+                {"action": "click_any", "selectors": [
+                    f"a.bili-video-card__info--owner:has-text('{up_name}')",
+                    "a.bili-video-card__info--owner[href*='space.bilibili.com']",
+                    f"a[href*='space.bilibili.com']:has-text('{up_name}')",
+                    "a.bili-video-card__info--owner",
+                    "a[href*='space.bilibili.com']"
+                ]},
+                {"action": "sleep", "ms": 2000}
+            ]
+            
+            result = browser_context.execute_steps(steps)
+            
+            if result.get('success'):
+                return {
+                    "success": True,
+                    "message": f"成功进入 {up_name} 的主页",
+                    "result": result
+                }
+            else:
+                return {"success": False, "error": result.get('error')}
+                
+        except Exception as e:
+            logger.error(f"B站主页导航失败: {e}")
+            return {"success": False, "error": f"B站主页导航失败: {str(e)}"}
+
+    def action_bilibili_play_video(self, params: Dict[str, Any]) -> Dict[str, Any]:
+        """播放B站视频 - 复用已打开的浏览器实例"""
+        try:
+            # 检查浏览器是否已启动
+            if not browser_context.is_active:
+                return {"success": False, "error": "浏览器未启动，请先执行主页导航"}
+            
+            # 获取当前页面信息
+            page_info = browser_context.get_page_info()
+            if not page_info.get('success'):
+                return {"success": False, "error": "无法获取当前页面信息"}
+            
+            current_url = page_info.get('url', '')
+            
+            # 检查是否在UP主主页
+            if 'space.bilibili.com' not in current_url:
+                logger.warning(f"当前URL不包含space.bilibili.com: {current_url}")
+                # 尝试导航到UP主主页
+                up_name = params.get("up_name", "影视飓风")
+                search_url = f"https://search.bilibili.com/all?keyword={up_name}"
+                nav_result = browser_context.navigate_to(search_url)
+                
+                if not nav_result.get('success'):
+                    return {"success": False, "error": "无法导航到UP主主页"}
+                
+                # 执行主页导航步骤
+                steps = [
+                    {"action": "sleep", "ms": 2000},
+                    {"action": "wait", "selector": "a.bili-video-card__info--owner, .bili-video-card", "state": "visible", "timeout": 8000},
+                    {"action": "sleep", "ms": 500},
+                    {"action": "click_any", "selectors": [
+                        f"a.bili-video-card__info--owner:has-text('{up_name}')",
+                        "a.bili-video-card__info--owner[href*='space.bilibili.com']",
+                        f"a[href*='space.bilibili.com']:has-text('{up_name}')",
+                        "a.bili-video-card__info--owner",
+                        "a[href*='space.bilibili.com']"
+                    ]},
+                    {"action": "sleep", "ms": 2000}
+                ]
+                
+                nav_result = browser_context.execute_steps(steps)
+                if not nav_result.get('success'):
+                    return {"success": False, "error": "主页导航失败"}
+            
+            # 执行播放视频步骤
+            steps = [
+                {"action": "sleep", "ms": 1000},
+                {"action": "wait", "selector": ".bili-video-card, .video-card, a[href*='/video/']", "state": "visible", "timeout": 8000},
+                {"action": "sleep", "ms": 500},
+                {"action": "click", "selector": ".bili-video-card:first-child a, .video-card:first-child a, a[href*='/video/']:first-child"},
+                {"action": "sleep", "ms": 2000}
+            ]
+            
+            result = browser_context.execute_steps(steps)
+            
+            if result.get('success'):
+                return {
+                    "success": True,
+                    "message": "成功播放视频",
+                    "result": result
+                }
+            else:
+                return {"success": False, "error": result.get('error')}
+                
+        except Exception as e:
+            logger.error(f"B站视频播放失败: {e}")
+            return {"success": False, "error": f"B站视频播放失败: {str(e)}"}
 
     def action_nl_automate(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """将自然语言解析为automate_page所需steps并执行。
@@ -346,6 +506,78 @@ class ActionExecutor:
                 "success": False,
                 "error": f"执行步骤化指令失败: {str(e)}"
             }
+
+    def action_taobao_search_product(self, params: Dict[str, Any]) -> Dict[str, Any]:
+        """淘宝搜索：店铺 -> 商品，停留在商品页。"""
+        shop_name = params.get("shop_name", "乔尔的桌搭小店").strip()
+        product_keyword = params.get("product_keyword", "金字塔").strip()
+        try:
+            if not browser_context.ensure_browser(headless=False):
+                return {"success": False, "error": "无法启动浏览器"}
+
+            # 直达店铺搜索结果
+            shop_search_url = f"https://s.taobao.com/search?q={shop_name}&tab=shop"
+            nav_shop = browser_context.navigate_to(shop_search_url)
+            if not nav_shop.get('success'):
+                return {"success": False, "error": nav_shop.get('error')}
+
+            steps_open_shop = [
+                {"action": "sleep", "ms": 1200},
+                {"action": "click", "selector": f"a:has-text('{shop_name}')"},
+                {"action": "sleep", "ms": 1800},
+            ]
+            res_open_shop = browser_context.execute_steps(steps_open_shop)
+            if not res_open_shop.get('success'):
+                return {"success": False, "error": "未能打开店铺"}
+
+            # 店内搜索
+            steps_search_product = [
+                {"action": "sleep", "ms": 900},
+                {"action": "click", "selector": "input[type='search'], input[name='q'], input[placeholder*='搜索']", "optional": True},
+                {"action": "type", "selector": "input[type='search'], input[name='q'], input[placeholder*='搜索']", "text": product_keyword},
+                {"action": "press", "selector": "input[type='search'], input[name='q'], input[placeholder*='搜索']", "key": "Enter"},
+                {"action": "sleep", "ms": 1600},
+                {"action": "click", "selector": "a[href*='item.taobao.com']:first-child, .item a[href*='item'], .item-card a[href*='item']"},
+                {"action": "sleep", "ms": 1600},
+            ]
+            res_prod = browser_context.execute_steps(steps_search_product)
+            if not res_prod.get('success'):
+                return {"success": False, "error": "未能打开商品页"}
+
+            return {"success": True, "message": "已打开商品页", "current_url": browser_context.get_page_info().get('url')}
+        except Exception as e:
+            logger.error(f"淘宝搜索失败: {e}")
+            return {"success": False, "error": f"淘宝搜索失败: {str(e)}"}
+
+    def action_taobao_buy(self, params: Dict[str, Any]) -> Dict[str, Any]:
+        """在当前商品页进行购买/加购（与前序搜索保持上下文）。"""
+        try:
+            if not browser_context.ensure_browser(headless=False):
+                return {"success": False, "error": "无法启动浏览器"}
+
+            page_info = browser_context.get_page_info()
+            url = page_info.get('url', '') if page_info.get('success') else ''
+            if 'item.taobao.com' not in url:
+                # 不在商品页则失败（避免误操作）
+                return {"success": False, "error": "当前不在商品页，请先执行搜索并进入商品页"}
+
+            steps_buy = [
+                {"action": "sleep", "ms": 900},
+                {"action": "click", "selector": ".J_Prop .J_TSaleProp li:not(.tb-out-of-stock):first-child, .sku .sku-list li:first-child", "optional": True},
+                {"action": "sleep", "ms": 500},
+                {"action": "click", "selector": "#J_LinkBuy, a:has-text('立即购买'), button:has-text('立即购买')", "optional": True},
+                {"action": "sleep", "ms": 1400},
+                {"action": "click", "selector": "#J_LinkBasket, a:has-text('加入购物车'), button:has-text('加入购物车')", "optional": True},
+                {"action": "sleep", "ms": 1000},
+            ]
+            res_buy = browser_context.execute_steps(steps_buy)
+            if not res_buy.get('success'):
+                return {"success": False, "error": "购买操作失败"}
+
+            return {"success": True, "message": "已尝试下单或加入购物车"}
+        except Exception as e:
+            logger.error(f"淘宝购买失败: {e}")
+            return {"success": False, "error": f"淘宝购买失败: {str(e)}"}
     
     def search_web(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """搜索网络"""

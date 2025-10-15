@@ -12,6 +12,7 @@ from ..tools.browser import automate_page
 from ..tools.search import open_search_in_browser, web_search
 from ..tools.desktop_integration import DesktopIntegration
 from ..utils.validators import sanitize_text, validate_query, validate_url
+from ..mcp import LAMAgentMCPAdapter
 
 def _setup_logging():
     """配置日志系统"""
@@ -95,6 +96,10 @@ class LamAgent:
         
         # 初始化桌面集成功能
         self._desktop_integration = DesktopIntegration()
+        
+        # 初始化MCP适配器
+        self._mcp_adapter = LAMAgentMCPAdapter()
+        self._use_mcp = getattr(settings, 'use_mcp', True)  # 默认启用MCP
         
         # 验证API密钥
         if settings.use_deepseek:
@@ -244,6 +249,19 @@ class LamAgent:
             steps = plan.get("steps", [])
             
             logger.info(f"执行计划: {operation_type} - {target_platform} - {len(steps)}步骤")
+            
+            # 如果启用MCP，优先使用MCP工具
+            if self._use_mcp:
+                try:
+                    import asyncio
+                    mcp_result = asyncio.run(self._execute_with_mcp(plan, user_query))
+                    if mcp_result.get("success"):
+                        logger.info("MCP执行成功")
+                        return mcp_result
+                    else:
+                        logger.warning(f"MCP执行失败，回退到传统方法: {mcp_result.get('error')}")
+                except Exception as e:
+                    logger.warning(f"MCP执行异常，回退到传统方法: {e}")
             
             if operation_type == "search":
                 # 执行搜索操作
@@ -443,6 +461,105 @@ class LamAgent:
         except Exception as e:
             logger.error(f"生成最终答案失败: {e}")
             return f"操作完成，但生成回答时出现错误: {str(e)}"
+    
+    async def _execute_with_mcp(self, plan: Dict[str, Any], user_query: str) -> Dict[str, Any]:
+        """使用MCP执行计划"""
+        try:
+            evidence = []
+            operation_type = plan.get("operation_type", "search")
+            target_platform = plan.get("target_platform", "browser")
+            steps = plan.get("steps", [])
+            
+            # 启动MCP适配器
+            await self._mcp_adapter.start()
+            
+            if operation_type == "search":
+                # 使用MCP网络搜索工具
+                result = await self._mcp_adapter.execute_action("search_web", {
+                    "query": user_query,
+                    "max_results": 5
+                })
+                
+                if result.get("success"):
+                    evidence.append({
+                        "title": "MCP网络搜索",
+                        "href": "",
+                        "body": f"搜索完成，找到 {len(result.get('result', {}).get('results', []))} 个结果"
+                    })
+            
+            elif operation_type == "automate":
+                # 使用MCP网页自动化工具
+                if steps:
+                    # 找到目标URL
+                    target_url = f"https://{target_platform}" if not target_platform.startswith("http") else target_platform
+                    for step in steps:
+                        if step.get('action') == 'navigate' and step.get('url'):
+                            target_url = step['url']
+                            break
+                    
+                    result = await self._mcp_adapter.execute_action("automate_page", {
+                        "url": target_url,
+                        "steps": steps
+                    })
+                    
+                    if result.get("success"):
+                        evidence.append({
+                            "title": "MCP网页自动化",
+                            "href": target_url,
+                            "body": f"自动化操作完成: {len(steps)}个步骤"
+                        })
+            
+            elif operation_type == "browse":
+                # 使用MCP网页抓取工具
+                url = plan.get("url", "")
+                if url:
+                    result = await self._mcp_adapter.execute_action("fetch_page", {
+                        "url": url,
+                        "timeout_ms": 15000
+                    })
+                    
+                    if result.get("success"):
+                        evidence.append({
+                            "title": "MCP页面浏览",
+                            "href": url,
+                            "body": f"页面内容已获取: {result.get('result', {}).get('title', '未知标题')}"
+                        })
+            
+            # 特殊平台处理
+            if "bilibili" in target_platform or "b站" in user_query.lower():
+                # 提取UP主名称（简单实现）
+                up_name = user_query.replace("b站", "").replace("bilibili", "").strip()
+                if not up_name:
+                    up_name = "影视飓风"  # 默认UP主
+                
+                result = await self._mcp_adapter.execute_action("bilibili_search_play", {
+                    "up_name": up_name,
+                    "keep_open_seconds": 60
+                })
+                
+                if result.get("success"):
+                    evidence.append({
+                        "title": "MCP B站操作",
+                        "href": "",
+                        "body": f"已搜索并播放UP主 {up_name} 的视频"
+                    })
+            
+            return {
+                "success": True,
+                "evidence": evidence,
+                "operation_type": operation_type,
+                "target_platform": target_platform,
+                "steps_executed": len(steps),
+                "source": "mcp"
+            }
+            
+        except Exception as e:
+            logger.error(f"MCP执行失败: {e}")
+            return {
+                "success": False,
+                "error": str(e),
+                "evidence": [{"title": "MCP执行失败", "href": "", "body": f"MCP执行时发生错误: {str(e)}"}]
+            }
     
     def run(self, user_query: str) -> Dict[str, Union[str, int, List[Dict[str, str]], Dict[str, Any]]]:
         """运行LAM代理处理用户查询 - 使用DeepSeek统一处理"""

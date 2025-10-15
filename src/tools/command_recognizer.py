@@ -45,7 +45,7 @@ class CommandRecognizer:
         
         # B站操作关键词
         self.bilibili_keywords = {
-            'search_play': ['搜索播放', 'search play', '播放', 'play', '看视频', 'watch video'],
+            'search_play': ['搜索播放', 'search play', '播放', 'play', '看视频', 'watch video', '搜索', 'search'],
             'up_homepage': ['UP主页', 'up homepage', '主页', 'homepage', '个人主页']
         }
         
@@ -73,6 +73,11 @@ class CommandRecognizer:
         """识别用户输入的命令类型和参数"""
         user_input = user_input.strip().lower()
         
+        # B站操作识别（优先级最高，因为B站是特定网站）
+        bilibili_result = self._recognize_bilibili_command(user_input)
+        if bilibili_result:
+            return bilibili_result
+        
         # 桌面操作识别
         desktop_result = self._recognize_desktop_command(user_input)
         if desktop_result:
@@ -82,11 +87,6 @@ class CommandRecognizer:
         web_result = self._recognize_web_command(user_input)
         if web_result:
             return web_result
-        
-        # B站操作识别
-        bilibili_result = self._recognize_bilibili_command(user_input)
-        if bilibili_result:
-            return bilibili_result
         
         # 文件操作识别
         file_result = self._recognize_file_command(user_input)
@@ -159,7 +159,7 @@ class CommandRecognizer:
     
     def _recognize_bilibili_command(self, user_input: str) -> Optional[Tuple[CommandType, Dict[str, Any]]]:
         """识别B站操作命令"""
-        if any(keyword in user_input for keyword in ['b站', 'bilibili', '哔哩哔哩']):
+        if any(keyword in user_input for keyword in ['b站', 'bilibili', '哔哩哔哩', '打开b站', '打开bilibili', 'b站搜索', 'b站播放']):
             # 搜索播放
             if any(keyword in user_input for keyword in self.bilibili_keywords['search_play']):
                 keyword = self._extract_search_keyword(user_input, self.bilibili_keywords['search_play'])

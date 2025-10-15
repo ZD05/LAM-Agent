@@ -16,7 +16,11 @@ class Settings(BaseSettings):
     langsmith_tracing: bool = False
     langsmith_api_key: Optional[str] = None
     lam_agent_model: str = "deepseek-chat"
-    lam_browser_headless: bool = True
+    lam_browser_headless: bool = False
+    # 浏览器默认设置：优先使用系统Edge（Playwright channel=msedge）
+    lam_browser_channel: str = "msedge"
+    # 如需强制指定可执行文件，设置该路径后将忽略 channel
+    lam_browser_executable: Optional[str] = None
     use_deepseek: bool = True  # 是否使用DeepSeek
 
     # 对部分网站启用纯鼠标操作模式（不修改DOM、不注入脚本、不使用iframe方案）
@@ -46,3 +50,4 @@ def validate_settings() -> None:
     elif not settings.use_deepseek and not settings.openai_api_key:
         raise APIKeyError("OpenAI")
 
+     

@@ -4,9 +4,9 @@ from bs4 import BeautifulSoup
 from typing import Optional, Dict, Any, List
 from urllib.parse import urlparse
 from ..config import settings
-from .browser_config import (
-    get_browser_args, 
-    get_browser_context_config,
+from .browser_config_safe import (
+    get_safe_browser_args, 
+    get_safe_browser_context_config,
     get_video_play_selectors,
     get_video_container_selectors,
     get_search_selectors,
@@ -14,6 +14,7 @@ from .browser_config import (
     get_add_to_cart_selectors,
     get_proxy_config,
 )
+from .auto_login import auto_login_manager
 
 logger = logging.getLogger(__name__)
 
@@ -34,12 +35,9 @@ def fetch_page(url: str, wait_selector: Optional[str] = None, timeout_ms: int = 
     try:
         logger.info(f"开始抓取页面: {url}")
         with sync_playwright() as p:
-            browser = p.chromium.launch(
-                headless=settings.lam_browser_headless,
-                channel="msedge",  # 使用Edge浏览器
-                args=get_browser_args()
-            )
-            context = browser.new_context(**get_browser_context_config())
+            from .browser_config_safe import get_launch_kwargs
+            browser = p.chromium.launch(**get_launch_kwargs(headless=settings.lam_browser_headless))
+            context = browser.new_context(**get_safe_browser_context_config())
             page = context.new_page()
             
             try:
@@ -93,19 +91,10 @@ def automate_page(
 
     try:
         with sync_playwright() as p:
-            proxy = get_proxy_config()
-            launch_kwargs = {
-                "headless": headless,
-                "channel": "msedge",  # 使用Edge浏览器
-                "args": get_browser_args(),
-            }
-            if proxy:
-                launch_kwargs["proxy"] = proxy
-            browser = p.chromium.launch(**launch_kwargs)
+            from .browser_config_safe import get_launch_kwargs
+            browser = p.chromium.launch(**get_launch_kwargs(headless=headless))
 
-            context_kwargs = get_browser_context_config()
-            if proxy:
-                context_kwargs["proxy"] = proxy
+            context_kwargs = get_safe_browser_context_config()
             context = browser.new_context(**context_kwargs)
             page = context.new_page()
 
@@ -116,6 +105,29 @@ def automate_page(
             # 进入初始URL
             log(f"打开页面: {url}")
             page.goto(url, timeout=timeout_ms)
+            
+            # 检查是否需要自动登录
+            try:
+                log("检查是否需要自动登录...")
+                login_result = auto_login_manager.auto_login_website(page, url)
+                
+                if login_result['success']:
+                    if login_result.get('action') == 'no_login_required':
+                        log("页面不需要登录，继续执行后续操作")
+                    elif login_result.get('action') == 'login_attempted':
+                        log(f"自动登录成功: {login_result.get('message', '')}")
+                        if login_result.get('redirect_url'):
+                            log(f"登录后跳转到: {login_result['redirect_url']}")
+                    elif login_result.get('action') == 'no_credentials':
+                        log(f"未找到登录凭据: {login_result.get('error', '')}")
+                    elif login_result.get('need_captcha'):
+                        log("需要手动输入验证码，请手动完成登录后继续")
+                else:
+                    log(f"自动登录失败: {login_result.get('error', '')}")
+                    
+            except Exception as e:
+                log(f"自动登录检查过程中出错: {e}")
+                # 继续执行后续操作，不因登录检查失败而中断
             
             # 按用户要求：不再注入任何脚本，避免修改页面标签
 
@@ -267,6 +279,68 @@ def automate_page(
                         page.wait_for_timeout(200)
                     if not ok:
                         raise RuntimeError(f"URL未到达预期: {page.url}")
+                elif action == 'debug_page':
+                    log("调试页面内容")
+                    try:
+                        # 获取页面标题和URL
+                        title = page.title()
+                        url = page.url
+                        log(f"页面标题: {title}")
+                        log(f"当前URL: {url}")
+                        
+                        # 测试常见选择器
+                        selectors_to_test = [
+                            # 新的用户卡片结构
+                            ".bili-video-card__info--owner",
+                            ".bili-video-card__info--author",
+                            "a.bili-video-card__info--owner",
+                            "a[href*='/space/']:has(.bili-video-card__info--author)",
+                            # 旧的用户卡片结构
+                            ".up-item",
+                            ".user-item", 
+                            ".bili-user-card",
+                            ".user-card",
+                            ".up-card",
+                            ".user-info",
+                            ".up-info",
+                            "a[href*='/space/']",
+                            ".result-item",
+                            ".search-result-item",
+                            ".user-list-item",
+                            ".up-list-item",
+                            ".user",
+                            ".up",
+                            ".card",
+                            ".item",
+                            ".list-item",
+                            ".result",
+                            ".search-result",
+                            "[class*='user']",
+                            "[class*='up']",
+                            "[class*='card']",
+                            "[class*='item']",
+                            "a[href*='user']",
+                            "a[href*='space']",
+                            ".bili-card",
+                            ".bili-item"
+                        ]
+                        
+                        for selector in selectors_to_test:
+                            try:
+                                elements = page.query_selector_all(selector)
+                                if elements:
+                                    log(f"找到选择器 {selector}: {len(elements)} 个元素")
+                                    if len(elements) > 0:
+                                        text = elements[0].text_content()
+                                        if text:
+                                            log(f"  第一个元素文本: {text[:100]}...")
+                                else:
+                                    log(f"选择器 {selector}: 未找到元素")
+                            except Exception as e:
+                                log(f"选择器 {selector} 测试失败: {e}")
+                                
+                    except Exception as e:
+                        log(f"调试页面失败: {e}")
                 elif action == 'wait_video_ready':
                     # 等待可见且具有有效尺寸的视频或播放器容器
                     log("等待视频元素可见且尺寸有效")
@@ -631,10 +705,14 @@ def automate_bilibili_search_and_play(keyword: str) -> Dict[str, Any]:
     ]
 
     up_card_selectors = [
-        "a[href*='/space/']:has-text('影视飓风')",
-        "[data-ct*='user'] a:has-text('影视飓风')",
-        "a:has(.bili-user-card__info:has-text('影视飓风'))",
-        "a:has-text('影视飓风')",
+        "a.bili-video-card__info--owner:has-text('影视飓风')",  # 新的用户卡片结构
+        "a.bili-video-card__info--owner[href*='/space/']",        # 用户卡片链接
+        "a[href*='/space/']:has(.bili-video-card__info--author)", # 包含作者信息的链接
+        "a[href*='/space/']:has(.bili-video-card__info--owner)",  # 包含所有者信息的链接
+        "a[href*='/space/']:has-text('影视飓风')",               # 包含UP主名称的链接
+        "[data-ct*='user'] a:has-text('影视飓风')",               # 旧的选择器
+        "a:has(.bili-user-card__info:has-text('影视飓风'))",      # 旧的选择器
+        "a:has-text('影视飓风')",                                 # 兜底选择器
     ]
 
     up_video_tab_selectors = [

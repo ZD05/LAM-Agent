@@ -1,176 +1,164 @@
 # LAM-Agent 智能桌面助手
 
-一个基于大语言模型的智能桌面助手，支持自然语言交互、网页自动化、Bilibili操作和桌面文件管理。
+一个基于大语言模型的智能桌面助手，支持自然语言交互、网页自动化、Steam游戏操作、Bilibili视频操作、凭据管理等功能。现已完成 MCP (Model Context Protocol) 协议集成。
 
-## 🚀 功能特性
+## 🚀 核心功能
 
-### 1. 自然语言交互
-- 支持多种大语言模型（DeepSeek、OpenAI等）
-- 智能命令识别和参数提取
-- 实时建议和自动补全
+- **智能对话**: 支持多种大语言模型，自然语言交互
+- **网页自动化**: 基于Playwright的浏览器自动化操作
+- **Steam集成**: 游戏库管理、下载、卸载、智能启动
+- **Bilibili操作**: 视频搜索、播放、UP主页面访问
+- **桌面管理**: 文件扫描、搜索、应用程序启动
+- **凭据管理**: 密码存储、自动填充、安全加密
+- **网站集成**: 京东、淘宝、拼多多、高德地图等
+- **桌面软件**: WPS Office、微信、QQ等软件集成
+- **统一UI**: ChatGPT风格现代化界面，侧边栏导航设计
 
-### 2. 网页自动化
-- 基于Playwright的浏览器自动化
-- 支持搜索、点击、输入等操作
-- 智能等待和错误处理
+## 📊 功能统计
 
-### 3. Bilibili操作
-- 搜索UP主和视频
-- 自动播放视频
-- 进入UP主主页
-- 支持鼠标点击操作（避免反爬检测）
+- **总工具数量**: 67个MCP工具
+- **支持网站**: 10+个主流网站
+- **桌面软件**: 3个常用软件
+- **技术特性**: MCP协议、异步处理、错误处理、日志记录
+- **代码架构**: 模块化设计、基类继承、统一接口
 
-### 4. 桌面文件管理
-- 扫描桌面文件和快捷方式
-- 智能搜索桌面文件
-- 启动桌面应用程序
-- 支持多种文件类型识别
+## 🚀 快速开始
 
-### 5. 图形用户界面
-- 基于Tkinter的现代化UI
-- 多标签页桌面管理对话框
-- 侧边栏快速操作按钮
-- 实时命令建议系统
-
-## 📁 项目结构
-
-```
-LAM-Agent/
-├── src/                          # 源代码目录
-│   ├── agent/                    # 智能代理
-│   │   └── lam_agent.py         # 主代理类
-│   ├── api/                      # API服务
-│   │   └── main.py              # FastAPI服务器
-│   ├── tools/                    # 工具模块
-│   │   ├── bilibili.py          # Bilibili操作
-│   │   ├── browser.py           # 浏览器自动化
-│   │   ├── command_recognizer.py # 命令识别
-│   │   ├── desktop_integration.py # 桌面集成
-│   │   ├── desktop_launcher.py  # 桌面启动器
-│   │   ├── search.py            # 搜索功能
-│   │   └── ...                  # 其他工具
-│   ├── ui/                       # 用户界面
-│   │   └── main_window.py       # 主窗口
-│   ├── utils/                    # 工具函数
-│   └── config.py                # 配置文件
-├── scripts/                      # 启动脚本
-├── logs/                         # 日志文件
-├── cli.py                        # 命令行接口
-├── start_ui.py                   # UI启动器
-├── run_with_deepseek.py         # DeepSeek启动器
-└── requirements.txt              # 依赖包
-```
-
-## 🛠️ 安装和配置
-
-### 1. 环境要求
-- Python 3.8+
-- Windows 10/11
-- 现代浏览器（Chrome/Edge）
-
-### 2. 安装依赖
+### 1. 环境配置
 ```bash
+# 克隆项目
+git clone <repository-url>
+cd LAM-Agent
+
+# 安装依赖
 pip install -r requirements.txt
+
+# 设置环境变量（可放入 .env 文件）
+export DEEPSEEK_API_KEY="your_api_key"          # 或 OPENAI_API_KEY
+export DEEPSEEK_BASE_URL="https://api.deepseek.com"
+export LAM_AGENT_MODEL="deepseek-chat"
+export USE_DEEPSEEK="true"                       # false 则使用 OpenAI
+export LAM_BROWSER_CHANNEL="msedge"              # 默认通过 Playwright 驱动系统 Edge
+export LAM_BROWSER_EXECUTABLE="C:/Path/to/msedge.exe"  # 可选：强制指定 Edge 路径
 ```
 
-### 3. 配置API密钥
-创建 `.env` 文件并配置：
-```env
-DEEPSEEK_API_KEY=your_deepseek_api_key
-DEEPSEEK_BASE_URL=https://api.deepseek.com
-LAM_AGENT_MODEL=deepseek-chat
-USE_DEEPSEEK=true
-```
-
-## 🎯 使用方法
-
-### 1. 启动UI界面
+### 2. 启动应用
 ```bash
-python start_ui.py
+# 启动图形界面（默认）
+python main.py
+
+# 命令行模式
+python main.py --cli "你的问题"
+
+# 启动API服务（FastAPI + Uvicorn）
+python main.py --api
+
+# 显示帮助
+python main.py --help
 ```
 
-### 2. 命令行模式
+### 3. 基本使用
+1. **智能对话**: 在底部输入框中输入自然语言指令
+2. **工具面板**: 使用侧边栏的"工具面板"按钮
+3. **凭据管理**: 点击侧边栏的"凭据管理"按钮
+4. **对话历史**: 在侧边栏查看和管理对话历史
+
+## 📋 主要工具
+
+### Steam集成 (9个工具)
+- `steam_get_library` - 获取游戏库
+- `steam_download_game` - 下载游戏
+- `steam_uninstall_game` - 卸载游戏
+- `steam_open_store` - 打开Steam商店
+- 更多Steam相关工具...
+
+### Bilibili操作 (10个工具)
+- `bilibili_search_play` - 搜索并播放视频
+- `bilibili_open_up` - 打开UP主页面
+- `bilibili_get_user_profile` - 获取用户资料
+- 更多Bilibili相关工具...
+
+### 凭据管理 (10个工具)
+- `credential_add` - 添加凭据
+- `credential_get` - 获取凭据
+- `credential_auto_fill` - 自动填充
+- 更多凭据管理工具...
+
+### 网站集成 (15个工具)
+- `website_open` - 打开网站
+- `jd_search_products` - 京东搜索商品
+- `taobao_search_products` - 淘宝搜索商品
+- 更多网站集成工具...
+
+## 🏗️ 代码架构
+
+### 模块化设计
+- **基础集成类**: `BaseIntegration`、`ECommerceIntegration`、`VideoPlatformIntegration`
+- **软件集成基类**: `BaseSoftwareIntegration`、`OfficeSoftwareIntegration`、`SocialSoftwareIntegration`
+- **MCP处理器基类**: `BaseToolHandler`、`BaseIntegrationHandler`
+- **统一错误处理**: 标准化的异常处理和日志记录
+
+### 代码组织
+```
+src/
+├── tools/                    # 工具模块
+│   ├── base_integration.py   # 网站集成基类
+│   ├── base_software_integration.py  # 软件集成基类
+│   ├── website_integration.py        # 网站集成实现
+│   └── desktop_software_integration.py  # 软件集成实现
+├── mcp/                      # MCP协议模块
+│   ├── core/                 # 核心基础类
+│   ├── handlers/             # 处理器模块
+│   │   └── base_handler.py   # 处理器基类
+│   └── registry/             # 工具注册
+└── ui/                       # 用户界面
+```
+
+## 🎨 用户界面
+
+### 统一UI设计
+- **深色主题**: ChatGPT风格的现代化界面
+- **双界面集成**: 主界面和凭据管理器
+- **顶部导航**: 便捷的界面切换
+- **响应式布局**: 自适应窗口大小
+
+## 🔧 高级配置
+
+### Steam配置
 ```bash
-python cli.py
+export STEAM_API_KEY="your_steam_api_key"
+export STEAM_USER_ID="your_steam_user_id"
 ```
 
-### 3. API服务模式
-```bash
-python -m src.api.main
-```
+### 数据库配置
+- **凭据数据库**: 自动创建SQLite数据库
+- **数据位置**: `src/database/credentials.db`
+- **备份恢复**: 支持导入导出功能
 
-### 4. 使用DeepSeek模型
-```bash
-python run_with_deepseek.py
-```
+## 📚 详细文档
 
-## 💡 使用示例
+- **[完整指南](LAM_AGENT_FINAL_GUIDE.md)**: 详细的功能说明和使用指南，包含所有67个工具的完整说明
 
-### 桌面管理
-- "扫描桌面文件" - 扫描桌面所有文件
-- "搜索桌面文件 python" - 搜索包含python的文件
-- "启动桌面文件 notepad.exe" - 启动记事本
+## 🛡️ 安全特性
 
-### Bilibili操作
-- "搜索影视飓风" - 搜索UP主
-- "播放影视飓风第一个视频" - 播放视频
-- "打开影视飓风主页" - 进入UP主主页
+- **密码安全**: Base64编码存储，按需解密
+- **数据保护**: 本地SQLite存储，用户控制
+- **隐私保护**: 无网络传输，透明操作
 
-### 网页自动化
-- "搜索滕王阁序" - 在浏览器中搜索
-- "点击第一个搜索结果" - 点击链接
+## 🔮 未来规划
 
-## 🔧 配置选项
+- **功能增强**: 更多网站支持、移动端适配
+- **技术优化**: 性能优化、内存优化、启动优化
+- **用户体验**: 主题系统、快捷键、语音控制
 
-### 浏览器配置
-- `HEADLESS_MODE`: 是否无头模式
-- `BROWSER_TYPE`: 浏览器类型（chrome/edge）
-- `TIMEOUT`: 操作超时时间
+## 📞 技术支持
 
-### 桌面配置
-- `DESKTOP_PATH`: 桌面路径
-- `SUPPORTED_EXTENSIONS`: 支持的文件扩展名
-
-### 命令识别
-- `COMMAND_PATTERNS`: 命令匹配模式
-- `PARAMETER_EXTRACTION`: 参数提取规则
-
-## 🚨 注意事项
-
-1. **Bilibili操作**: 使用鼠标点击避免反爬检测
-2. **桌面管理**: 需要管理员权限启动某些应用程序
-3. **API限制**: 注意大语言模型的API调用限制
-4. **浏览器兼容**: 建议使用Chrome或Edge浏览器
-
-## 📝 开发说明
-
-### 添加新功能
-1. 在 `src/tools/` 中创建新工具模块
-2. 在 `src/agent/lam_agent.py` 中集成新功能
-3. 在 `src/ui/main_window.py` 中添加UI支持
-4. 更新命令识别器以支持新命令
-
-### 调试模式
-设置环境变量启用详细日志：
-```bash
-set LAM_AGENT_DEBUG=true
-```
-
-## 🤝 贡献指南
-
-1. Fork 项目
-2. 创建功能分支
-3. 提交更改
-4. 发起 Pull Request
-
-## 📄 许可证
-
-MIT License
-
-## 📞 支持
-
-如有问题或建议，请创建 Issue 或联系开发者。
+- **问题反馈**: GitHub Issues
+- **文档更新**: 持续更新使用文档
+- **社区支持**: 用户社区交流
 
 ---
 
-**LAM-Agent** - 让AI助手更智能，让桌面操作更简单！
+**LAM-Agent** - 让智能助手更智能，让桌面操作更简单！
+
+*最后更新: 2025-01-12*

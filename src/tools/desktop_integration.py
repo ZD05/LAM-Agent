@@ -5,7 +5,7 @@ import os
 import sys
 import logging
 from typing import Dict, Any, List, Optional
-from .desktop_launcher import DesktopLauncher
+from .desktop_launcher_safe import SafeDesktopLauncher
 
 logger = logging.getLogger(__name__)
 
@@ -14,7 +14,7 @@ class DesktopIntegration:
     """桌面集成类，将桌面启动功能集成到LAM Agent中"""
     
     def __init__(self):
-        self.launcher = DesktopLauncher()
+        self.launcher = SafeDesktopLauncher()
     
     def handle_desktop_command(self, command: str) -> Dict[str, Any]:
         """处理桌面相关命令"""

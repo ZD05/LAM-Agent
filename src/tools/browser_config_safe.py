@@ -3,6 +3,7 @@
 修复可能导致黑屏的浏览器参数
 """
 from typing import Dict, Any, List, Optional
+from src.config import settings
 import os
 
 
@@ -57,7 +58,7 @@ def get_safe_browser_args() -> List[str]:
 
 
 def get_safe_browser_context_config() -> Dict[str, Any]:
-    """获取安全的浏览器上下文配置"""
+    """获取安全的浏览器上下文配置 - 适配已登录状态"""
     return {
         'user_agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
         'viewport': {'width': 1920, 'height': 1080},
@@ -73,7 +74,7 @@ def get_safe_browser_context_config() -> Dict[str, Any]:
         'bypass_csp': True,
         'ignore_https_errors': True,
         
-        # 模拟真实用户环境
+        # 模拟真实用户环境（已登录状态）
         'color_scheme': 'light',
         'reduced_motion': 'no-preference',
         'forced_colors': 'none',
@@ -84,8 +85,42 @@ def get_safe_browser_context_config() -> Dict[str, Any]:
             'DNT': '1',
             'Connection': 'keep-alive',
             'Upgrade-Insecure-Requests': '1',
-        }
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Sec-Fetch-User': '?1',
+        },
+        
+        # 保持登录状态相关配置
+        'storage_state': None,  # 可以设置存储状态来保持登录
+        'record_video_dir': None,  # 不录制视频，提高性能
+        'record_har_path': None,  # 不记录HAR，提高性能
     }
+
+
+def get_launch_kwargs(headless: Optional[bool] = None) -> Dict[str, Any]:
+    """统一的浏览器启动参数，默认使用系统 Edge。
+
+    优先级：
+    1) settings.lam_browser_executable 如果设置，则使用 executable_path
+    2) 否则使用 settings.lam_browser_channel（默认 msedge）
+    """
+    kwargs: Dict[str, Any] = {
+        "headless": settings.lam_browser_headless if headless is None else headless,
+        "args": get_safe_browser_args(),
+    }
+
+    if settings.lam_browser_executable:
+        kwargs["executable_path"] = settings.lam_browser_executable
+    else:
+        kwargs["channel"] = settings.lam_browser_channel or "msedge"
+
+    # 代理（如果存在）
+    proxy = get_proxy_config()
+    if proxy:
+        kwargs["proxy"] = proxy
+
+    return kwargs
 
 
 def get_video_play_selectors() -> List[str]:
@@ -158,4 +193,5 @@ def get_proxy_config() -> Optional[Dict[str, Any]]:
     if server:
         return {"server": server}
     return None
+
 

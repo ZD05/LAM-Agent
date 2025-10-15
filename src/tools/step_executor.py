@@ -218,40 +218,71 @@ class StepExecutor:
         return self._execute_open_step(step)
     
     def _search_on_bilibili(self, query: str) -> Dict[str, Any]:
-        """在B站搜索 - 使用搜索框进行搜索"""
+        """在B站搜索 - 使用浏览器上下文管理器"""
         try:
-            steps = [
-                # 1. 等待页面加载
-                {"action": "sleep", "ms": 2000},
-                
-                # 2. 关闭可能的弹窗
-                {"action": "click", "selector": "text=关闭, button:has-text('关闭'), .close-btn", "optional": True},
-                {"action": "sleep", "ms": 500},
-                
-                # 3. 点击搜索框
-                {"action": "click", "selector": "input#nav-searchform input, input[type=search], .nav-search-input input"},
-                {"action": "sleep", "ms": 300},
-                
-                # 4. 清空并输入搜索关键词
-                {"action": "type", "selector": "input#nav-searchform input, input[type=search], .nav-search-input input", 
-                 "text": query, "clear": True},
-                {"action": "sleep", "ms": 500},
-                
-                # 5. 按回车搜索
-                {"action": "press", "selector": "input#nav-searchform input, input[type=search], .nav-search-input input", "key": "Enter"},
-                {"action": "sleep", "ms": 2000},
-                
-                # 6. 等待搜索结果加载
-                {"action": "wait", "selector": "a[href*='/video/'], .video-item, .bili-video-card", "state": "visible"},
-                {"action": "sleep", "ms": 1000},
-            ]
+            from .browser_context import browser_context
             
-            result = automate_page("https://www.bilibili.com", steps, headless=False)
-            return {
-                "success": result.get("success", False),
-                "message": f"已在B站搜索: {query}",
-                "details": result
-            }
+            # 检查浏览器是否已启动
+            if not browser_context.is_active:
+                # 如果浏览器未启动，直接导航到搜索页面
+                search_url = f"https://search.bilibili.com/all?keyword={query}"
+                browser_context.start_browser(headless=False)
+                nav_result = browser_context.navigate_to(search_url)
+                
+                if not nav_result.get('success'):
+                    return {"success": False, "error": nav_result.get('error')}
+                
+                return {
+                    "success": True,
+                    "message": f"成功搜索: {query}",
+                    "result": nav_result
+                }
+            else:
+                # 浏览器已启动，在当前页面进行搜索
+                # 检查当前页面是否是B站
+                page_info = browser_context.get_page_info()
+                current_url = page_info.get('url', '')
+                
+                if 'bilibili.com' not in current_url:
+                    # 不在B站，导航到B站首页
+                    nav_result = browser_context.navigate_to("https://www.bilibili.com")
+                    if not nav_result.get('success'):
+                        return {"success": False, "error": nav_result.get('error')}
+                
+                # 执行搜索步骤
+                steps = [
+                    # 1. 等待页面加载
+                    {"action": "sleep", "ms": 2000},
+                    
+                    # 2. 关闭可能的弹窗
+                    {"action": "click", "selector": "text=关闭, button:has-text('关闭'), .close-btn", "optional": True},
+                    {"action": "sleep", "ms": 500},
+                    
+                    # 3. 点击搜索框
+                    {"action": "click", "selector": ".nav-search-input input, input[placeholder*='搜索'], .search-input input"},
+                    {"action": "sleep", "ms": 300},
+                    
+                    # 4. 清空并输入搜索关键词
+                    {"action": "type", "selector": ".nav-search-input input, input[placeholder*='搜索'], .search-input input", 
+                     "text": query, "clear": True},
+                    {"action": "sleep", "ms": 500},
+                    
+                    # 5. 按回车搜索
+                    {"action": "press", "selector": ".nav-search-input input, input[placeholder*='搜索'], .search-input input", "key": "Enter"},
+                    {"action": "sleep", "ms": 2000},
+                    
+                    # 6. 等待搜索结果加载
+                    {"action": "wait", "selector": "a[href*='/video/'], .video-item, .bili-video-card", "state": "visible"},
+                    {"action": "sleep", "ms": 1000},
+                ]
+                
+                result = browser_context.execute_steps(steps)
+                
+                return {
+                    "success": result.get("success", False),
+                    "message": f"已在B站搜索: {query}",
+                    "details": result
+                }
         except Exception as e:
             return {
                 "success": False,
@@ -395,51 +426,79 @@ class StepExecutor:
             }
     
     def _play_on_bilibili(self, query: str) -> Dict[str, Any]:
-        """在B站播放视频 - 先搜索再点击播放"""
+        """在B站播放视频 - 使用浏览器上下文管理器"""
         try:
-            steps = [
-                # 1. 等待页面加载
-                {"action": "sleep", "ms": 2000},
-                
-                # 2. 关闭可能的弹窗
-                {"action": "click", "selector": "text=关闭, button:has-text('关闭'), .close-btn", "optional": True},
-                {"action": "sleep", "ms": 500},
-                
-                # 3. 点击搜索框
-                {"action": "click", "selector": "input#nav-searchform input, input[type=search], .nav-search-input input"},
-                {"action": "sleep", "ms": 300},
-                
-                # 4. 输入搜索关键词
-                {"action": "type", "selector": "input#nav-searchform input, input[type=search], .nav-search-input input", 
-                 "text": query, "clear": True},
-                {"action": "sleep", "ms": 500},
-                
-                # 5. 按回车搜索
-                {"action": "press", "selector": "input#nav-searchform input, input[type=search], .nav-search-input input", "key": "Enter"},
-                {"action": "sleep", "ms": 2000},
-                
-                # 6. 等待搜索结果加载
-                {"action": "wait", "selector": "a[href*='/video/'], .video-item, .bili-video-card", "state": "visible"},
-                {"action": "sleep", "ms": 1000},
-                
-                # 7. 使用光标点击第一个视频链接
-                {"action": "click", "selector": "a[href*='/video/']:first-of-type, .video-item a:first-of-type, .bili-video-card a:first-of-type"},
-                {"action": "sleep", "ms": 3000},
-                
-                # 8. 等待视频页面加载
-                {"action": "wait", "selector": ".bpx-player-container, .bilibili-player, video", "state": "visible"},
-                {"action": "sleep", "ms": 2000},
-                
-                # 9. 使用光标点击播放按钮
-                {"action": "video_click_play"},
-                {"action": "sleep", "ms": 2000},
-                
-                # 10. 如果点击播放失败，尝试其他播放方式
-                {"action": "video_play"},
-                {"action": "sleep", "ms": 1000},
-            ]
+            from .browser_context import browser_context
             
-            result = automate_page("https://www.bilibili.com", steps, headless=False)
+            # 检查浏览器是否已启动
+            if not browser_context.is_active:
+                # 如果浏览器未启动，直接导航到搜索页面
+                search_url = f"https://search.bilibili.com/all?keyword={query}"
+                browser_context.start_browser(headless=False)
+                nav_result = browser_context.navigate_to(search_url)
+                
+                if not nav_result.get('success'):
+                    return {"success": False, "error": nav_result.get('error')}
+                
+                # 执行播放步骤
+                steps = [
+                    {"action": "sleep", "ms": 2000},
+                    {"action": "wait", "selector": "a[href*='/video/'], .video-item, .bili-video-card", "state": "visible"},
+                    {"action": "sleep", "ms": 1000},
+                    {"action": "click", "selector": "a[href*='/video/']:first-of-type, .video-item a:first-of-type, .bili-video-card a:first-of-type"},
+                    {"action": "sleep", "ms": 3000},
+                    {"action": "wait", "selector": ".bpx-player-container, .bilibili-player, video", "state": "visible"},
+                    {"action": "sleep", "ms": 2000},
+                ]
+                
+                result = browser_context.execute_steps(steps)
+            else:
+                # 浏览器已启动，在当前页面进行搜索和播放
+                page_info = browser_context.get_page_info()
+                current_url = page_info.get('url', '')
+                
+                if 'bilibili.com' not in current_url:
+                    # 不在B站，导航到B站首页
+                    nav_result = browser_context.navigate_to("https://www.bilibili.com")
+                    if not nav_result.get('success'):
+                        return {"success": False, "error": nav_result.get('error')}
+                
+                # 执行搜索和播放步骤
+                steps = [
+                    # 1. 等待页面加载
+                    {"action": "sleep", "ms": 2000},
+                    
+                    # 2. 关闭可能的弹窗
+                    {"action": "click", "selector": "text=关闭, button:has-text('关闭'), .close-btn", "optional": True},
+                    {"action": "sleep", "ms": 500},
+                    
+                    # 3. 点击搜索框
+                    {"action": "click", "selector": ".nav-search-input input, input[placeholder*='搜索'], .search-input input"},
+                    {"action": "sleep", "ms": 300},
+                    
+                    # 4. 输入搜索关键词
+                    {"action": "type", "selector": ".nav-search-input input, input[placeholder*='搜索'], .search-input input", 
+                     "text": query, "clear": True},
+                    {"action": "sleep", "ms": 500},
+                    
+                    # 5. 按回车搜索
+                    {"action": "press", "selector": ".nav-search-input input, input[placeholder*='搜索'], .search-input input", "key": "Enter"},
+                    {"action": "sleep", "ms": 2000},
+                    
+                    # 6. 等待搜索结果加载
+                    {"action": "wait", "selector": "a[href*='/video/'], .video-item, .bili-video-card", "state": "visible"},
+                    {"action": "sleep", "ms": 1000},
+                    
+                    # 7. 使用光标点击第一个视频链接
+                    {"action": "click", "selector": "a[href*='/video/']:first-of-type, .video-item a:first-of-type, .bili-video-card a:first-of-type"},
+                    {"action": "sleep", "ms": 3000},
+                    
+                    # 8. 等待视频页面加载
+                    {"action": "wait", "selector": ".bpx-player-container, .bilibili-player, video", "state": "visible"},
+                    {"action": "sleep", "ms": 2000},
+                ]
+                
+                result = browser_context.execute_steps(steps)
             return {
                 "success": result.get("success", False),
                 "message": f"已在B站搜索并播放视频: {query}",
